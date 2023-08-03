@@ -18,6 +18,7 @@ export default function PrimaryButton({children, mode}:Props ){
         transition-all 
         duration-500 
         ${inter.className}  
+        ${mode === "light" && "border border-black"}
         ${mode === "dark" ? "text-white" : "text-black"}
         ${mode === "dark" ? "bg-black" : "bg-white"}
         font-medium 

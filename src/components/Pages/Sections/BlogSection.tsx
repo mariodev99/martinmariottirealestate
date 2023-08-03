@@ -5,6 +5,7 @@ import edificioImage from "../../../../public/images/edificio.jpg"
 import SecondaryButton from '@/components/Buttons/SecondaryButton'
 import SectionWraper from '@/components/Layout/SectionWraper'
 import TitleSection from '@/components/Layout/TitleSection'
+import PrimaryButton from '@/components/Buttons/PrimaryButton'
 
 
 const merriweather = Merriweather({ subsets: ['latin'], weight: ["300", "400"] })
@@ -81,6 +82,9 @@ export default function BlogSection() {
             <Blog {...BlogList[1]} isSecondaryBlog={true}/>
           </div>      
         </div>
+      </div>
+      <div className='mt-10 flex justify-center'>
+        <PrimaryButton mode='light'><p className='text-lg'>Ver blogs</p></PrimaryButton>
       </div>
     </SectionWraper>
 
