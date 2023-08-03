@@ -114,38 +114,35 @@ export default function OfertSection() {
     
 
   return (
-    <div className=' py-10'>
-    <div className=''>
-      <TitleSection content='Oportunidades inmobiliarias' alignment='center' subtitle='aSDASD'/>
-    </div>
-
-    <Swiper
-      spaceBetween={20}
-      className='pl-10 md:pl-20'
-      breakpoints={{
-        0: {
-          slidesPerView: 1.2,
-        },
-        450: {
-          slidesPerView: 2.5,
-        },
-        720: {
-          slidesPerView: 3.5,
-        },
-        960: {
-          slidesPerView: 3.5,
-        },
-        1200: {
-          slidesPerView: 3.5,
-        },
-      }}
-    >
-      {OfertList.map((ofert) => (
-        <SwiperSlide key={ofert.id}>
-        <Ofert {...ofert}/>
-        </SwiperSlide>
-      ))}
-    </Swiper>
+    <div className='py-10 md:py-20'>
+      <TitleSection content='Oportunidades inmobiliarias' alignment='center' subtitle='texto sobre oportunidades'/>
+      <Swiper
+        spaceBetween={20}
+        className='pl-10 md:pl-20'
+        breakpoints={{
+          0: {
+            slidesPerView: 1.2,
+          },
+          450: {
+            slidesPerView: 2.5,
+          },
+          720: {
+            slidesPerView: 3.5,
+          },
+          960: {
+            slidesPerView: 3.5,
+          },
+          1200: {
+            slidesPerView: 3.5,
+          },
+        }}
+      >
+        {OfertList.map((ofert) => (
+          <SwiperSlide key={ofert.id}>
+          <Ofert {...ofert}/>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
 
   )

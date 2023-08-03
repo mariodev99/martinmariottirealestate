@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { CloseIcon, Logo, MenuIcon } from '../Icons'
+import { CloseIcon, Logo, LogoIcon, MenuIcon } from '../Icons'
 import Link from 'next/link'
 import { AnimatePresence, MotionValue, motion, useCycle, useMotionValueEvent, useScroll } from "framer-motion";
 import PrimaryButton from '../Buttons/PrimaryButton';
@@ -16,7 +16,7 @@ const links = [
 
 const itemVariants = {
   closed: {
-    opacity: 0
+    opacity: 0,
   },
   open: { opacity: 1 }
 };
@@ -64,12 +64,12 @@ export const Nav = () => {
     >
       <div className="container flex mx-auto w-full justify-between px-3 items-center">
         <Logo/> 
-        <div className=' items-center justify-center flex-1 gap-8 hidden md:flex'>
-          <Link href={"/inicio"} className='text-md text-black font-medium'>Inicio</Link>
-          <Link href={"/inicio"} className='text-md text-black font-medium'>Oportunidades</Link>
-          <Link href={"/inicio"} className='text-md text-black font-medium'>Sobre mi</Link>
-          <Link href={"/servicios"} className='text-md text-black font-medium'>Servicios</Link>
-          <Link href={"/blog"} className='text-md text-black font-medium'>Blog</Link>
+        <div className=' items-center justify-center flex-1 gap-8 hidden md:flex text-md font-regular uppercase'>
+          <Link href={"/inicio"} className=''>Inicio</Link>
+          <Link href={"/inicio"} className=''>Oportunidades</Link>
+          <Link href={"/inicio"} className=''>Sobre mi</Link>
+          <Link href={"/servicios"} className=''>Servicios</Link>
+          <Link href={"/blog"} className=''>Blog</Link>
         </div>
         <div className='hidden md:flex'>
           <PrimaryButton mode='dark'>
@@ -85,21 +85,29 @@ export const Nav = () => {
     <AnimatePresence>
         {open && (
           <motion.aside
-            className='bg-[#020202] fixed z-50 h-full'
+            className='pl-6 bg-[#020202] fixed z-50 h-full'
             initial={{ width: 0 }}
             animate={{
-              width: 350
+              width: 330
             }}
             exit={{
               width: 0,
               transition: { delay: 0.3, duration: 0.3 }
             }}
-          > 
-            <div className='flex justify-end '>            
-              <button className='mb-10' onClick={() => cycleOpen()}> <CloseIcon/></button>
+          >
+            <div className='flex justify-between my-5 pr-5'>
+              <motion.div 
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
+                transition={{delay: 0.2}}
+                exit={{opacity: 0}}
+              >
+                <LogoIcon/>
+              </motion.div>
+              <button className='' onClick={() => cycleOpen()}> <CloseIcon/></button>
             </div>
             <motion.div
-                className="flex flex-col gap-6 cursor-pointer"
+                className="flex flex-col gap-3 cursor-pointer"
                 initial="closed"
                 animate="open"
                 exit="closed"
@@ -108,9 +116,9 @@ export const Nav = () => {
                 {links.map(({ name, to, id }) => (
                   <motion.div
                     key={id}
-                    whileHover={{backgroundColor: "gray" }}
+                    whileHover={{backgroundColor: "#222" }}
                     variants={itemVariants}
-                    className='pl-6 text-white font-bold text-4xl'
+                    className=' text-white font-bold text-4xl py-3'
                   >
                     <Link href={to}>
                     {name}
