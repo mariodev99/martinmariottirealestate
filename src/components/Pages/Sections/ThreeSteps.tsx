@@ -94,9 +94,9 @@ export default function ThreeStepsSection() {
         ))}
       </div>
       <div className='flex justify-center py-10 '>
-          <PrimaryButton>
+          {/* <PrimaryButton>
             <p className='text-2xl'>Empecemos</p>
-          </PrimaryButton>
+          </PrimaryButton> */}
       </div>
       </div>
 
