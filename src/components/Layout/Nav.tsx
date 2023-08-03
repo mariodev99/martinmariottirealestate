@@ -24,8 +24,8 @@ const itemVariants = {
 const sideVariants = {
   closed: {
     transition: {
-      staggerChildren: 0.1,
-      staggerDirection: -1
+      staggerChildren: 0,
+      staggerDirection: 0
     }
   },
   open: {
@@ -63,7 +63,7 @@ export const Nav = () => {
       className='fixed w-full flex top-0 h-16 items-center z-40'
     >
       <div className="container flex mx-auto w-full justify-between px-3 items-center">
-        <Logo/> 
+        <Logo/>
         <div className=' items-center justify-center flex-1 gap-8 hidden md:flex text-md font-regular uppercase'>
           <Link href={"/inicio"} className=''>Inicio</Link>
           <Link href={"/inicio"} className=''>Oportunidades</Link>
@@ -99,12 +99,11 @@ export const Nav = () => {
               <motion.div 
                 initial={{opacity: 0}}
                 animate={{opacity: 1}}
-                transition={{delay: 0.2}}
                 exit={{opacity: 0}}
               >
                 <LogoIcon/>
               </motion.div>
-              <button className='' onClick={() => cycleOpen()}> <CloseIcon/></button>
+              <motion.button exit={{opacity: 0}} className='' onClick={() => cycleOpen()}> <CloseIcon/></motion.button>
             </div>
             <motion.div
                 className="flex flex-col gap-3 cursor-pointer"
