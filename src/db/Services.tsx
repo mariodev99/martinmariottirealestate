@@ -7,11 +7,12 @@ import gestionImg from "../../public/images/gestion_image.jpg"
 
 import { StaticImageData } from "next/image"
 
-interface Service {
+export interface Service {
     title: string
     description: string
     icon: React.ReactNode
     image: StaticImageData
+    index?: number
 }
 
 export const ServiceList:Service[] = [

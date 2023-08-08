@@ -1,13 +1,12 @@
 import TitleSection from '@/components/Layout/TitleSection'
-import React, { useState } from 'react'
-import { Lexend_Mega } from 'next/font/google'
+import React from 'react'
 import PrimaryButton from '@/components/Buttons/PrimaryButton'
-import { CashIcon, SmileIcon, TimeIcon } from '@/components/Icons'
 import { ServiceList } from '@/db/Services'
 import { AdvantageList } from '@/db/Advantages'
 import Image from 'next/image'
 import SectionWraper from '@/components/Layout/SectionWraper'
 import { motion } from 'framer-motion'
+import { Service } from '@/db/Services'
 
 const container = {
   hidden: { opacity: 0 },
@@ -27,6 +26,40 @@ const itemAnimation = {
     },
   }
 }
+
+
+
+const ServiceBox = ({title, image, index}:Service) => (
+    <motion.div                   
+      key={title} 
+      className="relative text-white h-[28rem] flex flex-col justify-between gap-3 overflow-hidden"
+    >
+      {/* Image */}
+      <motion.div 
+        variants={itemAnimation}
+        viewport={{ once: true }}
+        className='absolute w-full h-full brightness-50'
+      >
+        <Image
+          src={image}
+          alt='imagen del servicio' 
+          layout="fill"
+          objectFit="cover"
+          quality={100} 
+        />
+      </motion.div>
+      <motion.div     
+          initial={{opacity: 0}} 
+          whileInView={{opacity: 1}} 
+          viewport={{ once: true }}
+          transition={{duration: 0.5}}  
+          className='pt-2 px-5 relative z-20 h-full flex flex-col justify-between'
+      >
+        <div className='flex justify-end text-4xl font-light'>0{index+1}</div>
+        <h3 className={`font-semibold text-xl md:text-lg h-20 md:h-14`}>{title}</h3>
+      </motion.div>
+  </motion.div>
+)
 
 export default function ServicesSection() {
   
@@ -48,38 +81,10 @@ export default function ServicesSection() {
           variants={container}
           initial="hidden"
           whileInView="show" 
-          className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-1 mt-10'
+          className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 mt-10'
         >
             {ServiceList.map((item, index) => (
-              <motion.div                   
-                key={item.title} 
-                className="relative text-white h-[28rem] flex flex-col justify-between gap-3 overflow-hidden"
-              >
-                {/* Image */}
-                <motion.div 
-                  variants={itemAnimation}
-                  viewport={{ once: true }}
-                  className='absolute w-full h-full brightness-50'
-                >
-                  <Image
-                    src={item.image}
-                    alt='imagen del servicio' 
-                    layout="fill"
-                    objectFit="cover"
-                    quality={100} 
-                  />
-                </motion.div>
-                <motion.div     
-                    initial={{opacity: 0}} 
-                    whileInView={{opacity: 1}} 
-                    viewport={{ once: true }}
-                    transition={{duration: 0.5}}  
-                    className='pt-2 px-5 relative z-20 h-full flex flex-col justify-between'
-                >
-                  <div className='flex justify-end text-4xl font-light'>0{index+1}</div>
-                  <h3 className={`font-semibold text-lg h-20 md:h-14`}>{item.title}</h3>
-                </motion.div>
-              </motion.div>
+              <ServiceBox index={index} {...item}/>
             ))}
         </motion.div>
 
