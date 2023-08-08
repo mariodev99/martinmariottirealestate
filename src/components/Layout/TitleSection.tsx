@@ -1,7 +1,5 @@
 import React from 'react'
-import { Merriweather,Inter, Lexend_Mega } from 'next/font/google'
-
-const lexend = Lexend_Mega({ subsets: ['latin'] })
+import { motion } from 'framer-motion'
 
 interface TitleProps {
     content: string
@@ -9,17 +7,24 @@ interface TitleProps {
     subtitle?: string
 }
 
-
 export default function TitleSection({content, alignment, subtitle}:TitleProps) {
   return (
-    <div>
-      <h2 className={` text-3xl md:text-5xl font-bold text-${alignment}`}>{content}</h2>
-      <div className={`flex justify-${alignment} mb-20`}>
-      {subtitle && 
-      <p className={`pt-2 ${lexend.className} w-full md:w-3/4 uppercase text-xs md:text-md font-regular text-${alignment}`}>
-        {subtitle}
-      </p>}
+    <motion.div 
+
+      initial={{y: 30, opacity: 0}}
+      whileInView={{opacity: 1, y: 0}}
+      style={{ overflow: "hidden"}}
+      transition={{ duration: 0.6}}
+      viewport={{ once: true }}
+      className='flex flex-col items-center'
+    >
+      <div className='w-3/4'>
+        <h2 className={`pt-2 uppercase w-full text-secondary text-xs md:text-base font-medium text-${alignment}`}>
+          {subtitle}
+        </h2>
+        <h1 className={` text-3xl md:text-5xl font-bold text-${alignment}`}>{content}</h1>
       </div>
-    </div>
+    </motion.div>
+
   )
 }

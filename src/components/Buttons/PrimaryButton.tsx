@@ -13,6 +13,7 @@ export default function PrimaryButton({children, mode}:Props ){
   return (
     <button 
       className={`
+        rounded-full
         w-full
         md:w-auto
         transition-all 

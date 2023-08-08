@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <motion.div exit={{ opacity: 0}} className=' fixed z-50 flex bg-white h-screen w-full justify-center items-center '>
       <motion.div  initial={{ opacity: 0, scale: 0}} animate={{opacity: 1, scale: 1}} transition={{ duration: 1, type: "spring"}} exit={{ scale: 0}}>
-        <Logo/>
+        <Logo color='#000'/>
       </motion.div>
     </motion.div>
   )

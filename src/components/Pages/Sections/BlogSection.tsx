@@ -1,15 +1,9 @@
 import React from 'react'
-import { Merriweather,Inter } from 'next/font/google'
 import Image, { StaticImageData } from 'next/image'
 import edificioImage from "../../../../public/images/edificio.jpg"
-import SecondaryButton from '@/components/Buttons/SecondaryButton'
 import SectionWraper from '@/components/Layout/SectionWraper'
 import TitleSection from '@/components/Layout/TitleSection'
 import PrimaryButton from '@/components/Buttons/PrimaryButton'
-
-
-const merriweather = Merriweather({ subsets: ['latin'], weight: ["300", "400"] })
-const inter = Inter({ subsets: ['latin'] })
 
 
 const BlogList = [
@@ -17,20 +11,37 @@ const BlogList = [
       image: edificioImage,
       category: "Inversiones",
       date: "22 de Noviembre del 2022",
+      title: "Administración de Propiedades: Gestión de Alquileres ",
       description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     },
     {
         image: edificioImage,
         category: "inversiones",
         date: "22 de Noviembre del 2022",
+        title: "Planificar la inversión desde el inicio ",
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     },
     {
         image: edificioImage,
         category: "inversiones",
         date: "22 de Noviembre del 2022",
+        title: "Tradicional forma de financiación ",
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     },
+    // {
+    //   image: edificioImage,
+    //   category: "Inversiones",
+    //   date: "22 de Noviembre del 2022",
+    //   title: "",
+    //   description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    // },
+    // {
+    //   image: edificioImage,
+    //   category: "Inversiones",
+    //   date: "22 de Noviembre del 2022",
+    //   title: "",
+    //   description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    // },
   ]
 
 export default function BlogSection() {
@@ -42,46 +53,48 @@ export default function BlogSection() {
         description: string
         category: string
         isSecondaryBlog?: boolean
-      }
+        title: string
+    }
 
-    const Blog: React.FC<BlogData> = ({image, description, date, isSecondaryBlog, category}) => {
+    const Blog: React.FC<BlogData> = ({image, description, date, title }) => {
         return (
-          <div className='border border-gray-100 flex flex-col w-full h-full p-6 shadow-xl gap-4'>
-            <div className={`relative  overflow-hidden w-full object-cover ${isSecondaryBlog ? "h-24 md:h-40" : "h-36 md:h-4/6"} `} >
+          <div                   
+          key={title} 
+          className="relative text-white h-[28rem] flex flex-col justify-between gap-3 overflow-hidden"
+        >
+          <div 
+            className='absolute w-full h-full brightness-50'
+          >
             <Image
               src={image}
-              alt={`Blog sobre ${description}`}
+              alt='imagen del servicio' 
               layout="fill"
               objectFit="cover"
-              objectPosition="center"/> 
-            </div>
-            <div className='px-3'>
-            {!isSecondaryBlog && <p className='text-primary font-semibold my-5'>{category}</p>}
-            <div className=' flex flex-1 items-center'>
-              <p className={`${isSecondaryBlog ? "text-xs md:text-2xl" : "text-lg md:text-4xl"} font-medium`}>{description}</p>
-            </div>
-            {!isSecondaryBlog && <p className='text-sm md:text-md text-end text-secondary font-medium mt-7'>{date}</p>}
-
-            </div>
-
+              quality={100} 
+            />
           </div>
+          <div     
+            className='p-5 relative z-20 h-full flex flex-col justify-end'
+          >
+            <h3 className={`font-semibold text-lg h-20 md:h-16`}>{title}</h3>
+            <a>Leer más</a>
+          </div>
+        </div>
         )
     }
 
 
   return (
     <SectionWraper>
-      <TitleSection content='Blog' subtitle='Ultima informacion del sector inmobiliario' alignment='center'/>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-14 place-items-center h-auto md:h-blogsection'>
-        <Blog {...BlogList[0]} isSecondaryBlog={false}/>
-        <div className='grid grid-cols-2 md:grid-cols-1 h-full gap-2 md:gap-4'>
-          <div className='h-full'>
-            <Blog {...BlogList[1]} isSecondaryBlog={true}/>
-          </div>
-          <div className='h-full'>
-            <Blog {...BlogList[1]} isSecondaryBlog={true}/>
-          </div>      
-        </div>
+      <TitleSection 
+        content='Ultima informacion del sector inmobiliario' 
+        subtitle='Blog' 
+        alignment='center'
+      />
+      <div className='mt-14 grid grid-cols-1 md:grid-cols-3 gap-3 md:px-10'>
+        {BlogList.map(blog => (
+          <Blog key={blog.title} {...blog} />
+        ))}
       </div>
       <div className='mt-10 flex justify-center'>
         <PrimaryButton mode='light'><p className='text-lg'>Ver blogs</p></PrimaryButton>

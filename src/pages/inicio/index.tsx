@@ -23,13 +23,11 @@ export default function HomePage() {
         exit={{opacity: 0}}
     >
       <HeaderSection/>
-      <OfertSection/>
-      <div className=' bg-[#020202] text-white py-10'>
+      {/* <OfertSection/> */}
+          <ServicesSection/>
         <SectionWraper>
           <AboutSection/>
-          <ServicesSection/>
         </SectionWraper>
-      </div>
       <BlogSection/>
       <ContactSection/>
       {/* <CredentialsSection/> */}

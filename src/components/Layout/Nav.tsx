@@ -3,6 +3,7 @@ import { CloseIcon, Logo, LogoIcon, MenuIcon } from '../Icons'
 import Link from 'next/link'
 import { AnimatePresence, MotionValue, motion, useCycle, useMotionValueEvent, useScroll } from "framer-motion";
 import PrimaryButton from '../Buttons/PrimaryButton';
+import { Router, useRouter } from 'next/router';
 
 
 const links = [
@@ -38,6 +39,7 @@ const sideVariants = {
 
 export const Nav = () => {
 
+  const router = useRouter()
   const [open, cycleOpen] = useCycle(false, true);
   const { scrollY } = useScroll()
   const [backgroundNavColor, setBackgroundNavColor] = useState("transparent")
@@ -49,9 +51,12 @@ export const Nav = () => {
     else {
       setBackgroundNavColor("transparent")
     }
- 
-    
   })
+
+  const handleRedirect = (link:string) => {
+    router.push(link)
+    cycleOpen()
+  }
 
 
   return <>
@@ -60,11 +65,16 @@ export const Nav = () => {
       animate={{opacity: 1, y: 0 }}
       transition={{ duration: 0.5}}
       style={{ backgroundColor: backgroundNavColor }}
-      className='fixed w-full flex top-0 h-16 items-center z-40'
+      className='fixed w-full flex top-0 h-16 items-center z-40 '
     >
       <div className="container flex mx-auto w-full justify-between px-3 items-center">
-        <Logo/>
-        <div className=' items-center justify-center flex-1 gap-8 hidden md:flex text-md font-regular uppercase'>
+        <div className='hidden md:block'>
+          <Logo color={backgroundNavColor === "white" ? "#000" : "white"} />
+        </div>
+        <div className='block md:hidden'>
+          <LogoIcon color={"#000"}/>
+        </div>
+        <div className={`items-center justify-center flex-1 gap-8 hidden md:flex text-base font-medium ${backgroundNavColor === "white" ? "text-dark" : "text-white"}`}>
           <Link href={"/inicio"} className=''>Inicio</Link>
           <Link href={"/inicio"} className=''>Oportunidades</Link>
           <Link href={"/inicio"} className=''>Sobre mi</Link>
@@ -72,8 +82,8 @@ export const Nav = () => {
           <Link href={"/blog"} className=''>Blog</Link>
         </div>
         <div className='hidden md:flex'>
-          <PrimaryButton mode='dark'>
-            <Link href={"/contacto"} className='text-md'>Contacto</Link>
+          <PrimaryButton mode={backgroundNavColor === "white" ? "dark" : "light"}>
+            <Link href={"/contacto"} className='text-base'>Contacto</Link>
           </PrimaryButton>    
         </div>
         <button className='flex md:hidden' onClick={() => cycleOpen()}><MenuIcon/> </button>
@@ -101,7 +111,7 @@ export const Nav = () => {
                 animate={{opacity: 1}}
                 exit={{opacity: 0}}
               >
-                <LogoIcon/>
+                <LogoIcon color='#fff'/>
               </motion.div>
               <motion.button exit={{opacity: 0}} className='' onClick={() => cycleOpen()}> <CloseIcon/></motion.button>
             </div>
@@ -117,11 +127,10 @@ export const Nav = () => {
                     key={id}
                     whileHover={{backgroundColor: "#222" }}
                     variants={itemVariants}
-                    className=' text-white font-bold text-4xl py-3'
+                    className=' text-white font-bold text-3xl py-2'
+                    onClick={() => handleRedirect(to)}
                   >
-                    <Link href={to}>
                     {name}
-                    </Link>
                   </motion.div>
                 ))}
             </motion.div>

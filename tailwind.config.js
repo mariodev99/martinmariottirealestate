@@ -14,10 +14,7 @@ module.exports = {
         header: "url('/public/images/martinheader.jpg')",
       },
       colors: {
-        primary: "#0A283D",
-        dark: "#020202",
-        secondary: "#545454",
-        gold: "#D6BA4A",
+        secondary: "#686868",
       },
       borderRadius: {
         "4xl": "35px",
