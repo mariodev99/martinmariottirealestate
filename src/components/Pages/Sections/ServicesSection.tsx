@@ -84,7 +84,7 @@ export default function ServicesSection() {
           className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 mt-10'
         >
             {ServiceList.map((item, index) => (
-              <ServiceBox index={index} {...item}/>
+              <ServiceBox key={item.title} index={index} {...item}/>
             ))}
         </motion.div>
 
