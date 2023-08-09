@@ -53,7 +53,7 @@ export default function AboutSection() {
           </p>
         </div>
         {/* Imagen de Martin */}
-        <div className=' flex justify-center items-center'>
+        <div className=' flex justify-center items-center rounded-2xl overflow-hidden'>
           <Image className='h-full md:h-[400px] w-auto' src={Martin} alt='agente inmobiliario'/> 
         </div>
       </div>
