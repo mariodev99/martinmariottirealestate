@@ -2,12 +2,9 @@ import TitleSection from '@/components/Layout/TitleSection'
 import Image from 'next/image'
 import React from 'react'
 import Martin from "../../../../public/images/martinabout.png"
-import { Lexend_Mega, Inter } from 'next/font/google'
 import { Characteristics } from '@/components/Accordion/AccordionCharacteristics'
 import { EnfoqueIcon, MisionIcon, ValoresIcon } from '@/components/Icons'
 
-const lexend = Lexend_Mega({ subsets: ['latin'] })
-const inter = Inter({ subsets: ['latin'] })
 
 export interface CharacteristicsProps {
   title: string
@@ -18,17 +15,17 @@ export interface CharacteristicsProps {
 const Caracteristicas:CharacteristicsProps[] = [
     {
       title: "Enfoque",
-      description: "Buscamos superar las expectativas de nuestros clientes al ofrecerles una experiencia inigualable en...",
+      description: "Mi enfoque es simple: tu éxito inmobiliario. Me esforzare por superar las expectativas al proporcionar una experiencia de búsqueda y compra excepcionalmente personalizada y orientada a resultados.",
       icon:  <EnfoqueIcon/>
     },
     {
       title: "Valores",
-      description: "Mi enfoque es claro: tu satisfacción y seguridad son mi máxima prioridad. Trabajo arduamente para que encuentres la propiedad que se adapte a tus sueños y metas de inversión.",
+      description: "Estoy comprometido con la ética profesional, la transparencia y la honestidad en cada interacción. Mis valores me impulsan a priorizar el bienestar de mis clientes y a establecer relaciones basadas en la confianza mutua.",
       icon:  <ValoresIcon/>
     },
     {
       title: "Mision",
-      description: "Buscamos superar las expectativas de nuestros clientes al ofrecerles una experiencia inigualable en la búsqueda de propiedades. Nuestro objetivo es ayudarles a tomar decisiones informadas y acertadas, maximizando su rentabilidad y brindándoles tranquilidad en cada inversión",
+      description: "Mi misión es ser el aliado inmobiliario confiable y dedicado guiandote hacia la propiedad ideal, proporcionando un servicio personalizado y garantizando su satisfacción en cada paso del proceso de compra.",
       icon: <MisionIcon/>
     },
   ]
@@ -66,7 +63,7 @@ export default function AboutSection() {
         {Caracteristicas.map(item => (
           <div key={item.title} className=" flex flex-col gap-3 py-6 px-5 items-center">
             <div>{item.icon}</div>
-            <h3 className={`${inter.className} uppercase text-lg font-bold`}>{item.title}</h3>
+            <h3 className={`uppercase text-lg font-bold`}>{item.title}</h3>
             <p className='text-sm md:text-base text-center text-secondary'>{item.description}</p>
           </div>
         ))}

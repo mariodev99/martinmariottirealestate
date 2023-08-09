@@ -8,7 +8,7 @@ export default function ContactSection() {
     <div className='py-10 '>
         <SectionWraper>
             <TitleSection 
-              content='Ponte en contacto conmigo y hagamos realidad tu proyecto de inversión inmobiliario' 
+              content='Contactame y hagamos realidad tu proyecto de inversión inmobiliario' 
               subtitle='Contacto'
               alignment='center' 
             />
@@ -18,7 +18,7 @@ export default function ContactSection() {
                   <LogoIcon color='#000'/>
                   <h2 className='mt-3 text-2xl font-semibold'>Martin Mariotti, Real Estate Agent</h2>
                 </div>
-                <div className='text-lg font-medium flex flex-col gap-4'>
+                <div className='text-md md:text-lg font-regular md:font-medium flex flex-col gap-4'>
                   <div className='flex gap-3'>
                     <LocationIcon/>
                     <p>Barcelona, España</p>
@@ -41,7 +41,7 @@ export default function ContactSection() {
 
               {/* Formulario */}
               <form className='order-1 md:order-2 flex flex-col gap-10'>
-                <h2 className='font-semibold text-xl'>Enviame un mensaje y cuentame sobre tu proyecto</h2>
+                <h2 className='font-medium md:font-semibold text-lg md:text-xl'>Enviame un mensaje y cuentame sobre tu proyecto</h2>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
                   <div>
                     <label htmlFor='name' className='font-semibold'>Nombre</label>

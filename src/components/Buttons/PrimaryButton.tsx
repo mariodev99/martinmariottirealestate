@@ -25,7 +25,11 @@ export default function PrimaryButton({children, mode}:Props ){
         font-medium 
         py-3
         h-full 
-        px-7`
+        px-7
+        `
+        // bg-[#1EAFED]
+        // text-white
+        
       }
     >
       {children}

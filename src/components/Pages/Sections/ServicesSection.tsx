@@ -29,16 +29,21 @@ const itemAnimation = {
 
 
 
-const ServiceBox = ({title, image, index}:Service) => (
+const ServiceBox = ({title, image, index, subtitle}:Service) => (
     <motion.div                   
-      key={title} 
-      className="relative text-white h-[28rem] flex flex-col justify-between gap-3 overflow-hidden"
+      className="flex flex-col justify-between rounded-2xl shadow-xl "
     >
+      <div className='py-5 px-3'>
+        <div className='inline rounded-full border border-black px-2 uppercase font-medium text-sm'>
+          {subtitle}
+        </div>
+        <p className='mt-5 text-xl font-semibold'>{title}</p>
+      </div>
       {/* Image */}
       <motion.div 
-        variants={itemAnimation}
-        viewport={{ once: true }}
-        className='absolute w-full h-full brightness-50'
+        // variants={itemAnimation}
+        // viewport={{ once: true }}
+        className='relative w-full h-40  rounded-2xl overflow-hidden'
       >
         <Image
           src={image}
@@ -48,52 +53,42 @@ const ServiceBox = ({title, image, index}:Service) => (
           quality={100} 
         />
       </motion.div>
-      <motion.div     
-          initial={{opacity: 0}} 
-          whileInView={{opacity: 1}} 
-          viewport={{ once: true }}
-          transition={{duration: 0.5}}  
-          className='pt-2 px-5 relative z-20 h-full flex flex-col justify-between'
-      >
-        <div className='flex justify-end text-4xl font-light'>0{index+1}</div>
-        <h3 className={`font-semibold text-xl md:text-lg h-20 md:h-14`}>{title}</h3>
-      </motion.div>
+
   </motion.div>
 )
 
 export default function ServicesSection() {
   
   return (
-    <div className='pt-20 '>
-      <div className='px-5 container mx-auto flex flex-col gap-12'>
-      <TitleSection
-        content='Concreta tu proyecto de inversión en bienes raíces' 
-        alignment={"center"} 
-        subtitle="servicios y acompañamiento integral"
-        />
-        <p className='text-secondary text-xl mt-5'>
-          Como Agente del Comprador, me dedico exclusivamente a la búsqueda de propiedades por encargo expreso de mis clientes compradores, ya sea que se encuentren en España o Italia al momento de la compra.
-        </p>
-          <h3 className='font-semibold text-2xl'>Delega todo el proceso y simplifica tu proyecto de inversion </h3>
-        </div>
-
-        <motion.div     
-          variants={container}
-          initial="hidden"
-          whileInView="show" 
-          className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 mt-10'
-        >
-            {ServiceList.map((item, index) => (
-              <ServiceBox key={item.title} index={index} {...item}/>
-            ))}
-        </motion.div>
+    <SectionWraper>
+      <div className='flex flex-col gap-12'>
+          <TitleSection
+            content='Concreta tu proyecto de inversión en bienes raíces' 
+            alignment={"center"} 
+            subtitle="servicios y acompañamiento integral"
+          />
+          <p className='text-secondary text-md md:text-xl mt-5'>
+            Como Agente del Comprador, me dedico exclusivamente a la búsqueda de propiedades por encargo expreso de mis clientes compradores, ya sea que se encuentren en España o Italia al momento de la compra.
+          </p>
+          {/* Servicios */}
+          <div>
+            <h3 className='font-semibold text-lg md:text-2xl'>Delega todo el proceso y simplifica tu proyecto de inversion </h3>
+            <motion.div     
+              variants={container}
+              initial="hidden"
+              whileInView="show" 
+              className='pt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5'
+              >
+                {ServiceList.map((item, index) => (
+                  <ServiceBox key={item.title} index={index} {...item}/>
+                  ))}
+            </motion.div>
+          </div>
 
       {/* Ventajas */}
-      <SectionWraper>
-
       <div className=''>
         <h2 className='font-semibold text-2xl'>¿Por que contratar mis servicios?</h2>
-        <div className='pt-10 grid grid-cols-1 md:grid-cols-3 gap-5'>
+        <div className='pt-5 grid grid-cols-1 md:grid-cols-3 gap-5'>
             {AdvantageList.map( item => (
               <div key={item.title} className="flex flex-col gap-3 py-6 px-5">
                 <div>{item.icon}</div>
@@ -103,13 +98,16 @@ export default function ServicesSection() {
             ))}
         </div>
       </div>
-      <div className="mt-5 flex justify-center">
-        <PrimaryButton mode='light'> 
-          <p className='text-base md:text-xl font-bold'>Proyectemos juntos</p>
-        </PrimaryButton>
-      </div>
-      </SectionWraper>
 
-    </div>
+      {/* Call to action */}
+        <div className="mt-5 flex justify-center">
+          <PrimaryButton mode='light'> 
+            <p className='text-base md:text-xl font-bold'>Proyectemos juntos</p>
+          </PrimaryButton>
+        </div>
+      </div>
+
+    </SectionWraper>
+
   )
 }

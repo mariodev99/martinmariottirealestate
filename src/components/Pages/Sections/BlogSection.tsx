@@ -59,11 +59,10 @@ export default function BlogSection() {
     const Blog: React.FC<BlogData> = ({image, description, date, title }) => {
         return (
           <div                   
-          key={title} 
-          className="relative text-white h-[28rem] flex flex-col justify-between gap-3 overflow-hidden"
-        >
+            className=" text-white flex flex-col overflow-hidden gap-3"
+          >
           <div 
-            className='absolute w-full h-full brightness-50'
+            className='relative w-full h-96 rounded-xl overflow-hidden '
           >
             <Image
               src={image}
@@ -73,11 +72,9 @@ export default function BlogSection() {
               quality={100} 
             />
           </div>
-          <div     
-            className='p-5 relative z-20 h-full flex flex-col justify-end'
-          >
-            <h3 className={`font-semibold text-lg h-20 md:h-16`}>{title}</h3>
-            <a>Leer más</a>
+          <div className='px-2'>
+            <h3 className={`text-black font-medium text-lg md:h-16`}>{title}</h3>
+            <button className='px-4 py-2 border border-black text-black rounded-full '>Leer más</button>
           </div>
         </div>
         )
@@ -91,14 +88,12 @@ export default function BlogSection() {
         subtitle='Blog' 
         alignment='center'
       />
-      <div className='mt-14 grid grid-cols-1 md:grid-cols-3 gap-3 md:px-10'>
+      <div className='mt-14 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-3 md:px-10'>
         {BlogList.map(blog => (
           <Blog key={blog.title} {...blog} />
         ))}
       </div>
-      <div className='mt-10 flex justify-center'>
-        <PrimaryButton mode='light'><p className='text-lg'>Ver blogs</p></PrimaryButton>
-      </div>
+
     </SectionWraper>
 
   )

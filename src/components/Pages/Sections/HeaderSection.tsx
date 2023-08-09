@@ -23,14 +23,15 @@ export default function HeaderSection() {
             alt='imagen del servicio' 
             layout="fill"
             objectFit="cover"
-            quality={100} 
+            quality={100}
+            priority
           />
         </div>
       <SectionWraper>
         <main className='relative text-white md:grid w-full grid-cols-1 md:grid-cols-2 items-center gap-10'>
           <div className='flex flex-col gap-5'>
             <h1 className={`${inter.className} text-3xl md:text-5xl font-bold tracking-wide`}>{HEADER_INFORMATION.title}</h1>
-            <h2 className={`${inter.className} text-xl md:text-xl font-medium `}>{HEADER_INFORMATION.subtitle}</h2>
+            <h2 className={`${inter.className} text-lg md:text-xl font-regular md:font-medium `}>{HEADER_INFORMATION.subtitle}</h2>
             <div className='w-full'>
               <PrimaryButton mode='light'>
                 <p className='text-xl'>{HEADER_INFORMATION.callToAction}</p>
