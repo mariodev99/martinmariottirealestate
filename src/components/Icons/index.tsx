@@ -191,7 +191,7 @@ export const UpArrowIcon = () => {
       <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
       <path d="M16.75 29.5C23.7916 29.5 29.5 23.7916 29.5 16.75C29.5 9.70837 23.7916 4 16.75 4C9.70837 4 4 9.70837 4 16.75C4 23.7916 9.70837 29.5 16.75 29.5Z" fill="black"/>
       <path d="M21.75 21.25C21.75 17.9305 21.75 12.75 21.75 12.75C21.75 12.75 16.5695 12.75 13.25 12.75" fill="black"/>
-      <path d="M21.75 12.75L13.25 21.25M21.75 12.75C21.75 12.75 21.75 17.9305 21.75 21.25M21.75 12.75C21.75 12.75 16.5695 12.75 13.25 12.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M21.75 12.75L13.25 21.25M21.75 12.75C21.75 12.75 21.75 17.9305 21.75 21.25M21.75 12.75C21.75 12.75 16.5695 12.75 13.25 12.75" stroke="white" stroke-Width="2" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
 
   )
