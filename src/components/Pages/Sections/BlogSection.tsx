@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image, { StaticImageData } from 'next/image'
 import edificioImage from "../../../../public/images/edificio.jpg"
+import Servicio2 from "../../../../public/images/Servicio2.jpg"
+
 import SectionWraper from '@/components/Layout/SectionWraper'
 import TitleSection from '@/components/Layout/TitleSection'
 import PrimaryButton from '@/components/Buttons/PrimaryButton'
-
+import { DownArrowIcon, UpArrowIcon } from '@/components/Icons'
+import { motion } from 'framer-motion'
 
 const BlogList = [
     {
@@ -15,7 +18,7 @@ const BlogList = [
       description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     },
     {
-        image: edificioImage,
+        image: Servicio2,
         category: "inversiones",
         date: "22 de Noviembre del 2022",
         title: "Planificar la inversión desde el inicio ",
@@ -28,6 +31,13 @@ const BlogList = [
         title: "Tradicional forma de financiación ",
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     },
+    {
+      image: Servicio2,
+      category: "inversiones",
+      date: "22 de Noviembre del 2022",
+      title: "Planificar la inversión desde el inicio ",
+      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+  },
     // {
     //   image: edificioImage,
     //   category: "Inversiones",
@@ -47,6 +57,7 @@ const BlogList = [
 export default function BlogSection() {
 
 
+
     interface BlogData {
         image: StaticImageData
         date: string
@@ -57,26 +68,32 @@ export default function BlogSection() {
     }
 
     const Blog: React.FC<BlogData> = ({image, description, date, title }) => {
+
+      const [isHover, setIsHover] = useState(false)
+
         return (
-          <div                   
-            className=" text-white flex flex-col overflow-hidden gap-3"
+          <motion.div                   
+            className="group cursor-pointer relative w-full text-white flex flex-col justify-end h-32 md:h-96 overflow-hidden rounded-xl"
+            onHoverStart={()=> setIsHover(true)}
+            onHoverEnd={()=> setIsHover(false)}
           >
-          <div 
-            className='relative w-full h-96 rounded-xl overflow-hidden '
-          >
-            <Image
-              src={image}
-              alt='imagen del servicio' 
-              layout="fill"
-              objectFit="cover"
-              quality={100} 
-            />
-          </div>
-          <div className='px-2'>
-            <h3 className={`text-black font-medium text-lg md:h-16`}>{title}</h3>
-            <button className='px-4 py-2 border border-black text-black rounded-full '>Leer más</button>
-          </div>
-        </div>
+              <Image
+                src={image}
+                alt='imagen del servicio' 
+                layout="fill"
+                objectFit="cover"
+                quality={100}
+                className='group-hover:brightness-[0.4] brightness-[0.8] ease-in duration-100'
+              />
+            <div className='flex items-center px-5 py-2 relative z-20  gap-5'>
+              <h3 className={`font-medium text-base`}>{title}</h3>
+              <motion.div
+                animate={{ rotateZ: isHover ? 45 : 0}}
+              >
+                <UpArrowIcon/>
+              </motion.div>
+            </div>
+          </motion.div>
         )
     }
 
@@ -88,7 +105,7 @@ export default function BlogSection() {
         subtitle='Blog' 
         alignment='center'
       />
-      <div className='mt-14 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-3 md:px-10'>
+      <div className='mt-14 grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-3 md:px-10'>
         {BlogList.map(blog => (
           <Blog key={blog.title} {...blog} />
         ))}

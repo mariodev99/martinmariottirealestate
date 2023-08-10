@@ -4,8 +4,10 @@ import TitleSection from '@/components/Layout/TitleSection'
 import React from 'react'
 
 export default function ContactSection() {
+
+  const inputClassname = "rounded-xl mt-2 px-2 py-2 text-xl bg-[#ededed] focus:outline-none "
+
   return (
-    <div className='py-10 '>
         <SectionWraper>
             <TitleSection 
               content='Contactame y hagamos realidad tu proyecto de inversión inmobiliario' 
@@ -40,25 +42,19 @@ export default function ContactSection() {
 
 
               {/* Formulario */}
-              <form className='order-1 md:order-2 flex flex-col gap-10'>
+              <form className='order-1 md:order-2 flex flex-col gap-10 py-10 px-5 rounded-4xl bg-white shadow-lg'>
                 <h2 className='font-medium md:font-semibold text-lg md:text-xl'>Enviame un mensaje y cuentame sobre tu proyecto</h2>
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
-                  <div>
-                    <label htmlFor='name' className='font-semibold'>Nombre</label>
-                    <input id='name' type='text' className='text-xl border-b-2 border-black focus:outline-none '/>
-                  </div>
-                  <div>
-                  <label htmlFor='last_name' className='font-semibold'>Apellido</label>
-                  <input id='last_name' type='text' className='text-xl border-b-2 border-black focus:outline-none '/>
-                  </div>
+                <div className='flex flex-col'>
+                    <label htmlFor='name' className='font-semibold'>Nombre y apellido</label>
+                    <input id='name' type='text' className={inputClassname}/>
                 </div>
                 <div className='flex flex-col'>
                   <label htmlFor='email' className='font-semibold'>Email</label>
-                  <input id='email' type='email' className='text-xl border-b-2 border-black focus:outline-none '/>
+                  <input id='email' type='email' className={inputClassname}/>
                 </div>
                 <div className='flex flex-col'>
                   <label htmlFor='message' className='font-semibold'>Mensaje</label>
-                  <textarea className='h-32 text-xl border-b-2 border-black focus:outline-none ' ></textarea>
+                  <textarea className={`h-32 ${inputClassname}`} ></textarea>
                 </div>
                 <button 
                   type='submit' 
@@ -69,6 +65,5 @@ export default function ContactSection() {
 
             </div>
         </SectionWraper> 
-    </div>
   )
 }

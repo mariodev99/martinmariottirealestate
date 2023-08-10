@@ -8,7 +8,7 @@ import { Router, useRouter } from 'next/router';
 
 const links = [
   { name: "Inicio", to: "/inicio", id: 1 },
-  { name: "Oportunidades", to: "/inicio", id: 2 },
+  // { name: "Oportunidades", to: "/inicio", id: 2 },
   { name: "Sobre mi", to: "/inicio", id: 3 },
   { name: "Servicios", to: "/servicios", id: 4 },
   { name: "Blog", to: "/blog", id: 5},
@@ -72,11 +72,10 @@ export const Nav = () => {
           <Logo color={backgroundNavColor === "white" ? "#000" : "white"} />
         </div>
         <div className='block md:hidden'>
-          <LogoIcon color={"#000"}/>
+          <LogoIcon color={backgroundNavColor === "white" ? "#000" : "#fff"}/>
         </div>
-        <div className={`items-center justify-center flex-1 gap-8 hidden md:flex text-base font-medium ${backgroundNavColor === "white" ? "text-dark" : "text-white"}`}>
+        <div className={`items-center justify-center flex-1 gap-8 hidden md:flex text-lg font-medium ${backgroundNavColor === "white" ? "text-dark" : "text-white"}`}>
           <Link href={"/inicio"} className=''>Inicio</Link>
-          <Link href={"/inicio"} className=''>Oportunidades</Link>
           <Link href={"/inicio"} className=''>Sobre mi</Link>
           <Link href={"/servicios"} className=''>Servicios</Link>
           <Link href={"/blog"} className=''>Blog</Link>
@@ -86,7 +85,7 @@ export const Nav = () => {
             <Link href={"/contacto"} className='text-base'>Contacto</Link>
           </PrimaryButton>    
         </div>
-        <button className='flex md:hidden' onClick={() => cycleOpen()}><MenuIcon/> </button>
+        <button className='flex md:hidden' onClick={() => cycleOpen()}><MenuIcon color={backgroundNavColor === "white" ? "#000" : "#fff"}/> </button>
 
       </div>
     </motion.div>

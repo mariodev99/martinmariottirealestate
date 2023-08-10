@@ -73,11 +73,11 @@ export const RulerIcon = () => {
   )
 }
 
-export const MenuIcon = () => {
+export const MenuIcon = ({color}:LogoIconProps) => {
   return (
-<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none">
-  <path d="M4 6H20M4 12H20M4 18H20" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-</svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke={color}>
+      <path d="M4 6H20M4 12H20M4 18H20"  strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
   )
 }
 
@@ -154,7 +154,7 @@ export const SmileIcon = () => {
 
 export const EnfoqueIcon = () => {
   return (
-      <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55" fill="none" className="stroke-secondary">
+      <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55" fill="none" className="stroke-secondary h-14 w-14">
         <path d="M27.5 29.7917C28.7657 29.7917 29.7917 28.7657 29.7917 27.5C29.7917 26.2343 28.7657 25.2083 27.5 25.2083C26.2343 25.2083 25.2083 26.2343 25.2083 27.5C25.2083 28.7657 26.2343 29.7917 27.5 29.7917Z"  strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         <path d="M27.5 38.9583C33.8283 38.9583 38.9583 33.8283 38.9583 27.5C38.9583 21.1717 33.8283 16.0417 27.5 16.0417C21.1717 16.0417 16.0417 21.1717 16.0417 27.5C16.0417 33.8283 21.1717 38.9583 27.5 38.9583Z"  strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         <path d="M27.5 48.125C38.8909 48.125 48.125 38.8909 48.125 27.5C48.125 16.1091 38.8909 6.875 27.5 6.875C16.1091 6.875 6.875 16.1091 6.875 27.5C6.875 38.8909 16.1091 48.125 27.5 48.125Z"  strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -164,7 +164,7 @@ export const EnfoqueIcon = () => {
 
 export const ValoresIcon = () => {
   return (
-      <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55" fill="none" className="stroke-secondary">
+      <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55" fill="none" className="stroke-secondary h-14 w-14">
         <path d="M27.5 20.625V48.125M27.5 20.625C31.297 20.625 34.375 17.547 34.375 13.75C34.375 9.95304 31.297 6.875 27.5 6.875C23.703 6.875 20.625 9.95304 20.625 13.75C20.625 17.547 23.703 20.625 27.5 20.625ZM27.5 48.125C22.6377 48.125 17.9745 46.1935 14.5364 42.7553C11.0982 39.3171 9.16667 34.654 9.16667 29.7917M27.5 48.125C32.3623 48.125 37.0255 46.1935 40.4636 42.7553C43.9018 39.3171 45.8333 34.654 45.8333 29.7917M48.125 29.7917H43.5417M11.4583 29.7917H6.875" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
   )
@@ -172,7 +172,7 @@ export const ValoresIcon = () => {
 
 export const MisionIcon = () => {
   return (
-      <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55" fill="none" className="stroke-secondary">
+      <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55" fill="none" className="stroke-secondary h-14 w-14">
         <path d="M11.4583 32.0834H43.5416L33.2291 21.7709L43.5416 11.4584H11.4583V48.125" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
   )
@@ -185,6 +185,18 @@ export const DownArrowIcon = () => {
       </svg>
   )
 }
+
+export const UpArrowIcon = () => {
+  return (
+      <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+      <path d="M16.75 29.5C23.7916 29.5 29.5 23.7916 29.5 16.75C29.5 9.70837 23.7916 4 16.75 4C9.70837 4 4 9.70837 4 16.75C4 23.7916 9.70837 29.5 16.75 29.5Z" fill="black"/>
+      <path d="M21.75 21.25C21.75 17.9305 21.75 12.75 21.75 12.75C21.75 12.75 16.5695 12.75 13.25 12.75" fill="black"/>
+      <path d="M21.75 12.75L13.25 21.25M21.75 12.75C21.75 12.75 21.75 17.9305 21.75 21.25M21.75 12.75C21.75 12.75 16.5695 12.75 13.25 12.75" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+
+  )
+}
+
 
 
 

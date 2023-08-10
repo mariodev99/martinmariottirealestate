@@ -31,7 +31,7 @@ const itemAnimation = {
 
 const ServiceBox = ({title, image, index, subtitle}:Service) => (
     <motion.div                   
-      className="flex flex-col justify-between rounded-2xl shadow-xl "
+      className="bg-white flex flex-col justify-between rounded-2xl shadow-xl "
     >
       <div className='py-5 px-3'>
         <div className='inline rounded-full border border-black px-2 uppercase font-medium text-sm'>

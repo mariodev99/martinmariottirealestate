@@ -2,9 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import React, { useState } from "react";
 import { CharacteristicsProps } from "../Pages/Sections/About";
 import { DownArrowIcon } from "../Icons";
-import {  Lexend_Mega } from 'next/font/google'
 
-const lexend = Lexend_Mega({ subsets: ['latin'] })
 
 interface CharacteristicsGeneralProps {
   characteristics: CharacteristicsProps[]
@@ -22,11 +20,11 @@ const Accordion = ({ i, expanded, setExpanded, title, description, icon }:Accord
     return (
       <>
         <motion.header
-          className="cursor-pointer flex items-center justify-between"
+          className="cursor-pointer flex items-center justify-between px-4 py-2 rounded-xl shadow-lg"
           initial={false}
           onClick={() => setExpanded(isOpen ? false : i)}
         >
-          <div className={`${lexend.className} uppercase text-lg  flex items-center gap-3`}>{icon}{title}</div>
+          <div className={`text-lg font-semibold flex items-center gap-3`}>{icon}{title}</div>
           <motion.div
             animate={{ rotateZ: isOpen ? 180 : 0}}
           >

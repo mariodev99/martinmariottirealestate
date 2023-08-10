@@ -19,13 +19,14 @@ export default function PrimaryButton({children, mode}:Props ){
         transition-all 
         duration-500 
         ${inter.className}  
-        ${mode === "light" && "border border-black"}
         ${mode === "dark" ? "text-white" : "text-black"}
-        ${mode === "dark" ? "bg-black" : "bg-white"}
+        ${mode === "dark" ? "bg-black" : "bg-gradient-to-r from-[#0785ca] to-[#2ccdff]"}
         font-medium 
         py-3
         h-full 
-        px-7
+        px-10
+        uppercase
+        text-white
         `
         // bg-[#1EAFED]
         // text-white
