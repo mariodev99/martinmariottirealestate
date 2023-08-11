@@ -18,20 +18,26 @@ const container = {
   }
 }
 
-const itemAnimation = {
-  hidden: { y: 600, opacity: 0 },
-  show: { y: 0, opacity: 1,     
+const serviceVariant = {
+  hidden: { opacity: 0, y: 50 },
+  show: { 
+    opacity: 1,
+    y: 0,
     transition: {
-      duration: 1,
-    },
-  }
+      duration: 0.7,
+      type: "spring"
+    }
+  },
 }
+
+
 
 
 
 const ServiceBox = ({title, image, index, subtitle}:Service) => (
     <motion.div                   
       className="bg-white flex flex-col justify-between rounded-2xl shadow-xl "
+      variants={serviceVariant}
     >
       <div className='py-5 px-3'>
         <div className='inline rounded-full border border-black px-2 uppercase font-medium text-sm'>
@@ -41,8 +47,6 @@ const ServiceBox = ({title, image, index, subtitle}:Service) => (
       </div>
       {/* Image */}
       <motion.div 
-        // variants={itemAnimation}
-        // viewport={{ once: true }}
         className='relative w-full h-40  rounded-2xl overflow-hidden'
       >
         <Image
@@ -60,7 +64,6 @@ const ServiceBox = ({title, image, index, subtitle}:Service) => (
 export default function ServicesSection() {
   
   return (
-    <SectionWraper>
       <div className='flex flex-col gap-12'>
           <TitleSection
             content='Concreta tu proyecto de inversión en bienes raíces' 
@@ -77,10 +80,12 @@ export default function ServicesSection() {
               variants={container}
               initial="hidden"
               whileInView="show" 
+              viewport={{ once: true }}
               className='pt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5'
               >
+                {/* AnimationVariant={serviceVariant} */}
                 {ServiceList.map((item, index) => (
-                  <ServiceBox key={item.title} index={index} {...item}/>
+                    <ServiceBox  key={item.title} index={index} {...item}/>
                   ))}
             </motion.div>
           </div>
@@ -88,7 +93,13 @@ export default function ServicesSection() {
       {/* Ventajas */}
       <div className=''>
         <h2 className='font-semibold text-2xl'>¿Por que contratar mis servicios?</h2>
-        <div className='pt-5 grid grid-cols-1 md:grid-cols-3 gap-5'>
+        <motion.div 
+          initial={{opacity: 0, x: -50}}
+          whileInView={{ opacity: 1, x: 0}}
+          transition={{ duration: 1,}}
+          viewport={{ once: true }}
+          className='pt-5 grid grid-cols-1 md:grid-cols-3 gap-5'
+        >
             {AdvantageList.map( item => (
               <div key={item.title} className="flex flex-col gap-3 py-6 px-5">
                 <div>{item.icon}</div>
@@ -96,7 +107,7 @@ export default function ServicesSection() {
                 <p className='text-base'>{item.description}</p>
               </div>
             ))}
-        </div>
+        </motion.div>
       </div>
 
       {/* Call to action */}
@@ -107,7 +118,6 @@ export default function ServicesSection() {
         </div>
       </div>
 
-    </SectionWraper>
 
   )
 }

@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { AnimatePresence, MotionValue, motion, useCycle, useMotionValueEvent, useScroll } from "framer-motion";
 import PrimaryButton from '../Buttons/PrimaryButton';
 import { Router, useRouter } from 'next/router';
+import { Link as ScrollLink } from "react-scroll"
 
 
 const links = [
@@ -59,6 +60,7 @@ export const Nav = () => {
   }
 
 
+
   return <>
     <motion.div 
       initial={{opacity: 0, y:-100}} 
@@ -76,14 +78,22 @@ export const Nav = () => {
         </div>
         <div className={`items-center justify-center flex-1 gap-8 hidden md:flex text-lg font-medium ${backgroundNavColor === "white" ? "text-dark" : "text-white"}`}>
           <Link href={"/inicio"} className=''>Inicio</Link>
-          <Link href={"/inicio"} className=''>Sobre mi</Link>
+
+          {/* if estoy en inicio */}
+          <ScrollLink to="section_about_me" smooth={true} duration={500}>Sobre mi desde inicio</ScrollLink>
+          {/* else */}
+          <Link href={"/inicio#section_about_me"} className=''>Sobre mi desde otra</Link>
+
+
           <Link href={"/servicios"} className=''>Servicios</Link>
           <Link href={"/blog"} className=''>Blog</Link>
         </div>
         <div className='hidden md:flex'>
+        <Link href={"/contacto"} className='text-base'>
           <PrimaryButton mode={backgroundNavColor === "white" ? "dark" : "light"}>
-            <Link href={"/contacto"} className='text-base'>Contacto</Link>
+            Contacto
           </PrimaryButton>    
+        </Link>
         </div>
         <button className='flex md:hidden' onClick={() => cycleOpen()}><MenuIcon color={backgroundNavColor === "white" ? "#000" : "#fff"}/> </button>
 

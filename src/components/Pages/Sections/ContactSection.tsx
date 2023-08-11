@@ -8,7 +8,7 @@ export default function ContactSection() {
   const inputClassname = "rounded-xl mt-2 px-2 py-2 text-xl bg-[#ededed] focus:outline-none "
 
   return (
-        <SectionWraper>
+        <>
             <TitleSection 
               content='Contactame y hagamos realidad tu proyecto de inversión inmobiliario' 
               subtitle='Contacto'
@@ -18,9 +18,9 @@ export default function ContactSection() {
               <div className='order-2 md:order-1 flex flex-col gap-4'>
                 <div className='mb-5'>
                   <LogoIcon color='#000'/>
-                  <h2 className='mt-3 text-2xl font-semibold'>Martin Mariotti, Real Estate Agent</h2>
+                  <h2 className=' text-2xl font-semibold'>Martin Mariotti, Real Estate Agent</h2>
                 </div>
-                <div className='text-md md:text-lg font-regular md:font-medium flex flex-col gap-4'>
+                <div className='text-md md:text-lg font-regular md:font-medium flex flex-col gap-4 mt-5 '>
                   <div className='flex gap-3'>
                     <LocationIcon/>
                     <p>Barcelona, España</p>
@@ -64,6 +64,6 @@ export default function ContactSection() {
               </form>
 
             </div>
-        </SectionWraper> 
+        </> 
   )
 }

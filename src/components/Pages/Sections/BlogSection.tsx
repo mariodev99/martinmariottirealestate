@@ -35,7 +35,7 @@ const BlogList = [
       image: Servicio2,
       category: "inversiones",
       date: "22 de Noviembre del 2022",
-      title: "Planificar la inversión desde el inicio ",
+      title: "Planificar la inversión desde el inicio 2",
       description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
   },
     // {
@@ -54,6 +54,28 @@ const BlogList = [
     // },
   ]
 
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+      },
+    }
+  }
+  
+  const serviceVariant = {
+    hidden: { opacity: 0, y: 50 },
+    show: { 
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.7,
+        type: "spring"
+      }
+    },
+  }
+  
 export default function BlogSection() {
 
 
@@ -72,7 +94,8 @@ export default function BlogSection() {
       const [isHover, setIsHover] = useState(false)
 
         return (
-          <motion.div                   
+          <motion.div
+            variants={serviceVariant}                
             className="group cursor-pointer relative w-full text-white flex flex-col justify-end h-32 md:h-96 overflow-hidden rounded-xl"
             onHoverStart={()=> setIsHover(true)}
             onHoverEnd={()=> setIsHover(false)}
@@ -99,19 +122,24 @@ export default function BlogSection() {
 
 
   return (
-    <SectionWraper>
+    <>
       <TitleSection 
         content='Ultima informacion del sector inmobiliario' 
         subtitle='Blog' 
         alignment='center'
       />
-      <div className='mt-14 grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-3 md:px-10'>
+      <motion.div 
+        variants={container}
+        initial="hidden"
+        whileInView="show" 
+        viewport={{ once: true }}
+        className='mt-14 grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-3 md:px-10'
+      >
         {BlogList.map(blog => (
           <Blog key={blog.title} {...blog} />
         ))}
-      </div>
-
-    </SectionWraper>
+      </motion.div>
+    </>
 
   )
 }
