@@ -86,7 +86,7 @@ export const Nav = () => {
           <Link href={"/inicio"} className=''>Inicio</Link>
 
           {router.pathname === "/inicio" ? 
-          <div className=''>
+          <div className='cursor-pointer'>
             <ScrollLink to="section_about_me" smooth={true} duration={500}>Sobre mi</ScrollLink>
           </div>
           :
@@ -94,7 +94,9 @@ export const Nav = () => {
           }
 
           {router.pathname === "/inicio" ? 
-          <ScrollLink to="section_services" smooth={true} duration={500}>Servicios</ScrollLink>
+          <div className='cursor-pointer'>
+            <ScrollLink to="section_services" smooth={true} duration={500}>Servicios</ScrollLink>
+          </div>
           :
           <Link href={"/inicio#section_services"} className=''>Servicios</Link>
           }
