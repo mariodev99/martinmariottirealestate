@@ -35,14 +35,15 @@ export default function HomePage() {
         exit={{opacity: 0}}
     >
       <HeaderSection/>
-      <SectionWraper>
-        <ServicesSection/>
-      </SectionWraper>
+      <div id='section_services'>
+        <SectionWraper>
+          <ServicesSection/>
+        </SectionWraper>
+      </div>
       <div id='section_about_me'>
-      
-      <SectionWraper>
-        <AboutSection/>
-      </SectionWraper>
+        <SectionWraper>
+          <AboutSection/>
+        </SectionWraper>
       </div>
       <SectionWraper>
         <BlogSection/>

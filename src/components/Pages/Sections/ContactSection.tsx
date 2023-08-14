@@ -22,19 +22,19 @@ export default function ContactSection() {
                 </div>
                 <div className='text-md md:text-lg font-regular md:font-medium flex flex-col gap-4 mt-5 '>
                   <div className='flex gap-3'>
-                    <LocationIcon/>
+                    <LocationIcon  color='#000'/>
                     <p>Barcelona, España</p>
                   </div>
                   <div className='flex gap-3'>
-                    <EmailIcon/>
+                    <EmailIcon color='#000'/>
                     <a href='mailto:martinmariotti.realestate@gmail.com'>martinmariotti.realestate@gmail.com</a>
                   </div>
                   <div className='flex gap-3'>
-                    <PhoneIcon/>
+                    <PhoneIcon color='#000'/>
                     <p>España (+34) 624250094</p>
                   </div>
                   <div className='flex gap-3'>
-                    <PhoneIcon/>
+                    <PhoneIcon color='#000'/>
                     <p>Italia  (+39) 3802056435</p>
                   </div>
                 </div>

@@ -5,6 +5,7 @@ interface TitleProps {
     content: string
     alignment: "start" | "end" | "center";
     subtitle?: string
+    // theme: "dark" | "light"
 }
 
 export default function TitleSection({content, alignment, subtitle}:TitleProps) {

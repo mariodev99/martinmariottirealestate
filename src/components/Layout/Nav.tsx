@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { CloseIcon, Logo, LogoIcon, MenuIcon } from '../Icons'
 import Link from 'next/link'
-import { AnimatePresence, MotionValue, motion, useCycle, useMotionValueEvent, useScroll } from "framer-motion";
+import { AnimatePresence, motion, useCycle, useMotionValueEvent, useScroll } from "framer-motion";
 import PrimaryButton from '../Buttons/PrimaryButton';
-import { Router, useRouter } from 'next/router';
+import { useRouter } from 'next/router';
 import { Link as ScrollLink } from "react-scroll"
 
 
@@ -43,6 +43,11 @@ export const Nav = () => {
   const router = useRouter()
   const [open, cycleOpen] = useCycle(false, true);
   const { scrollY } = useScroll()
+
+  console.log(router.pathname, "Base path")
+
+  const colorInContactPage = router.pathname === "/contacto" && "black"
+
   const [backgroundNavColor, setBackgroundNavColor] = useState("transparent")
 
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -59,6 +64,7 @@ export const Nav = () => {
     cycleOpen()
   }
 
+  console.log(router.pathname, "Base path")
 
 
   return <>
@@ -67,7 +73,7 @@ export const Nav = () => {
       animate={{opacity: 1, y: 0 }}
       transition={{ duration: 0.5}}
       style={{ backgroundColor: backgroundNavColor }}
-      className='fixed w-full flex top-0 h-16 items-center z-40 '
+      className='fixed w-full flex top-0 h-16 items-center  z-40 '
     >
       <div className="container flex mx-auto w-full justify-between px-3 items-center">
         <div className='hidden md:block'>
@@ -79,13 +85,21 @@ export const Nav = () => {
         <div className={`items-center justify-center flex-1 gap-8 hidden md:flex text-lg font-medium ${backgroundNavColor === "white" ? "text-dark" : "text-white"}`}>
           <Link href={"/inicio"} className=''>Inicio</Link>
 
-          {/* if estoy en inicio */}
-          <ScrollLink to="section_about_me" smooth={true} duration={500}>Sobre mi desde inicio</ScrollLink>
-          {/* else */}
-          <Link href={"/inicio#section_about_me"} className=''>Sobre mi desde otra</Link>
+          {router.pathname === "/inicio" ? 
+          <div className=''>
+            <ScrollLink to="section_about_me" smooth={true} duration={500}>Sobre mi</ScrollLink>
+          </div>
+          :
+          <Link href={"/inicio#section_about_me"} className=''>Sobre mi</Link>
+          }
 
+          {router.pathname === "/inicio" ? 
+          <ScrollLink to="section_services" smooth={true} duration={500}>Servicios</ScrollLink>
+          :
+          <Link href={"/inicio#section_services"} className=''>Servicios</Link>
+          }
 
-          <Link href={"/servicios"} className=''>Servicios</Link>
+          {/* <Link href={"/servicios"} className=''>Servicios</Link> */}
           <Link href={"/blog"} className=''>Blog</Link>
         </div>
         <div className='hidden md:flex'>
@@ -95,8 +109,7 @@ export const Nav = () => {
           </PrimaryButton>    
         </Link>
         </div>
-        <button className='flex md:hidden' onClick={() => cycleOpen()}><MenuIcon color={backgroundNavColor === "white" ? "#000" : "#fff"}/> </button>
-
+        <button className='flex md:hidden' onClick={() => cycleOpen()}><MenuIcon color={backgroundNavColor === "white" ? "#000" : "#fff"}/></button>
       </div>
     </motion.div>
 
@@ -143,6 +156,10 @@ export const Nav = () => {
                   </motion.div>
                 ))}
             </motion.div>
+                {/* <div className='flex flex-col justify-end items-center h-64 text-white border-2 border-white'>
+                  <div className='text-lg text-secondary'>Martin Mariotti</div>
+                  <div className='uppercase text-secondary text-md'>personal shopper inmobiliario</div>
+                </div> */}
           </motion.aside>
         )}
     </AnimatePresence>
