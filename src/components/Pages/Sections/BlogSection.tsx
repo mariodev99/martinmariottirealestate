@@ -2,11 +2,10 @@ import React, { useState } from 'react'
 import Image, { StaticImageData } from 'next/image'
 import edificioImage from "../../../../public/images/edificio.jpg"
 import Servicio2 from "../../../../public/images/Servicio2.jpg"
-
-import SectionWraper from '@/components/Layout/SectionWraper'
+import Servicio3 from "../../../../public/images/Servicio3.jpg"
+import Servicio4 from "../../../../public/images/Servicio4.jpg"
 import TitleSection from '@/components/Layout/TitleSection'
-import PrimaryButton from '@/components/Buttons/PrimaryButton'
-import { DownArrowIcon, UpArrowIcon } from '@/components/Icons'
+import {  UpArrowIcon } from '@/components/Icons'
 import { motion } from 'framer-motion'
 
 const BlogList = [
@@ -25,14 +24,14 @@ const BlogList = [
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     },
     {
-        image: edificioImage,
+        image: Servicio3,
         category: "inversiones",
         date: "22 de Noviembre del 2022",
         title: "Tradicional forma de financiación ",
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     },
     {
-      image: Servicio2,
+      image: Servicio4,
       category: "inversiones",
       date: "22 de Noviembre del 2022",
       title: "Planificar la inversión desde el inicio 2",

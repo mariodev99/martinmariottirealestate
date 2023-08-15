@@ -7,6 +7,7 @@ import Image from 'next/image'
 import SectionWraper from '@/components/Layout/SectionWraper'
 import { motion } from 'framer-motion'
 import { Service } from '@/db/Services'
+import { SwiperSlide, Swiper } from "swiper/react";
 
 const container = {
   hidden: { opacity: 0 },
@@ -36,18 +37,13 @@ const serviceVariant = {
 
 const ServiceBox = ({title, image, index, subtitle}:Service) => (
     <motion.div                   
-      className="bg-white flex flex-col justify-between rounded-2xl shadow-xl "
+      className="flex flex-col justify-between"
       variants={serviceVariant}
     >
-      <div className='py-5 px-3'>
-        <div className='inline rounded-full border border-black px-2 uppercase font-medium text-sm'>
-          {subtitle}
-        </div>
-        <p className='mt-5 text-xl font-semibold'>{title}</p>
-      </div>
+
       {/* Image */}
       <motion.div 
-        className='relative w-full h-40  rounded-2xl overflow-hidden'
+        className='relative w-full h-64  rounded-2xl overflow-hidden'
       >
         <Image
           src={image}
@@ -57,7 +53,12 @@ const ServiceBox = ({title, image, index, subtitle}:Service) => (
           quality={100} 
         />
       </motion.div>
-
+      <div className='py-3 px-3'>
+        <div className='inline rounded-full border border-black px-2 uppercase font-medium text-sm'>
+          {subtitle}
+        </div>
+        <p className='mt-3 text-xl font-semibold'>{title}</p>
+      </div>
   </motion.div>
 )
 
@@ -66,30 +67,55 @@ export default function ServicesSection() {
   return (
       <div className='flex flex-col gap-12'>
           <TitleSection
-            content='Concreta tu proyecto de inversión en bienes raíces' 
+            content='Te ayudo a concretar tu proyecto de inversión en bienes raíces, brindando un acompañamiento integral y servicios personalizados' 
             alignment={"center"} 
-            subtitle="servicios y acompañamiento integral"
           />
-          <p className='text-secondary text-md md:text-xl mt-5'>
-            Como Agente del Comprador, me dedico exclusivamente a la búsqueda de propiedades por encargo expreso de mis clientes compradores, ya sea que se encuentren en España o Italia al momento de la compra.
-          </p>
-          {/* Servicios */}
           <div>
-            <h3 className='font-semibold text-lg md:text-2xl'>Delega todo el proceso y simplifica tu proyecto de inversion </h3>
-            <motion.div     
-              variants={container}
-              initial="hidden"
-              whileInView="show" 
-              viewport={{ once: true }}
-              className='pt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5'
-              >
-                {/* AnimationVariant={serviceVariant} */}
-                {ServiceList.map((item, index) => (
-                    <ServiceBox  key={item.title} index={index} {...item}/>
-                  ))}
-            </motion.div>
+          <h2 className='font-medium'>
+          Simplifica tu inversión en inmuebles delegando todo el proceso: 
+          </h2>
+
+          <ul className='list-disc mt-5'>
+            {ServiceList.map((item, index) => (
+              <li className='flex items-center gap-3 '>
+                <div className='h-3 w-3 bg-[#2ccdff] rounded-full'></div>
+                <p>{item.title}</p>
+              </li>
+            ))}
+          </ul>
+          </div>
+          <div>
+            <Swiper
+              spaceBetween={20}
+              breakpoints={{
+              0: {
+                slidesPerView: 1.2,
+              },
+              450: {
+                slidesPerView: 1.5,
+              },
+              720: {
+                slidesPerView: 3,
+              },
+              960: {
+                slidesPerView: 3.5,
+              },
+              1200: {
+                slidesPerView: 4,
+              },
+          }}
+        >
+          {ServiceList.map((item, index) => (
+            <SwiperSlide key={item.title} index={index} {...item}>
+                <ServiceBox  key={item.title} index={index} {...item}/>
+            </SwiperSlide>
+          ))}
+            </Swiper>
           </div>
 
+          <p className='text-secondary text-md md:text-xl mt-5 text-center'>
+            Como Agente del Comprador, me dedico exclusivamente a la búsqueda de propiedades por encargo expreso de mis clientes compradores, ya sea que se encuentren en España o Italia al momento de la compra.
+          </p>
       {/* Ventajas */}
       <div className=''>
         <h2 className='font-semibold text-2xl'>¿Por que contratar mis servicios?</h2>

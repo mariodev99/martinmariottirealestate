@@ -23,7 +23,7 @@ export default function TitleSection({content, alignment, subtitle}:TitleProps) 
         <h2 className={`pt-2 uppercase w-full text-secondary text-xs md:text-base font-medium text-${alignment}`}>
           {subtitle}
         </h2>
-        <h1 className={` text-xl md:text-5xl font-bold text-${alignment}`}>{content}</h1>
+        <h1 className={` text-lg md:text-3xl font-bold text-${alignment}`}>{content}</h1>
       </div>
     </motion.div>
 
