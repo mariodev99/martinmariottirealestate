@@ -74,6 +74,7 @@ export default function ServicesSection() {
           <h2 className='font-medium md:text-xl'>
             Simplifica tu inversión en inmuebles delegando todo el proceso: 
           </h2>
+
           <ul className='list-disc mt-5 md:text-lg'>
             {ServiceList.map((item, index) => (
               <li className='flex items-center gap-3 '>
@@ -83,6 +84,9 @@ export default function ServicesSection() {
             ))}
           </ul>
           </div>
+          <h2 className='font-medium md:text-xl'>
+          Maximiza la eficacia de tu inversión delegando todo el proceso:
+          </h2>
           <div>
             <Swiper
               spaceBetween={20}

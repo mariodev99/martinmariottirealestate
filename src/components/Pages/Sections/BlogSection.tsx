@@ -123,7 +123,7 @@ export default function BlogSection() {
   return (
     <>
       <TitleSection 
-        content='Ultima informacion del sector inmobiliario' 
+        content='Lo que debes saber para concretar tu proyecto de inversión en bienes raíces en España o Italia con éxito.  ' 
         subtitle='Blog' 
         alignment='center'
       />
