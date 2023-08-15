@@ -40,7 +40,7 @@ export default function HomePage() {
           <ServicesSection/>
         </SectionWraper>
       </div>
-      <div id='section_about_me'>
+      <div id='section_about_me' className='bg-[#020202] text-white'>
         <SectionWraper>
           <AboutSection/>
         </SectionWraper>
