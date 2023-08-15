@@ -4,13 +4,14 @@ import { Merriweather,Inter } from 'next/font/google'
 import Image from 'next/image'
 import SectionWraper from '@/components/Layout/SectionWraper'
 import headerImage from "../../../../public/images/header2.jpg"
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
 const HEADER_INFORMATION = {
   title: "Invierte en inmuebles de españa o italia, de forma inteligente, rentable y escalable",
   subtitle: "Crea tu patrimonio inmobiliario inviertiendo en los inmuebles de mayor rentabilidad con total seguridad y tranquilidad",
-  callToAction: "Realiza tu proyecto"
+  callToAction: "Concreta tu proyecto"
 }
 
 export default function HeaderSection() {
@@ -30,12 +31,14 @@ export default function HeaderSection() {
       <SectionWraper>
         <main className='relative text-white md:grid w-full grid-cols-1 md:grid-cols-2 items-center gap-10'>
           <div className='flex flex-col gap-5'>
-            <h1 className={`${inter.className} text-3xl md:text-5xl font-bold tracking-wide`}>{HEADER_INFORMATION.title}</h1>
+            <h1 className={`${inter.className} text-3xl md:text-5xl font-medium tracking-wide`}>{HEADER_INFORMATION.title}</h1>
             <h2 className={`${inter.className} text-lg md:text-xl font-regular md:font-medium `}>{HEADER_INFORMATION.subtitle}</h2>
             <div className='w-full'>
+              <Link href={"/contacto"}>
               <PrimaryButton mode='light'>
                 <p className='text-xl'>{HEADER_INFORMATION.callToAction}</p>
               </PrimaryButton>          
+              </Link>
             </div>
           </div>
           {/* Empty */}

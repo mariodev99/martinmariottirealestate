@@ -71,15 +71,14 @@ export default function ServicesSection() {
             alignment={"center"} 
           />
           <div>
-          <h2 className='font-medium'>
-          Simplifica tu inversión en inmuebles delegando todo el proceso: 
+          <h2 className='font-medium md:text-xl'>
+            Simplifica tu inversión en inmuebles delegando todo el proceso: 
           </h2>
-
-          <ul className='list-disc mt-5'>
+          <ul className='list-disc mt-5 md:text-lg'>
             {ServiceList.map((item, index) => (
               <li className='flex items-center gap-3 '>
                 <div className='h-3 w-3 bg-[#2ccdff] rounded-full'></div>
-                <p>{item.title}</p>
+                <p className=''>{item.title}</p>
               </li>
             ))}
           </ul>
