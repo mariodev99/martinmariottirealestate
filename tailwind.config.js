@@ -19,7 +19,7 @@ module.exports = {
         greenprimary: "#c0ff3f",
         greensecondary: "#B0C916",
         orangeprimary: "#FF7A00",
-        secondary: "#b3b3b3",
+        secondary: "#757575",
       },
       borderRadius: {
         "4xl": "35px",

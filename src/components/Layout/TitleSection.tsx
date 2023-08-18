@@ -17,14 +17,12 @@ export default function TitleSection({content, alignment, subtitle}:TitleProps) 
       style={{ overflow: "hidden"}}
       transition={{ duration: 0.6}}
       viewport={{ once: true }}
-      className='flex flex-col items-center'
+      className={`flex flex-col w-full items-${alignment}`}
     >
-      <div className='w-3/4'>
         <h2 className={`pt-2 uppercase w-full text-secondary text-xs md:text-base font-medium text-${alignment}`}>
           {subtitle}
         </h2>
-        <h1 className={` text-lg md:text-3xl font-bold text-${alignment}`}>{content}</h1>
-      </div>
+        <h1 className={` text-lg md:text-3xl font-semibold text-${alignment}`}>{content}</h1>
     </motion.div>
 
   )
