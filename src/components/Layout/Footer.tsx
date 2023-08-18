@@ -14,10 +14,10 @@ export default function Footer() {
           <h3 className='font-normal text-base'>Martin Mariotti, 2023</h3>
         </div>
         <div className=' mt-5 flex flex-col gap-2 md:gap-4 text-lg md:text-xl justify-center items-start md:items-end'>
-          <Link href={"/contacto"}>Servicios</Link>
-          <Link href={"/contacto"}>Blog</Link>
-          <Link href={"/contacto"}>Sobre mi</Link>
-          <Link href={"/contacto"}>Contacto</Link>
+          <Link className='nav-link' href={"/contacto"}>Servicios</Link>
+          <Link className='nav-link' href={"/contacto"}>Blog</Link>
+          <Link className='nav-link' href={"/contacto"}>Sobre mi</Link>
+          <Link className='nav-link' href={"/contacto"}>Contacto</Link>
         </div>
       </div>
       <div className='my-10 h-[2px] bg-gradient-to-r from-[#030E16] via-white to-[#030E16]'></div>
