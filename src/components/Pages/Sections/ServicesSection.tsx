@@ -76,7 +76,7 @@ export default function ServicesSection() {
 
           <ul className='list-disc mt-5 md:text-lg'>
             {ServiceList.map((item, index) => (
-              <li className='flex items-center gap-3 '>
+              <li key={item.title} className='flex items-center gap-3 '>
                 <div className='h-3 w-3 bg-greenprimary border border-black rounded-full'></div>
                 <p className=''>{item.title}</p>
               </li>
@@ -109,7 +109,7 @@ export default function ServicesSection() {
         >
           {ServiceList.map((item, index) => (
             <SwiperSlide key={item.title} index={index} {...item}>
-                <ServiceBox  key={item.title} index={index} {...item}/>
+                <ServiceBox  index={index} {...item}/>
             </SwiperSlide>
           ))}
             </Swiper>
