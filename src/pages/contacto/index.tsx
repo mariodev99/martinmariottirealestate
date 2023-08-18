@@ -4,7 +4,7 @@ import headerImage from "../../../public/images/header2.jpg"
 import Image from 'next/image'
 import Footer from '@/components/Layout/Footer'
 import { EmailIcon, LocationIcon, LogoIcon, PhoneIcon } from '@/components/Icons'
-
+import contactImage from "../../../public/images/ContactPage.avif"
 export default function ContactPage() {
 
   const inputClassname = "rounded-xl mt-1 px-2 py-1 text-xl bg-[#ededed] focus:outline-none "
@@ -61,8 +61,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className='relative border-2 w-full h-full'>
-                  IMAGE
+                <div className='relative overflow-hidden h-full w-full h-42 rounded-3xl bg-contactImage  bg-cover bg-no-repeat bg-center'>
                 </div>
               </div>
 
@@ -84,7 +83,7 @@ export default function ContactPage() {
                 </div>
                 <button 
                   type='submit' 
-                  className='rounded-full w-full bg-black text-white transition-all duration-500 font-medium py-3 h-full px-7'> 
+                  className='rounded-full w-full bg-black text-white transition-all duration-500 font-medium py-3 px-7'> 
                     Enviar mensaje
                 </button>
               </form>

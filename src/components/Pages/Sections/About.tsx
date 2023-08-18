@@ -5,6 +5,7 @@ import Martin from "../../../../public/images/martinabout.png"
 import { Characteristics } from '@/components/Accordion/AccordionCharacteristics'
 import { EnfoqueIcon, MisionIcon, ValoresIcon } from '@/components/Icons'
 import { motion } from 'framer-motion'
+import {PrimaryButton} from '@/components/Buttons/PrimaryButton'
 
 export interface CharacteristicsProps {
   title: string
@@ -16,17 +17,17 @@ const Caracteristicas:CharacteristicsProps[] = [
     {
       title: "Enfoque",
       description: "Mi enfoque es simple: tu éxito inmobiliario. Me esforzare por superar las expectativas al proporcionar una experiencia de búsqueda y compra excepcionalmente personalizada y orientada a resultados.",
-      icon:  <EnfoqueIcon/>
+      icon:  <EnfoqueIcon color='#c0ff3f'/>
     },
     {
       title: "Valores",
       description: "Estoy comprometido con la ética profesional, la transparencia y la honestidad en cada interacción. Mis valores me impulsan a priorizar el bienestar de mis clientes y a establecer relaciones basadas en la confianza mutua.",
-      icon:  <ValoresIcon/>
+      icon:  <ValoresIcon color='#c0ff3f'/>
     },
     {
       title: "Mision",
       description: "Mi misión es ser el aliado inmobiliario confiable y dedicado guiandote hacia la propiedad ideal, proporcionando un servicio personalizado y garantizando su satisfacción en cada paso del proceso de compra.",
-      icon: <MisionIcon/>
+      icon: <MisionIcon color='#c0ff3f'/>
     },
   ]
 
@@ -60,11 +61,11 @@ export default function AboutSection() {
           <p className=''>
             Formado en administración y dirección de empresa como así también especializado en agente e inversor inmobiliario, acompaño a mis clientes de manera integral para ayudarlos a hacer realidad sus proyectos de inversión inmobiliaria.
             Ya sea que desee comprar o vender, en España o Italia estoy aquí para guiarlo en cada paso del camino, asegurándole una experiencia tranquila y sin estrés.
-            <br/>
+            {/* <br/> */}
           </p>
           <p className='hidden md:block'>
-          La atención al detalle y el bienestar de mis clientes y mis colaboradores me convierten en el socio ideal para todas sus necesidades inmobiliarias.
-          ¡Embarquémonos juntos en esta aventura y hagamos realidad sus sueños inmobiliarios!
+            La atención al detalle y el bienestar de mis clientes y mis colaboradores me convierten en el socio ideal para todas sus necesidades inmobiliarias.
+            ¡Embarquémonos juntos en esta aventura y hagamos realidad sus sueños inmobiliarios!
           </p>
         </motion.div>
       </div>
@@ -83,6 +84,10 @@ export default function AboutSection() {
       {/* Caracteristicas Mobile */}
       <div className='block md:hidden mt-8'>
         <Characteristics characteristics={Caracteristicas} />
+      </div>
+      
+      <div className='mt-2 flex justify-center'>
+        <PrimaryButton mode='dark'>Contactame</PrimaryButton>
       </div>
     </div>
   )

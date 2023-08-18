@@ -34,7 +34,7 @@ const BlogList = [
       image: Servicio4,
       category: "inversiones",
       date: "22 de Noviembre del 2022",
-      title: "Planificar la inversión desde el inicio 2",
+      title: "Ubicación y diversificación ",
       description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
   },
     // {
@@ -95,7 +95,7 @@ export default function BlogSection() {
         return (
           <motion.div
             variants={serviceVariant}                
-            className="group cursor-pointer relative w-full text-white flex flex-col justify-end h-32 md:h-96 overflow-hidden rounded-xl"
+            className=" px-5 py-2 group cursor-pointer relative w-full text-white flex flex-col justify-end h-32 md:h-96 overflow-hidden rounded-3xl"
             onHoverStart={()=> setIsHover(true)}
             onHoverEnd={()=> setIsHover(false)}
           >
@@ -105,16 +105,16 @@ export default function BlogSection() {
                 layout="fill"
                 objectFit="cover"
                 quality={100}
-                className='group-hover:brightness-[0.4] brightness-[0.8] ease-in duration-100'
+                className=' brightness-[0.4] ease-in duration-100'
               />
-            <div className='flex items-center px-5 py-2 relative z-20  gap-5'>
-              <h3 className={`font-medium text-base`}>{title}</h3>
-              <motion.div
-                animate={{ rotateZ: isHover ? 45 : 0}}
-              >
-                <UpArrowIcon/>
-              </motion.div>
-            </div>
+              <h3 className={`relative z-20 font-medium text-lg`}>{title}</h3>
+              <div className='flex justify-end relative z-20  gap-5'>
+                <motion.div
+                 animate={{ rotateZ: isHover ? 45 : 0, fill: isHover ? "#c0ff3f" : "none", stroke: isHover ? "black" : "white" }}
+                >
+                  <UpArrowIcon/>
+                </motion.div>
+              </div>
           </motion.div>
         )
     }

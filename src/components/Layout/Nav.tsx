@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { CloseIcon, Logo, LogoIcon, MenuIcon } from '../Icons'
 import Link from 'next/link'
 import { AnimatePresence, motion, useCycle, useMotionValueEvent, useScroll } from "framer-motion";
-import PrimaryButton from '../Buttons/PrimaryButton';
+import {PrimaryButton} from '../Buttons/PrimaryButton';
 import { useRouter } from 'next/router';
 import { Link as ScrollLink } from "react-scroll"
 
@@ -52,7 +52,7 @@ export const Nav = () => {
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     if ( latest > 50) {
-      setBackgroundNavColor("white")
+      setBackgroundNavColor("black")
     }
     else {
       setBackgroundNavColor("transparent")
@@ -73,11 +73,23 @@ export const Nav = () => {
       animate={{opacity: 1, y: 0 }}
       transition={{ duration: 0.5}}
       style={{ backgroundColor: backgroundNavColor }}
-      className='fixed w-full flex top-0 h-16 items-center  z-40 '
+      className='fixed w-full flex top-0 h-16 items-center z-40'
     >
-      <div className="container flex mx-auto w-full justify-between px-3 items-center">
-        <div className='hidden md:block'>
-          <Logo color={backgroundNavColor === "white" ? "#000" : "white"} />
+      <div className="container flex mx-auto w-full justify-between px-3 items-center ">
+        <div className='hidden md:flex gap-3'>
+          <motion.div
+            animate={{scale: backgroundNavColor === "black" ? 0.9 : 1 }}
+          >
+            <LogoIcon color={backgroundNavColor === "black" ? "#c0ff3f" : "white"} />
+          </motion.div>
+          <motion.div
+          style={{color: backgroundNavColor === "black" ? "white" : "white" }}
+          animate={{opacity: backgroundNavColor === "black" ? 0 : 1, y:  backgroundNavColor === "black" ? -100 : 0 }}
+          className='border-l-2 border-white pl-3'
+          >
+            <p className='text-lg font-semibold'>Martin Mariotti</p>
+            <p>Real shopper inmobiliario</p>
+          </motion.div>
         </div>
         <div className='block md:hidden'>
           <LogoIcon color={backgroundNavColor === "white" ? "#000" : "#fff"}/>

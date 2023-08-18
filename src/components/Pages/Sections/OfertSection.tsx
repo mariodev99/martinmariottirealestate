@@ -1,7 +1,7 @@
 import React from 'react'
 import { Merriweather,Inter } from 'next/font/google'
 import Image, { StaticImageData } from 'next/image'
-import PrimaryButton from '@/components/Buttons/PrimaryButton'
+import {PrimaryButton} from '@/components/Buttons/PrimaryButton'
 import edificioImage from "../../../../public/images/edificio.jpg"
 import { BathIcon, BedIcon, LocationIcon, RulerIcon } from '@/components/Icons'
 import SectionWraper from '@/components/Layout/SectionWraper'

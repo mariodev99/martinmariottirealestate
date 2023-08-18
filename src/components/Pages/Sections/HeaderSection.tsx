@@ -1,4 +1,4 @@
-import PrimaryButton from '@/components/Buttons/PrimaryButton'
+import {PrimaryButton} from '@/components/Buttons/PrimaryButton'
 import React from 'react'
 import { Merriweather,Inter } from 'next/font/google'
 import Image from 'next/image'
@@ -18,7 +18,7 @@ export default function HeaderSection() {
   return (
     <div className="relative flex items-center pt-0 h-screen w-full">
        {/* bg-[url('/images/header2.jpg')] bg-right bg-cover  */}
-       <div className='absolute w-full h-full brightness-50'>
+       <div className='absolute w-full h-full brightness-[0.3]'>
           <Image
             src={headerImage}
             alt='imagen del servicio' 
@@ -29,20 +29,19 @@ export default function HeaderSection() {
           />
         </div>
       <SectionWraper>
-        <main className='relative text-white md:grid w-full grid-cols-1 md:grid-cols-2 items-center gap-10'>
+        <main className='relative text-white w-2/3'>
           <div className='flex flex-col gap-5'>
             <h1 className={`${inter.className} text-3xl md:text-5xl font-medium tracking-wide`}>{HEADER_INFORMATION.title}</h1>
             <h2 className={`${inter.className} text-lg md:text-xl font-regular md:font-medium `}>{HEADER_INFORMATION.subtitle}</h2>
             <div className='w-full'>
               <Link href={"/contacto"}>
-              <PrimaryButton mode='light'>
-                <p className='text-xl'>{HEADER_INFORMATION.callToAction}</p>
-              </PrimaryButton>          
+              <PrimaryButton mode='dark'>
+                {HEADER_INFORMATION.callToAction}
+              </PrimaryButton> 
               </Link>
             </div>
           </div>
           {/* Empty */}
-          <div></div>
         </main>
 
       </SectionWraper>

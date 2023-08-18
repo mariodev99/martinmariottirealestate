@@ -22,7 +22,7 @@ export const ServiceList:Service[] = [
         description: "Buscamos superar las expectativas de nuestros clientes al ofrecerles una experiencia inigualable en la búsqueda de propiedades. Nuestro objetivo es ayudarles a tomar decisiones informadas y acertadas, maximizando su rentabilidad y brindándoles tranquilidad en cada inversión",
         icon:  <TimeIcon/>,
         image: busquedaImg,
-        subtitle: "busqueda"
+        subtitle: "Busqueda"
       },
       {
         title: "Negociacion al mejor precio ",

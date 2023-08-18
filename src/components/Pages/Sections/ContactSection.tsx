@@ -58,7 +58,7 @@ export default function ContactSection() {
                 </div>
                 <button 
                   type='submit' 
-                  className='rounded-full w-full bg-black text-white transition-all duration-500 font-medium py-3 h-full px-7'> 
+                  className='rounded-full w-full bg-black text-greenprimary transition-all duration-500 font-medium py-3 h-full px-7'> 
                     Enviar mensaje
                 </button>
               </form>

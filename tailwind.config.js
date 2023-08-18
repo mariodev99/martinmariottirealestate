@@ -8,13 +8,18 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
+        contactImage: "url('/images/ContactPage.avif')",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         header: "url('/public/images/martinheader.jpg')",
       },
       colors: {
-        secondary: "#686868",
+        // ddf247 otro verde clarito
+        greenprimary: "#c0ff3f",
+        greensecondary: "#B0C916",
+        orangeprimary: "#FF7A00",
+        secondary: "#b3b3b3",
       },
       borderRadius: {
         "4xl": "35px",

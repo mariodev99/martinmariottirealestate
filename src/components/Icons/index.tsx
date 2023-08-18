@@ -129,7 +129,7 @@ export const InstagramIcon = () => {
 
 export const CashIcon = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 24 24" fill="none"  className="stroke-secondary">
+    <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 24 24" fill="none"  className="stroke-greensecondary">
     <path d="M14.8 8.99997C14.6188 8.68574 14.3557 8.42668 14.0386 8.25053C13.7215 8.07438 13.3625 7.98777 13 7.99997H11C10.4696 7.99997 9.96086 8.21069 9.58579 8.58576C9.21071 8.96083 9 9.46954 9 9.99997C9 10.5304 9.21071 11.0391 9.58579 11.4142C9.96086 11.7893 10.4696 12 11 12H13C13.5304 12 14.0391 12.2107 14.4142 12.5858C14.7893 12.9608 15 13.4695 15 14C15 14.5304 14.7893 15.0391 14.4142 15.4142C14.0391 15.7893 13.5304 16 13 16H11C10.6375 16.0122 10.2785 15.9256 9.96142 15.7494C9.64435 15.5733 9.38115 15.3142 9.2 15M12 6V8M12 16V18M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   )
@@ -137,7 +137,7 @@ export const CashIcon = () => {
 
 export const TimeIcon = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 24 24" fill="none" className="stroke-secondary">
+    <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 24 24" fill="none" className="stroke-greensecondary">
     <path d="M12 7V12L15 15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   )
@@ -146,15 +146,15 @@ export const TimeIcon = () => {
 
 export const SmileIcon = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 24 24" fill="none" className="stroke-secondary">
+    <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 24 24" fill="none" className="stroke-greensecondary">
     <path d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM12 3C11.4696 3 10.9609 3.21071 10.5858 3.58579C10.2107 3.96086 10 4.46957 10 5C10 5.53043 10.2107 6.03914 10.5858 6.41421C10.9609 6.78929 11.4696 7 12 7M9 10H9.01M15 10H15.01M9.5 15C9.82588 15.3326 10.2148 15.5968 10.6441 15.7772C11.0734 15.9576 11.5344 16.0505 12 16.0505C12.4656 16.0505 12.9266 15.9576 13.3559 15.7772C13.7852 15.5968 14.1741 15.3326 14.5 15"  strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   )
 }
 
-export const EnfoqueIcon = () => {
+export const EnfoqueIcon = ({color}:{color: string}) => {
   return (
-      <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55" fill="none" className="stroke-secondary h-14 w-14">
+      <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55" fill="none" className="h-14 w-14"  stroke={color}>
         <path d="M27.5 29.7917C28.7657 29.7917 29.7917 28.7657 29.7917 27.5C29.7917 26.2343 28.7657 25.2083 27.5 25.2083C26.2343 25.2083 25.2083 26.2343 25.2083 27.5C25.2083 28.7657 26.2343 29.7917 27.5 29.7917Z"  strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         <path d="M27.5 38.9583C33.8283 38.9583 38.9583 33.8283 38.9583 27.5C38.9583 21.1717 33.8283 16.0417 27.5 16.0417C21.1717 16.0417 16.0417 21.1717 16.0417 27.5C16.0417 33.8283 21.1717 38.9583 27.5 38.9583Z"  strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         <path d="M27.5 48.125C38.8909 48.125 48.125 38.8909 48.125 27.5C48.125 16.1091 38.8909 6.875 27.5 6.875C16.1091 6.875 6.875 16.1091 6.875 27.5C6.875 38.8909 16.1091 48.125 27.5 48.125Z"  strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -162,17 +162,17 @@ export const EnfoqueIcon = () => {
   )
 }
 
-export const ValoresIcon = () => {
+export const ValoresIcon = ({color}:{color: string}) => {
   return (
-      <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55" fill="none" className="stroke-secondary h-14 w-14">
+      <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55" fill="none" className=" h-14 w-14" stroke={color}>
         <path d="M27.5 20.625V48.125M27.5 20.625C31.297 20.625 34.375 17.547 34.375 13.75C34.375 9.95304 31.297 6.875 27.5 6.875C23.703 6.875 20.625 9.95304 20.625 13.75C20.625 17.547 23.703 20.625 27.5 20.625ZM27.5 48.125C22.6377 48.125 17.9745 46.1935 14.5364 42.7553C11.0982 39.3171 9.16667 34.654 9.16667 29.7917M27.5 48.125C32.3623 48.125 37.0255 46.1935 40.4636 42.7553C43.9018 39.3171 45.8333 34.654 45.8333 29.7917M48.125 29.7917H43.5417M11.4583 29.7917H6.875" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
   )
 }
 
-export const MisionIcon = () => {
+export const MisionIcon = ({color}:{color: string}) => {
   return (
-      <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55" fill="none" className="stroke-secondary h-14 w-14">
+      <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55" fill="none" className="h-14 w-14" stroke={color}>
         <path d="M11.4583 32.0834H43.5416L33.2291 21.7709L43.5416 11.4584H11.4583V48.125" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
   )
@@ -188,10 +188,10 @@ export const DownArrowIcon = () => {
 
 export const UpArrowIcon = () => {
   return (
-      <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
-      <path d="M16.75 29.5C23.7916 29.5 29.5 23.7916 29.5 16.75C29.5 9.70837 23.7916 4 16.75 4C9.70837 4 4 9.70837 4 16.75C4 23.7916 9.70837 29.5 16.75 29.5Z" fill="black"/>
-      <path d="M21.75 21.25C21.75 17.9305 21.75 12.75 21.75 12.75C21.75 12.75 16.5695 12.75 13.25 12.75" fill="black"/>
-      <path d="M21.75 12.75L13.25 21.25M21.75 12.75C21.75 12.75 21.75 17.9305 21.75 21.25M21.75 12.75C21.75 12.75 16.5695 12.75 13.25 12.75" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 34 34" >
+      <path d="M16.75 29.5C23.7916 29.5 29.5 23.7916 29.5 16.75C29.5 9.70837 23.7916 4 16.75 4C9.70837 4 4 9.70837 4 16.75C4 23.7916 9.70837 29.5 16.75 29.5Z" />
+      <path d="M21.75 21.25C21.75 17.9305 21.75 12.75 21.75 12.75C21.75 12.75 16.5695 12.75 13.25 12.75" />
+      <path d="M21.75 12.75L13.25 21.25M21.75 12.75C21.75 12.75 21.75 17.9305 21.75 21.25M21.75 12.75C21.75 12.75 16.5695 12.75 13.25 12.75"  strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
 
   )

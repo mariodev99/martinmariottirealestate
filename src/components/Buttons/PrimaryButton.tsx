@@ -1,6 +1,6 @@
 import React from 'react'
-import { Merriweather,Inter } from 'next/font/google'
-
+import { motion } from 'framer-motion'
+import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 interface Props {
@@ -8,10 +8,10 @@ interface Props {
   mode: "dark" | "light"
 }
 
-
-export default function PrimaryButton({children, mode}:Props ){
+export const PrimaryButton = ({children, mode}:Props ) => {
   return (
-    <button 
+    <motion.button 
+      whileHover={{ scale: 1.1}}
       className={`
         rounded-full
         w-full
@@ -19,21 +19,19 @@ export default function PrimaryButton({children, mode}:Props ){
         transition-all 
         duration-500 
         ${inter.className}  
-        ${mode === "dark" ? "text-white" : "text-black"}
-        ${mode === "dark" ? "bg-black" : "bg-gradient-to-r from-[#0785ca] to-[#2ccdff]"}
-        font-medium 
+        ${mode === "dark" ? "text-black" : "text-greenprimary"}
+        ${mode === "dark" ? "bg-greenprimary" : "bg-black"}
         py-3
         h-full 
         px-10
-        uppercase
-        text-white
+        font-medium 
         `
-        // bg-[#1EAFED]
-        // text-white
-        
       }
     >
       {children}
-    </button>
+    </motion.button>
   )
 }
+
+export default PrimaryButton;
+
