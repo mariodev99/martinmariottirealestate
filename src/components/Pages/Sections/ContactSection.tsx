@@ -16,7 +16,7 @@ export default function ContactSection() {
             />
             <div className=' mt-5 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-10'>
               <div className='order-2 md:order-1 flex flex-col gap-4'>
-                <div className='mb-5'>
+                <div className='flex flex-col gap-3'>
                   <LogoIcon color='#000'/>
                   <h2 className=' text-2xl font-semibold'>Martin Mariotti, Real Estate Agent</h2>
                 </div>
