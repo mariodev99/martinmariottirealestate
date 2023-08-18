@@ -29,10 +29,10 @@ export default function HeaderSection() {
           />
         </div>
       <SectionWraper>
-        <main className='relative text-white w-2/3'>
+        <main className='relative text-white  w-full md:w-2/3'>
           <div className='flex flex-col gap-5'>
-            <h1 className={`${inter.className} text-3xl md:text-5xl font-medium tracking-wide`}>{HEADER_INFORMATION.title}</h1>
-            <h2 className={`${inter.className} text-lg md:text-xl font-regular md:font-medium `}>{HEADER_INFORMATION.subtitle}</h2>
+            <h1 className={`${inter.className} text-3xl md:text-5xl text-center md:text-start font-medium tracking-wide`}>{HEADER_INFORMATION.title}</h1>
+            <h2 className={`${inter.className} text-lg md:text-xl text-center md:text-start font-regular md:font-medium `}>{HEADER_INFORMATION.subtitle}</h2>
             <div className='w-full'>
               <Link href={"/contacto"}>
               <PrimaryButton mode='dark'>
