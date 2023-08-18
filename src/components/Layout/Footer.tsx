@@ -13,7 +13,7 @@ export default function Footer() {
           <h2 className='font-semibold text-2xl'>Mi asesoría, tu rentabilidad. <br/> Invierte con confianza hoy mismo.</h2>
           <h3 className='font-normal text-base'>Martin Mariotti, 2023</h3>
         </div>
-        <div className=' mt-5 flex flex-col gap-4 text-xl justify-center items-center md:items-end'>
+        <div className=' mt-5 flex flex-col gap-2 md:gap-4 text-lg md:text-xl justify-center items-start md:items-end'>
           <Link href={"/contacto"}>Servicios</Link>
           <Link href={"/contacto"}>Blog</Link>
           <Link href={"/contacto"}>Sobre mi</Link>
