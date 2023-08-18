@@ -107,7 +107,7 @@ export default function BlogSection() {
                 quality={100}
                 className=' brightness-[0.4] ease-in duration-100'
               />
-              <h3 className={`relative z-20 font-medium text-lg`}>{title}</h3>
+              <h3 className={`relative z-20 font-medium text-base md:text-lg`}>{title}</h3>
               <div className='flex justify-end relative z-20  gap-5'>
                 <motion.div
                  animate={{ rotateZ: isHover ? 45 : 0, fill: isHover ? "#c0ff3f" : "none", stroke: isHover ? "black" : "white" }}
