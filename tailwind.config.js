@@ -17,7 +17,7 @@ module.exports = {
       colors: {
         // ddf247 otro verde clarito
         greenprimary: "#c0ff3f",
-        greensecondary: "#B0C916",
+        greensecondary: "#BFDE00",
         orangeprimary: "#FF7A00",
         secondary: "#757575",
       },

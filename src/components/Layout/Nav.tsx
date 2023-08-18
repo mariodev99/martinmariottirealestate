@@ -95,26 +95,26 @@ export const Nav = () => {
           <LogoIcon color={backgroundNavColor === "white" ? "#000" : "#fff"}/>
         </div>
         <div className={`items-center justify-center flex-1 gap-8 hidden md:flex text-lg font-medium ${backgroundNavColor === "white" ? "text-dark" : "text-white"}`}>
-          <Link href={"/inicio"} className=''>Inicio</Link>
+          <Link href={"/inicio"} className='nav-link'>Inicio</Link>
 
           {router.pathname === "/inicio" ? 
-          <div className='cursor-pointer'>
+          <div className='cursor-pointer nav-link'>
             <ScrollLink to="section_about_me" smooth={true} duration={500}>Sobre mi</ScrollLink>
           </div>
           :
-          <Link href={"/inicio#section_about_me"} className=''>Sobre mi</Link>
+          <Link href={"/inicio#section_about_me"} className='nav-link'>Sobre mi</Link>
           }
 
           {router.pathname === "/inicio" ? 
-          <div className='cursor-pointer'>
+          <div className='cursor-pointer nav-link'>
             <ScrollLink to="section_services" smooth={true} duration={500}>Servicios</ScrollLink>
           </div>
           :
-          <Link href={"/inicio#section_services"} className=''>Servicios</Link>
+          <Link href={"/inicio#section_services"} className='nav-link'>Servicios</Link>
           }
 
           {/* <Link href={"/servicios"} className=''>Servicios</Link> */}
-          <Link href={"/blog"} className=''>Blog</Link>
+          <Link href={"/blog"} className='nav-link'>Blog</Link>
         </div>
         <div className='hidden md:flex'>
         <Link href={"/contacto"} className='text-base'>

@@ -130,8 +130,8 @@ const MostrarVentajas = () => (
 )
 
 const MostrarImagenes = () => (
-  <div className='grid grid-cols-2 gap-3 '>
-    <div className="  grid grid-rows-2 gap-3" >
+  <div className='hidden md:grid grid-cols-2 gap-3 '>
+    <div className="grid grid-rows-2 gap-3" >
       <div className='relative rounded-2xl overflow-hidden '>
       <Image 
         src={ServiceImage3} 
@@ -165,7 +165,7 @@ export default function ServicesSection() {
   return (
       <div className='flex flex-col gap-12 pt-5'>
 
-        <div className='grid grid-cols-2 gap-10'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
           <div>
             <TitleSection
               content='Te ayudo a concretar tu proyecto de inversión en bienes raíces, brindando un acompañamiento integral y servicios personalizados' 
@@ -185,7 +185,7 @@ export default function ServicesSection() {
               </ul>
             </div>
           </div>
-          {MostrarImagenes()}
+            {MostrarImagenes()}
         </div>
 
       {MostrarProceso()}
