@@ -64,7 +64,7 @@ export default function HeaderSection() {
               Invierte en inmuebles en España o Italia, de forma
               {headerWords.map((word, index) => (
                 <motion.span
-                  className='ml-3 block md:inline-block flex justify-center md:justify-start w-full absolute text-greenprimary'
+                  className='ml-0 md:ml-3 block md:inline-block flex justify-center md:justify-start w-full absolute text-greenprimary'
                   key={index}
                   variants={wordVariants}
                   initial="hidden"
