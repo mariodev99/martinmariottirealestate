@@ -18,7 +18,7 @@ export interface Service {
 
 export const ServiceList:Service[] = [
     {
-        title: "Busqueda del inmueble con mayor rentabilidad",
+        title: "Busqueda del inmueble mas rentable",
         description: "Buscamos superar las expectativas de nuestros clientes al ofrecerles una experiencia inigualable en la búsqueda de propiedades. Nuestro objetivo es ayudarles a tomar decisiones informadas y acertadas, maximizando su rentabilidad y brindándoles tranquilidad en cada inversión",
         icon:  <TimeIcon/>,
         image: busquedaImg,

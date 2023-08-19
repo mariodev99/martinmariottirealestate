@@ -21,7 +21,7 @@ export default function ContactPage() {
           <div className='relative h-80 w-full flex justify-center '>
             <div className='relative z-20 pt-24'>
               <h1 className={` text-xl md:text-5xl font-bold text-center text-white`}>Contacto</h1>
-              <h2 className={`pt-2  w-full text-white text-md md:text-2xl font-medium text-center`}>
+              <h2 className={`pt-2 px-5 w-full text-white text-md md:text-2xl font-medium text-center`}>
               Contactame y hagamos realidad tu proyecto de inversión inmobiliario
               </h2>
             </div>
@@ -38,7 +38,7 @@ export default function ContactPage() {
           {/* se agrego px-10 y pb-10 */}
           <div className='px-10 pb-10 mt-2 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-10'>
               <div className='order-2 md:order-1 flex flex-col gap-4 bg-black text-white rounded-4xl p-5'>
-                <div className='mb-5'>
+                <div className='mb-3'>
                   <LogoIcon color='#fff'/>
                   <h2 className=' text-2xl font-semibold'>Martin Mariotti, Real Estate Agent</h2>
                 </div>
@@ -49,7 +49,7 @@ export default function ContactPage() {
                   </div>
                   <div className='flex gap-3'>
                     <EmailIcon color='#fff'/>
-                    <a href='mailto:martinmariotti.realestate@gmail.com'>martinmariotti.realestate@gmail.com</a>
+                    <a href='mailto:martinmariotti.realestate@gmail.com'>martinmariotti.realestate</a>
                   </div>
                   <div className='flex gap-3'>
                     <PhoneIcon color='white'/>

@@ -178,7 +178,7 @@ export default function ServicesSection() {
               <ul className='list-disc mt-5 md:text-lg'>
                 {ServiceList.map((item, index) => (
                   <li key={item.title} className='flex items-center gap-3 '>
-                    <div className='h-3 w-3 bg-greensecondary  rounded-full'></div>
+                    <div className='h-[10px] w-[10px] bg-greensecondary  rounded-full'></div>
                     <p className=''>{item.title}</p>
                   </li>
                 ))}

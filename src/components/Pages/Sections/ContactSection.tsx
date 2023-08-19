@@ -18,9 +18,9 @@ export default function ContactSection() {
               <div className='order-2 md:order-1 flex flex-col gap-4'>
                 <div className='flex flex-col gap-3'>
                   <LogoIcon color='#000'/>
-                  <h2 className=' text-2xl font-semibold'>Martin Mariotti, Real Estate Agent</h2>
+                  <h2 className=' text-2xl font-semibold '>Martin Mariotti, Real Estate Agent</h2>
                 </div>
-                <div className='text-md md:text-lg font-regular md:font-medium flex flex-col gap-4 mt-5 '>
+                <div className='text-md md:text-lg font-regular md:font-medium flex flex-col gap-4 mt-3 '>
                   <div className='flex gap-3'>
                     <LocationIcon  color='#000'/>
                     <p>Barcelona, España</p>

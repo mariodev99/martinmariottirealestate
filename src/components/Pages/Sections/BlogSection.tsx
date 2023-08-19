@@ -1,57 +1,10 @@
 import React, { useState } from 'react'
 import Image, { StaticImageData } from 'next/image'
-import edificioImage from "../../../../public/images/edificio.jpg"
-import Servicio2 from "../../../../public/images/Servicio2.jpg"
-import Servicio3 from "../../../../public/images/Servicio3.jpg"
-import Servicio4 from "../../../../public/images/Servicio4.jpg"
+import { BlogList } from '@/db/BlogList'
 import TitleSection from '@/components/Layout/TitleSection'
 import {  UpArrowIcon } from '@/components/Icons'
 import { motion } from 'framer-motion'
-
-const BlogList = [
-    {
-      image: edificioImage,
-      category: "Inversiones",
-      date: "22 de Noviembre del 2022",
-      title: "Administración de Propiedades: Gestión de Alquileres ",
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    },
-    {
-        image: Servicio2,
-        category: "inversiones",
-        date: "22 de Noviembre del 2022",
-        title: "Planificar la inversión desde el inicio ",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    },
-    {
-        image: Servicio3,
-        category: "inversiones",
-        date: "22 de Noviembre del 2022",
-        title: "Tradicional forma de financiación ",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    },
-    {
-      image: Servicio4,
-      category: "inversiones",
-      date: "22 de Noviembre del 2022",
-      title: "Ubicación y diversificación ",
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-  },
-    // {
-    //   image: edificioImage,
-    //   category: "Inversiones",
-    //   date: "22 de Noviembre del 2022",
-    //   title: "",
-    //   description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    // },
-    // {
-    //   image: edificioImage,
-    //   category: "Inversiones",
-    //   date: "22 de Noviembre del 2022",
-    //   title: "",
-    //   description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    // },
-  ]
+import { useRouter } from 'next/router'
 
   const container = {
     hidden: { opacity: 0 },
@@ -77,7 +30,7 @@ const BlogList = [
   
 export default function BlogSection() {
 
-
+  const router = useRouter()
 
     interface BlogData {
         image: StaticImageData
@@ -94,8 +47,9 @@ export default function BlogSection() {
 
         return (
           <motion.div
+            onClick={() => router.push("/blog")}
             variants={serviceVariant}                
-            className=" px-5 py-2 group cursor-pointer relative w-full text-white flex flex-col justify-end h-32 md:h-96 overflow-hidden rounded-3xl"
+            className=" px-5 py-2 group cursor-pointer relative w-full text-white flex flex-col justify-end h-36 md:h-96 overflow-hidden rounded-3xl"
             onHoverStart={()=> setIsHover(true)}
             onHoverEnd={()=> setIsHover(false)}
           >
@@ -124,7 +78,7 @@ export default function BlogSection() {
     <>
       <TitleSection 
         content='Lo que debes saber para concretar tu proyecto de inversión en bienes raíces en España o Italia con éxito.  ' 
-        subtitle='Blog' 
+        subtitle='' 
         alignment='center'
       />
       <motion.div 
@@ -134,7 +88,7 @@ export default function BlogSection() {
         viewport={{ once: true }}
         className='mt-14 grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-3 md:px-10'
       >
-        {BlogList.map(blog => (
+        {BlogList.slice(0,4).map(blog => (
           <Blog key={blog.title} {...blog} />
         ))}
       </motion.div>
