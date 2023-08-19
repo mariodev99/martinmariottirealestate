@@ -45,6 +45,7 @@ export default function BlogPage() {
               </div>
             </div>
           ))}
+
         </SectionWraper>
       <Footer/>
     </motion.main>

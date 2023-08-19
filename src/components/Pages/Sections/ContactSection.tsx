@@ -20,7 +20,7 @@ export default function ContactSection() {
                   <LogoIcon color='#000'/>
                   <h2 className=' text-2xl font-semibold '>Martin Mariotti, Real Estate Agent</h2>
                 </div>
-                <div className='text-md md:text-lg font-regular md:font-medium flex flex-col gap-4 mt-3 '>
+                <div className='text-sm md:text-lg font-regular md:font-medium flex flex-col gap-4 mt-3 '>
                   <div className='flex gap-3'>
                     <LocationIcon  color='#000'/>
                     <p>Barcelona, España</p>
