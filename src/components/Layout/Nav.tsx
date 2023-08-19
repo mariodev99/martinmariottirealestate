@@ -63,6 +63,14 @@ export const Nav = () => {
 
   // console.log(router.pathname, "Base path")
 
+  const LogoWithAnimation = () => (
+    <motion.div
+    animate={{scale: backgroundNavColor === "black" ? 0.9 : 1 }}
+  >
+    <LogoIcon color={backgroundNavColor === "black" ? "#c0ff3f" : "white"} />
+  </motion.div>
+  )
+
 
   return <>
     <motion.div 
@@ -74,11 +82,7 @@ export const Nav = () => {
     >
       <div className="container flex mx-auto w-full justify-between px-3 items-center ">
         <div className='hidden md:flex gap-3'>
-          <motion.div
-            animate={{scale: backgroundNavColor === "black" ? 0.9 : 1 }}
-          >
-            <LogoIcon color={backgroundNavColor === "black" ? "#c0ff3f" : "white"} />
-          </motion.div>
+          <LogoWithAnimation/>
           <motion.div
           style={{color: backgroundNavColor === "black" ? "white" : "white" }}
           animate={{opacity: backgroundNavColor === "black" ? 0 : 1, y:  backgroundNavColor === "black" ? -100 : 0 }}
@@ -89,7 +93,7 @@ export const Nav = () => {
           </motion.div>
         </div>
         <div className='block md:hidden'>
-          <LogoIcon color={backgroundNavColor === "white" ? "#000" : "#fff"}/>
+          <LogoWithAnimation/>
         </div>
         <div className={`items-center justify-center flex-1 gap-8 hidden md:flex text-lg font-medium ${backgroundNavColor === "white" ? "text-dark" : "text-white"}`}>
           <Link href={"/inicio"} className='nav-link'>Inicio</Link>
@@ -173,7 +177,7 @@ export const Nav = () => {
             >
               Mi asesoría, tu rentabilidad. Invierte con confianza hoy mismo.
             </motion.h2>
-            <div className='mt-5 pb-5'>
+            <div className='mt-10'>
               <p className='text-sm text-secondary text-center text-regular'>Martin Mariotti, Real Estate Agent</p>
             </div>
           </motion.aside>
