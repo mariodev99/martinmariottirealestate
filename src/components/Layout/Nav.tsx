@@ -44,7 +44,7 @@ export const Nav = () => {
   const [open, cycleOpen] = useCycle(false, true);
   const { scrollY } = useScroll()
 
-  console.log(router.pathname, "Base path")
+  // console.log(router.pathname, "Base path")
 
   const colorInContactPage = router.pathname === "/contacto" && "black"
 
