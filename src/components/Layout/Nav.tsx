@@ -45,9 +45,6 @@ export const Nav = () => {
   const { scrollY } = useScroll()
 
   // console.log(router.pathname, "Base path")
-
-  const colorInContactPage = router.pathname === "/contacto" && "black"
-
   const [backgroundNavColor, setBackgroundNavColor] = useState("transparent")
 
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -64,7 +61,7 @@ export const Nav = () => {
     cycleOpen()
   }
 
-  console.log(router.pathname, "Base path")
+  // console.log(router.pathname, "Base path")
 
 
   return <>
@@ -131,7 +128,7 @@ export const Nav = () => {
     <AnimatePresence>
         {open && (
           <motion.aside
-            className='pl-6 bg-[#020202] fixed z-50 h-full'
+            className='pl-6 bg-[#020202] fixed z-50 h-screen'
             initial={{ width: 0 }}
             animate={{
               width: 330
@@ -147,12 +144,12 @@ export const Nav = () => {
                 animate={{opacity: 1}}
                 exit={{opacity: 0}}
               >
-                <LogoIcon color='#fff'/>
+                <LogoIcon color='#c0ff3f'/>
               </motion.div>
               <motion.button exit={{opacity: 0}} className='' onClick={() => cycleOpen()}> <CloseIcon/></motion.button>
             </div>
             <motion.div
-                className="flex flex-col gap-3 cursor-pointer"
+                className="flex flex-col gap-3 cursor-pointer mt-10"
                 initial="closed"
                 animate="open"
                 exit="closed"
@@ -160,20 +157,25 @@ export const Nav = () => {
               >
                 {links.map(({ name, to, id }) => (
                   <motion.div
+                    whileHover={{ color: "#c0ff3f"}}
                     key={id}
-                    whileHover={{backgroundColor: "#222" }}
                     variants={itemVariants}
-                    className=' text-white font-bold text-3xl py-2'
+                    className='text-center text-white font-medium text-3xl py-2'
                     onClick={() => handleRedirect(to)}
                   >
                     {name}
                   </motion.div>
                 ))}
             </motion.div>
-                {/* <div className='flex flex-col justify-end items-center h-64 text-white border-2 border-white'>
-                  <div className='text-lg text-secondary'>Martin Mariotti</div>
-                  <div className='uppercase text-secondary text-md'>personal shopper inmobiliario</div>
-                </div> */}
+            <motion.h2 
+              exit={{opacity: 0}} 
+              className='text-center text-white mt-10'
+            >
+              Mi asesoría, tu rentabilidad. Invierte con confianza hoy mismo.
+            </motion.h2>
+            <div className='mt-5 pb-5'>
+              <p className='text-sm text-secondary text-center text-regular'>Martin Mariotti, Real Estate Agent</p>
+            </div>
           </motion.aside>
         )}
     </AnimatePresence>
