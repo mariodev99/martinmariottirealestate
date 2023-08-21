@@ -61,7 +61,7 @@ const MostrarProceso = () => {
         />
       </motion.div>
       <div className='py-3 px-3'>
-        <div className='inline rounded-full text-black bg-greensecondary  px-3 py-1 font-regular text-sm'>
+        <div className='inline rounded-full text-black bg-greenprimary px-3 py-1 font-regular text-sm'>
           {subtitle}
         </div>
         <p className='mt-3 text-xl font-semibold'>{title}</p>
