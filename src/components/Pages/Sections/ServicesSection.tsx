@@ -38,7 +38,11 @@ const serviceVariant = {
 
 
 
-const ServiceBox = ({title, image, index, subtitle}:Service) => (
+
+
+const MostrarProceso = () => {
+
+  const ServiceBox = ({title, image, subtitle}:Service) => (
     <motion.div                   
       className="flex flex-col justify-between"
       variants={serviceVariant}
@@ -57,49 +61,50 @@ const ServiceBox = ({title, image, index, subtitle}:Service) => (
         />
       </motion.div>
       <div className='py-3 px-3'>
-        <div className='inline rounded-full border border-greensecondary text-greensecondary px-3 py-1 font-regular text-sm'>
+        <div className='inline rounded-full text-black bg-greensecondary  px-3 py-1 font-regular text-sm'>
           {subtitle}
         </div>
         <p className='mt-3 text-xl font-semibold'>{title}</p>
       </div>
   </motion.div>
-)
+  )
 
-const MostrarProceso = () => (
-  <>
-          <h2 className='font-medium md:text-xl'>
-          Maximiza la eficacia de tu inversión delegando todo el proceso:
-          </h2>
-          <div>
-            <Swiper
-              spaceBetween={20}
-              breakpoints={{
-              0: {
-                slidesPerView: 1.2,
-              },
-              450: {
-                slidesPerView: 1.5,
-              },
-              720: {
-                slidesPerView: 3,
-              },
-              960: {
-                slidesPerView: 3.5,
-              },
-              1200: {
-                slidesPerView: 4,
-              },
-          }}
-        >
-          {ServiceList.map((item, index) => (
-            <SwiperSlide key={item.title} index={index} {...item}>
-                <ServiceBox  index={index} {...item}/>
-            </SwiperSlide>
-          ))}
-            </Swiper>
-          </div>
+  return (
+    <>
+    <h2 className='font-medium md:text-xl'>
+    Maximiza la eficacia de tu inversión delegando todo el proceso:
+    </h2>
+    <div>
+      <Swiper
+        spaceBetween={20}
+        breakpoints={{
+        0: {
+          slidesPerView: 1.2,
+        },
+        450: {
+          slidesPerView: 1.5,
+        },
+        720: {
+          slidesPerView: 3,
+        },
+        960: {
+          slidesPerView: 3.5,
+        },
+        1200: {
+          slidesPerView: 4,
+        },
+    }}
+  >
+    {ServiceList.map((item, index) => (
+      <SwiperSlide key={item.title} index={index} {...item}>
+          <ServiceBox  index={index} {...item}/>
+      </SwiperSlide>
+    ))}
+      </Swiper>
+    </div>
   </>
-)
+  )
+}
 
 const MostrarVentajas = () => (
     <>
