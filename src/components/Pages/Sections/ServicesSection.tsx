@@ -48,6 +48,11 @@ const MostrarProceso = () => {
       variants={serviceVariant}
     >
 
+      <div className='mb-3 pt-1'>
+        <div className='inline rounded-full text-black border border-black px-3 py-1 font-medium text-sm'>
+          {subtitle}
+        </div>
+      </div>
       {/* Image */}
       <motion.div 
         className='relative w-full h-64  rounded-2xl overflow-hidden'
@@ -61,10 +66,8 @@ const MostrarProceso = () => {
         />
       </motion.div>
       <div className='py-3 px-3'>
-        <div className='inline rounded-full text-black bg-greenprimary px-3 py-1 font-regular text-sm'>
-          {subtitle}
-        </div>
-        <p className='mt-3 text-xl font-semibold'>{title}</p>
+
+        <p className='mt-0 text-xl font-semibold'>{title}</p>
       </div>
   </motion.div>
   )
