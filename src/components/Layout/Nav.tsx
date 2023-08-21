@@ -95,7 +95,7 @@ export const Nav = () => {
         <div className='block md:hidden'>
           <LogoWithAnimation/>
         </div>
-        <div className={`items-center justify-center flex-1 gap-8 hidden md:flex text-lg font-medium ${backgroundNavColor === "white" ? "text-dark" : "text-white"}`}>
+        <div className={`items-center justify-center flex-1 gap-8 hidden md:flex text-base font-medium uppercase ${backgroundNavColor === "white" ? "text-dark" : "text-white"}`}>
           <Link href={"/inicio"} className='nav-link'>Inicio</Link>
 
           {router.pathname === "/inicio" ? 
