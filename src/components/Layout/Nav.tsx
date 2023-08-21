@@ -114,15 +114,15 @@ export const Nav = () => {
           <Link href={"/inicio#section_about_me"} className='nav-link'>Sobre mi</Link>
           }
 
-          {/* <Link href={"/servicios"} className=''>Servicios</Link> */}
           <Link href={"/blog"} className='nav-link'>Blog</Link>
+
+          <Link href={"/contacto"} className='nav-link'>Contacto</Link>
+
         </div>
         <div className='hidden md:flex'>
-        <Link href={"/contacto"} className='text-base'>
           <PrimaryButton mode={backgroundNavColor === "white" ? "dark" : "light"}>
-            Contacto
+            Esp
           </PrimaryButton>    
-        </Link>
         </div>
         <button className='flex md:hidden' onClick={() => cycleOpen()}><MenuIcon color={backgroundNavColor === "white" ? "#000" : "#fff"}/></button>
       </div>
