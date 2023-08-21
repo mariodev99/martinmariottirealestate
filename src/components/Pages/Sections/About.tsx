@@ -16,7 +16,7 @@ export interface CharacteristicsProps {
 const Caracteristicas:CharacteristicsProps[] = [
     {
       title: "Enfoque",
-      description: "Mi enfoque es simple: tu éxito inmobiliario. Me esforzare por superar las expectativas al proporcionar una experiencia de búsqueda y compra excepcionalmente personalizada y orientada a resultados.",
+      description: "Mi enfoque es simple: tu éxito en inversión inmobiliaria. Me esforzaré por superar las expectativas al proporcionar una experiencia de búsqueda personalizada y orientada a resultados.",
       icon:  <EnfoqueIcon color='#c0ff3f'/>
     },
     {
@@ -26,7 +26,7 @@ const Caracteristicas:CharacteristicsProps[] = [
     },
     {
       title: "Mision",
-      description: "Mi misión es ser el aliado inmobiliario confiable y dedicado guiandote hacia la propiedad ideal, proporcionando un servicio personalizado y garantizando su satisfacción en cada paso del proceso de compra.",
+      description: "Mi misión es ayudar a mis clientes a concretar sus proyectos de inversión inmobiliaria en España o Italia con total seguridad y tranquilidad, proporcionando un servicio personalizado y garantizando su satisfacción en cada paso del proceso.",
       icon: <MisionIcon color='#c0ff3f'/>
     },
   ]
@@ -34,10 +34,7 @@ const Caracteristicas:CharacteristicsProps[] = [
 export default function AboutSection() {
   return (
     <div >
-      <TitleSection 
-        content='Conoce mi perfil profesional' 
-        alignment='center' 
-      />
+
       {/* Sobre mi */}
       <div className='grid grid-cols-1 md:grid-cols-2 mt-5 md:mt-20'>
         {/* Imagen de Martin */}
@@ -58,6 +55,10 @@ export default function AboutSection() {
           viewport={{ once: true }}
           className='order-1 md:order-2 flex flex-col justify-center items-start py-8 gap-5 text-base md:text-lg font-regular'
         >
+        <TitleSection 
+          content='Sobre mí' 
+          alignment='start' 
+        />
           <p className=''>
             Formado en administración y dirección de empresa como así también especializado en agente e inversor inmobiliario, acompaño a mis clientes de manera integral para ayudarlos a hacer realidad sus proyectos de inversión inmobiliaria.
             Ya sea que desee comprar o vender, en España o Italia estoy aquí para guiarlo en cada paso del camino, asegurándole una experiencia tranquila y sin estrés.

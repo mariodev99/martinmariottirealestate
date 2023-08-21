@@ -2,16 +2,30 @@ import React from 'react'
 import SectionWraper from './SectionWraper'
 import { EmailIcon, InstagramIcon, LinkedinIcon, LogoIcon, WspIcon } from '../Icons'
 import Link from 'next/link'
+import logoApi from "@/../public/images/logo_api1.jpg"
+import logoIset from "@/../public/images/logo_ISET.png"
+import Image from 'next/image'
 
 export default function Footer() {
   return (
     <div className='bg-gradient-to-b from-[#000] to-[#01080E] text-white'>
     <SectionWraper>
-      <div className='grid grid-cols-1 md:grid-cols-2 py-6'>
-        <div className='w-full flex flex-col gap-4'>
+      <div className='grid grid-cols-1 md:grid-cols-3 py-6'>
+        <div className='w-full flex flex-col gap-5'>
           <h1 className=''><LogoIcon color={"#c0ff3f"} /></h1>
           <h2 className='font-semibold text-2xl'>Mi asesoría, tu rentabilidad. <br/> Invierte con confianza hoy mismo.</h2>
           <h3 className='font-normal text-base'>Martin Mariotti, 2023</h3>
+        </div>
+        {/* Acreditaciones */}
+        <div className='px-0 md:px-10 md:pl-20 pt-6 flex flex-col gap-3'>
+          <h2 className='text-xl '>Acreditaciones</h2>
+          <div className='h-24 relative'>
+            <Image className='rounded-md' src={logoApi} height={80} alt='Logo de El Colegio de Agentes Inmobiliarios '/>
+          </div>
+          <div className='h-24 relative'>
+            <Image className='rounded-md' src={logoIset } height={80} alt='Logo de El Colegio de Agentes Inmobiliarios '/>
+          </div>
+
         </div>
         <div className=' mt-5 flex flex-col gap-2 md:gap-4 text-lg md:text-xl justify-center items-start md:items-end'>
           <Link className='nav-link' href={"/contacto"}>Servicios</Link>

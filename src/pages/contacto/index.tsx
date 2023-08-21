@@ -18,15 +18,14 @@ export default function ContactPage() {
         exit={{opacity: 0}}
     >
         <div className='w-full '>
-          <div className='relative h-80 w-full flex justify-center '>
-            <div className='relative z-20 pt-24'>
-              <h1 className={` text-xl md:text-5xl font-bold text-center text-white`}>Contacto</h1>
-              <h2 className={`pt-2 px-5 w-full text-white text-md md:text-2xl font-medium text-center`}>
-              Contactame y hagamos realidad tu proyecto de inversión inmobiliario
-              </h2>
+          <div className='relative h-64 w-full flex justify-center '>
+            <div className='relative z-20 pt-24 w-3/4'>
+              <h1 className={` text-xl md:text-3xl font-semibold text-center text-white`}>
+                Contactame y hagamos realidad tu proyecto de inversión inmobiliario
+              </h1>
             </div>
             <Image
-            className='brightness-50'
+              className='brightness-50'
               src={headerImage}
               alt='imagen del servicio' 
               layout="fill"
@@ -35,7 +34,7 @@ export default function ContactPage() {
               priority
             />
           </div>
-          {/* se agrego px-10 y pb-10 */}
+
           <div className='px-10 pb-10 mt-2 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-10'>
               <div className='order-2 md:order-1 flex flex-col gap-4 bg-black text-white rounded-4xl p-5'>
                 <div className='mb-3'>
