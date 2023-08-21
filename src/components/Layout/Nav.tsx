@@ -88,8 +88,8 @@ export const Nav = () => {
           animate={{opacity: backgroundNavColor === "black" ? 0 : 1, y:  backgroundNavColor === "black" ? -100 : 0 }}
           className='border-l-2 border-white pl-3'
           >
-            <p className='text-lg font-semibold'>Martin Mariotti</p>
-            <p>Real shopper inmobiliario</p>
+            <p className='uppercase text-xl font-normal'>Martin Mariotti</p>
+            <p className='font-light'>Personal Shopper Inmobiliario</p>
           </motion.div>
         </div>
         <div className='block md:hidden'>
@@ -100,18 +100,18 @@ export const Nav = () => {
 
           {router.pathname === "/inicio" ? 
           <div className='cursor-pointer nav-link'>
-            <ScrollLink to="section_about_me" smooth={true} duration={500}>Sobre mi</ScrollLink>
-          </div>
-          :
-          <Link href={"/inicio#section_about_me"} className='nav-link'>Sobre mi</Link>
-          }
-
-          {router.pathname === "/inicio" ? 
-          <div className='cursor-pointer nav-link'>
             <ScrollLink to="section_services" smooth={true} duration={500}>Servicios</ScrollLink>
           </div>
           :
           <Link href={"/inicio#section_services"} className='nav-link'>Servicios</Link>
+          }
+
+          {router.pathname === "/inicio" ? 
+          <div className='cursor-pointer nav-link'>
+            <ScrollLink to="section_about_me" smooth={true} duration={500}>Sobre mi</ScrollLink>
+          </div>
+          :
+          <Link href={"/inicio#section_about_me"} className='nav-link'>Sobre mi</Link>
           }
 
           {/* <Link href={"/servicios"} className=''>Servicios</Link> */}
