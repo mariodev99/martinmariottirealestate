@@ -10,6 +10,7 @@ import { SwiperSlide, Swiper } from "swiper/react";
 import ServiceImage1 from "@/../public/images/servicesImage1.jpg"
 import ServiceImage2 from "@/../public/images/servicesImage2.jpg"
 import ServiceImage3 from "@/../public/images/servicesImage3.jpg"
+import { CheckIcon } from '@/components/Icons'
 
 const container = {
   hidden: { opacity: 0 },
@@ -178,7 +179,7 @@ export default function ServicesSection() {
               <ul className='list-disc mt-5 md:text-lg'>
                 {ServiceList.map((item, index) => (
                   <li key={item.title} className='flex items-center gap-3 '>
-                    <div className='h-[10px] w-[10px] bg-greensecondary  rounded-full'></div>
+                    <CheckIcon/>
                     <p className=''>{item.title}</p>
                   </li>
                 ))}
