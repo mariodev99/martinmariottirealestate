@@ -64,12 +64,12 @@ const Accordion = ({ i, expanded, setExpanded, title, description, icon }:Accord
 
 
   
-  export const Characteristics = ({icons, data}:{ icons: CharacteristicsIconsProps, data: Characteristic   } ) => {
+  export const Characteristics = ({icons, data}:{ icons: CharacteristicsIconsProps, data: any   } ) => {
     const [expanded, setExpanded] = useState<false | number>(0);
   
     return (
     <div className=" px-4 flex flex-col gap-2">
-      {data.map((item:Characteristic, index:number) => (
+      {data.map((item:any, index:number) => (
         <Accordion key={item.title} i={index} expanded={expanded} setExpanded={setExpanded} title={item.title} description={item.description} icon={icons[index].icon} />
       ))}
     </div>
