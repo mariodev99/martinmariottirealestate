@@ -64,7 +64,7 @@ const Accordion = ({ i, expanded, setExpanded, title, description, icon }:Accord
 
 
   
-  export const Characteristics = ({icons, data}:{ icons: CharacteristicsIconsProps, data: any   } ) => {
+  export const Characteristics = ({icons, data}:{ icons: any, data: any   } ) => {
     const [expanded, setExpanded] = useState<false | number>(0);
   
     return (
