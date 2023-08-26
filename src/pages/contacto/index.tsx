@@ -6,7 +6,9 @@ import Footer from '@/components/Layout/Footer'
 import { EmailIcon, LocationIcon, LogoIcon, PhoneIcon } from '@/components/Icons'
 import contactImage from "../../../public/images/ContactPage.avif"
 import ContactForm from '@/components/ContactForm/ContactForm'
-export default function ContactPage() {
+
+
+export default function ContactPage(props:any) {
 
   const inputClassname = "rounded-xl mt-1 px-2 py-1 text-xl bg-[#ededed] focus:outline-none "
 
@@ -65,11 +67,22 @@ export default function ContactPage() {
                 </div>
             </div>
               {/* Formulario */}
-              <ContactForm/>
+              <ContactForm data={props.contactData}/>
 
           </div>
         </div>
       <Footer/>
     </motion.main>
   )
+}
+
+export async function getStaticProps({locale}:any) {
+
+  const response = await import (`../../lang/${locale}.json`)
+  
+  return {
+    props: {
+      contactData: response.default.contact,
+    }
+  }
 }

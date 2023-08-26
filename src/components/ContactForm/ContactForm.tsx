@@ -3,7 +3,7 @@ import emailjs from "emailjs-com";
 import { motion } from 'framer-motion';
 
 interface contactData {
-  data: {
+  data?: {
     title: string
     name_label: string
     email_label: string
