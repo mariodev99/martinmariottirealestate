@@ -5,6 +5,7 @@ import { AnimatePresence, motion, useCycle, useMotionValueEvent, useScroll } fro
 import {PrimaryButton} from '../Buttons/PrimaryButton';
 import { useRouter } from 'next/router';
 import { Link as ScrollLink } from "react-scroll"
+import SelectButton from '../Buttons/SelectButton';
 
 
 const links = [
@@ -38,7 +39,8 @@ const sideVariants = {
   }
 };
 
-export const Nav = () => {
+// FIX
+export const Nav = ({dataLang}:any) => {
 
   const router = useRouter()
   const [open, cycleOpen] = useCycle(false, true);
@@ -120,9 +122,7 @@ export const Nav = () => {
 
         </div>
         <div className='hidden md:flex'>
-          <PrimaryButton mode={backgroundNavColor === "white" ? "dark" : "light"}>
-            Esp
-          </PrimaryButton>    
+          <SelectButton />          
         </div>
         <button className='flex md:hidden' onClick={() => cycleOpen()}><MenuIcon color={backgroundNavColor === "white" ? "#000" : "#fff"}/></button>
       </div>
@@ -171,15 +171,24 @@ export const Nav = () => {
                   </motion.div>
                 ))}
             </motion.div>
-            <motion.h2 
+
+            <motion.div 
+              initial={{opacity: 0}} 
+              animate={{opacity: 1}}
               exit={{opacity: 0}} 
-              className='text-center text-white mt-10'
+              className='flex flex-col gap-10'
             >
-              Mi asesoría, tu rentabilidad. Invierte con confianza hoy mismo.
-            </motion.h2>
-            <div className='mt-10'>
-              <p className='text-sm text-secondary text-center text-regular'>Martin Mariotti, Real Estate Agent</p>
-            </div>
+              <motion.h2 
+                className='text-center text-white mt-10'
+              >
+                Mi asesoría, tu rentabilidad. Invierte con confianza hoy mismo.
+              </motion.h2>
+
+              <SelectButton />          
+
+              <p className='mt-20 text-sm text-secondary text-center text-regular'>Martin Mariotti, Real Estate Agent</p>
+            </motion.div>
+
           </motion.aside>
         )}
     </AnimatePresence>

@@ -5,8 +5,13 @@ import Link from 'next/link'
 import logoApi from "@/../public/images/logo_api1.jpg"
 import logoIset from "@/../public/images/logo_ISET.png"
 import Image from 'next/image'
+import { Link as ScrollLink } from "react-scroll"
+import { useRouter } from 'next/router'
 
-export default function Footer() {
+export default function Footer({data}:any) {
+
+  const router = useRouter()
+
   return (
     <div className='bg-gradient-to-b from-[#000] to-[#01080E] text-white'>
     <SectionWraper>
@@ -28,9 +33,23 @@ export default function Footer() {
 
         </div>
         <div className=' mt-5 flex flex-col gap-2 md:gap-4 text-lg md:text-xl justify-center items-start md:items-end'>
-          <Link className='nav-link' href={"/contacto"}>Servicios</Link>
+        {router.pathname === "/inicio" ? 
+          <div className='cursor-pointer nav-link'>
+            <ScrollLink to="section_services" smooth={true} duration={500}>Servicios</ScrollLink>
+          </div>
+          :
+          <Link href={"/inicio#section_services"} className='nav-link'>Servicios</Link>
+          }
           <Link className='nav-link' href={"/contacto"}>Blog</Link>
-          <Link className='nav-link' href={"/contacto"}>Sobre mi</Link>
+          
+          {router.pathname === "/inicio" ? 
+          <div className='cursor-pointer nav-link'>
+            <ScrollLink to="section_about_me" smooth={true} duration={500}>Sobre mi</ScrollLink>
+          </div>
+          :
+          <Link href={"/inicio#section_about_me"} className='nav-link'>Sobre mi</Link>
+          }
+
           <Link className='nav-link' href={"/contacto"}>Contacto</Link>
         </div>
       </div>

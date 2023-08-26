@@ -1,13 +1,11 @@
 import {PrimaryButton} from '@/components/Buttons/PrimaryButton'
 import React, { useEffect, useState } from 'react'
-import { Merriweather,Inter } from 'next/font/google'
 import Image from 'next/image'
 import SectionWraper from '@/components/Layout/SectionWraper'
-import headerImage from "../../../../public/images/header2.jpg"
+import headerImage from "../../../public/images/header2.jpg"
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
-const inter = Inter({ subsets: ['latin'] })
 
 const HEADER_INFORMATION = {
   title: "Invierte en inmuebles de españa o italia, de forma",
@@ -15,18 +13,12 @@ const HEADER_INFORMATION = {
   callToAction: "Concreta tu proyecto"
 }
 
-const headerWords = [
-  "inteligente",
-  "rentable",
-  "escalable"
-]
-
 const wordVariants = {
   hidden: { opacity: 0, y: -20 },
   visible: { opacity: 1, y: 0 },
 };
 
-export default function HeaderSection() {
+export default function HeaderSection({data}:any) {
 
   const [currentWordIndex, setCurrentWordIndex] = useState(0)
 
@@ -35,7 +27,7 @@ export default function HeaderSection() {
 
     const interval = setInterval(() => {
       setCurrentWordIndex((prevIndex) =>
-        prevIndex === headerWords.length - 1 ? 0 : prevIndex + 1
+        prevIndex === data.words.length - 1 ? 0 : prevIndex + 1
       );
     }, 2000);
 
@@ -60,9 +52,9 @@ export default function HeaderSection() {
           <div className='flex flex-col gap-10'>
           
           <div className='text-2xl md:text-5xl whitespace-normal md:whitespace-normal	'>
-            <h1 className={`${inter.className} text-center md:text-start font-medium tracking-wide`}>
-              Invierte en inmuebles en España o Italia, de forma
-              {headerWords.map((word, index) => (
+            <h1 className={`text-center md:text-start font-medium tracking-wide`}>
+              {data.title}
+              {data.words.map((word:string, index:number) => (
                 <motion.span
                   className='font-semibold ml-0 md:ml-3 block md:inline-block flex justify-center md:justify-start w-full absolute text-greenprimary'
                   key={index}
@@ -77,11 +69,13 @@ export default function HeaderSection() {
 
           </div>
 
-            <h2 className={`${inter.className} text-lg md:text-xl text-center md:text-start font-regular md:font-medium mt-5 md:mt-0`}>{HEADER_INFORMATION.subtitle}</h2>
+            <h2 className={` text-lg md:text-xl text-center md:text-start font-regular md:font-medium mt-5 md:mt-0`}>
+              {data.subtitle}
+            </h2>
             <div className='w-full'>
               <Link href={"/contacto"}>
               <PrimaryButton mode='dark'>
-                {HEADER_INFORMATION.callToAction}
+                {data.callToAction}
               </PrimaryButton> 
               </Link>
             </div>

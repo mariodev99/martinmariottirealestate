@@ -40,7 +40,7 @@ const serviceVariant = {
 
 
 
-const MostrarProceso = () => {
+const MostrarProceso = (data:any) => {
 
   const ServiceBox = ({title, image, subtitle}:Service) => (
     <motion.div                   
@@ -75,7 +75,7 @@ const MostrarProceso = () => {
   return (
     <>
     <h2 className='font-medium md:text-xl'>
-    Maximiza la eficacia de tu inversión delegando todo el proceso:
+    {data.subtitle2}
     </h2>
     <div>
       <Swiper
@@ -98,9 +98,9 @@ const MostrarProceso = () => {
         },
     }}
   >
-    {ServiceList.map((item, index) => (
+    {data.proccess.map((item:any, index:number) => (
       <SwiperSlide key={item.title} index={index} {...item}>
-          <ServiceBox  index={index} {...item}/>
+          <ServiceBox  index={index} title={item.title} subtitle={item.subtitle} image={ServiceList[index].image}/>
       </SwiperSlide>
     ))}
       </Swiper>
@@ -109,14 +109,14 @@ const MostrarProceso = () => {
   )
 }
 
-const MostrarVentajas = () => (
+const MostrarVentajas = (data:any) => (
     <>
     <p className='text-secondary text-md md:text-xl mt-5 text-center'>
-      Como Agente del Comprador, me dedico exclusivamente a la búsqueda de propiedades por encargo expreso de mis clientes compradores, ya sea que se encuentren en España o Italia al momento de la compra.
+      {data.subtitle3}
     </p>
     <div className='flex flex-col items-center w-full gap-10 mb-10'>
       <div className='text-center md:text-center w-full'>
-      <h2 className='font-semibold text-lg md:text-3xl'>¿Por que contratar mis servicios?</h2>
+      <h2 className='font-semibold text-lg md:text-3xl'>{data.advantage_title}</h2>
       </div>
       <motion.div 
         initial={{opacity: 0, x: -50}}
@@ -125,9 +125,9 @@ const MostrarVentajas = () => (
         viewport={{ once: true }}
         className='grid grid-cols-1 md:grid-cols-3 gap-6 w-full mt-5 md:mt-0'
       >
-        {AdvantageList.map( item => (
+        {data.advantages.map((item:any, index:number) => (
           <div key={item.title} className=" py-7 px-5 bg-white rounded-3xl shadow-lg flex flex-col gap-3 ">
-          <div>{item.icon}</div>
+          <div>{AdvantageList[index].icon}</div>
           <h3 className='font-bold text-xl mt-4'>{item.title}</h3>
           <p className='text-secondary text-sm'>{item.description}</p>
           </div>
@@ -168,26 +168,26 @@ const MostrarImagenes = () => (
   </div>
 )
 
-export default function ServicesSection() {
+export default function ServicesSection({data}:any) {
   
   return (
-      <div className='flex flex-col gap-12 pt-5'>
+      <div className='flex flex-col gap-12 pt-14'>
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
           <div>
             <TitleSection
-              content='Te ayudo a concretar tu proyecto de inversión en bienes raíces, brindando un acompañamiento integral y servicios personalizados' 
+              content={data.title}
               alignment={"start"} 
             />
             <div className='mt-6'>
               <h2 className='font-medium md:text-xl'>
-                Simplifica tu inversión en inmuebles delegando todo el proceso: 
+                {data.subtitle}
               </h2>
               <ul className='list-disc mt-5 md:text-lg'>
-                {ServiceList.map((item, index) => (
-                  <li key={item.title} className='flex items-center gap-3 '>
+                {data.services.map((item:string, index:number) => (
+                  <li key={item} className='flex items-center gap-3 '>
                     <CheckIcon/>
-                    <p className=''>{item.title}</p>
+                    <p className=''>{item}</p>
                   </li>
                 ))}
               </ul>
@@ -196,9 +196,9 @@ export default function ServicesSection() {
             {MostrarImagenes()}
         </div>
 
-      {MostrarProceso()}
+      {MostrarProceso(data)}
 
-      {MostrarVentajas()}
+      {MostrarVentajas(data)}
       </div>
 
 

@@ -1,11 +1,18 @@
 import { motion, AnimatePresence } from "framer-motion";
 import React, { useState } from "react";
-import { CharacteristicsProps } from "../Pages/Sections/About";
+import { CharacteristicsIconsProps } from "../Sections/About";
 import { DownArrowIcon } from "../Icons";
 
 
 interface CharacteristicsGeneralProps {
-  characteristics: CharacteristicsProps[]
+  icon: React.ReactNode
+  title: string
+  description: string
+}
+
+interface Characteristic {
+  title: string
+  description: string
 }
 
 interface AccordionProps {
@@ -14,8 +21,9 @@ interface AccordionProps {
     setExpanded: (value: false | number) => void;
 }
 
-const Accordion = ({ i, expanded, setExpanded, title, description, icon }:AccordionProps & CharacteristicsProps) => {
-    const isOpen = i === expanded;
+const Accordion = ({ i, expanded, setExpanded, title, description, icon }:AccordionProps & CharacteristicsGeneralProps) => {
+    
+  const isOpen = i === expanded;
   
     return (
       <>
@@ -27,6 +35,7 @@ const Accordion = ({ i, expanded, setExpanded, title, description, icon }:Accord
           <div className={`text-lg font-semibold flex items-center gap-3`}>{icon}{title}</div>
           <motion.div
             animate={{ rotateZ: isOpen ? 180 : 0}}
+            className="stroke-white"
           >
             <DownArrowIcon/>
           </motion.div>
@@ -55,16 +64,15 @@ const Accordion = ({ i, expanded, setExpanded, title, description, icon }:Accord
 
 
   
-  export const Characteristics = ({characteristics}:CharacteristicsGeneralProps) => {
+  export const Characteristics = ({icons, data}:{ icons: CharacteristicsIconsProps, data: Characteristic   } ) => {
     const [expanded, setExpanded] = useState<false | number>(0);
   
     return (
     <div className=" px-4 flex flex-col gap-2">
-      {characteristics.map((item, index) => (
-        <Accordion key={item.title} i={index} expanded={expanded} setExpanded={setExpanded} {...item} />
+      {data.map((item:Characteristic, index:number) => (
+        <Accordion key={item.title} i={index} expanded={expanded} setExpanded={setExpanded} title={item.title} description={item.description} icon={icons[index].icon} />
       ))}
     </div>
     )
   };
   
-  const accordionIds = [0, 1, 3];

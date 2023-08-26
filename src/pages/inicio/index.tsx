@@ -1,22 +1,16 @@
 import React, { useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Merriweather,Inter, Lexend_Mega } from 'next/font/google'
-import OfertSection from '@/components/Pages/Sections/OfertSection'
-import BlogSection from '@/components/Pages/Sections/BlogSection'
-import HeaderSection from '@/components/Pages/Sections/HeaderSection'
+import BlogSection from '@/components/Sections/BlogSection'
+import HeaderSection from '@/components/Sections/HeaderSection'
 import SectionWraper from '@/components/Layout/SectionWraper'
 import Footer from '@/components/Layout/Footer'
-import AboutSection from '@/components/Pages/Sections/About'
-import ServicesSection from '@/components/Pages/Sections/ServicesSection'
-import CredentialsSection from '@/components/Pages/Sections/Credentials'
-import ContactSection from '@/components/Pages/Sections/ContactSection'
+import AboutSection from '@/components/Sections/About'
+import ServicesSection from '@/components/Sections/ServicesSection'
+import ContactSection from '@/components/Sections/ContactSection'
 import { useRouter } from 'next/router'
 
-const inter = Inter({ subsets: ['latin'] })
-
-export default function HomePage() {
+export default function HomePage(props:any) {
   const router = useRouter();
-
 
   useEffect(() => {
     if (router.asPath.includes('#section_about_me')) {
@@ -29,30 +23,47 @@ export default function HomePage() {
 
   return (
     <motion.div
-        className={` min-h-screen overflow-y-hidden ${inter.className} scroll-smooth	`}
+        className={` min-h-screen overflow-y-hidden scroll-smooth	`}
         initial={{opacity: 0}}
         animate={{opacity: 1}}
         exit={{opacity: 0}}
     >
-      <HeaderSection/>
+      <HeaderSection data={props.homeData}/>
       <div id='section_services'>
         <SectionWraper>
-          <ServicesSection/>
+          <ServicesSection data={props.servicesData}/>
         </SectionWraper>
       </div>
       <div id='section_about_me' className='mx-3 rounded-4xl bg-[#020202] text-white'>
         <SectionWraper>
-          <AboutSection/>
+          <AboutSection data={props.aboutData}/>
         </SectionWraper>
       </div>
       <SectionWraper>
-        <BlogSection/>
+        <BlogSection data={props.blogData}/>
       </SectionWraper>
       <SectionWraper>
-        <ContactSection/>
+        <ContactSection data={props.contactData}/>
       </SectionWraper>
       {/* <CredentialsSection/> */}
-      <Footer/>
+      <Footer data={props.footerData}/>
     </motion.div>
   )
+}
+
+
+export async function getStaticProps({locale}:any) {
+
+  const response = await import (`../../lang/${locale}.json`)
+  
+  return {
+    props: {
+      homeData: response.default.home,
+      servicesData: response.default.services,
+      aboutData: response.default.about,
+      blogData: response.default.blog,
+      contactData: response.default.contact,
+      footerData: response.default.footer
+    }
+  }
 }

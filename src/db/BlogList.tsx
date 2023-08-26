@@ -2,6 +2,7 @@ import edificioImage from "@/../public/images/edificio.jpg"
 import Servicio2 from "@/../public/images/Servicio2.jpg"
 import Servicio3 from "@/../public/images/Servicio3.jpg"
 import Servicio4 from "@/../public/images/Servicio4.jpg"
+import Servicio5 from "@/../public/images/servicio5.jpg"
 
 export const BlogList = [
     {
@@ -33,7 +34,7 @@ export const BlogList = [
       description: "Siempre recomendamos elegir una zona que tenga buena comunicación, servicios y calidad de vida. Por ejemplo, si quieres invertir en una vivienda para estudiantes o jóvenes profesionales, puedes optar por zonas o centros de trabajo. Si prefieres invertir en una vivienda para familias, puedes preferir zonas residenciales o tranquilas. Asimismo, si la intención es reducir el riesgo y aumentar las posibilidades de éxito al invertir en bienes raíces, puedes diversificar tu inversión en diferentes tipos de propiedades o ubicaciones. Así podrás aprovechar las oportunidades que ofrece cada mercado y adaptarse mejor a los cambios del sector.  ",
   },
     {
-      image: edificioImage,
+      image: Servicio5,
       category: "Inversiones",
       date: "22 de Noviembre del 2022",
       title: "Invertir nos da la posibilidad de rentabilizar nuestro dinero",

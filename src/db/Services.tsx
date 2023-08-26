@@ -9,8 +9,6 @@ import { StaticImageData } from "next/image"
 
 export interface Service {
     title: string
-    description: string
-    icon: React.ReactNode
     image: StaticImageData
     index?: number
     subtitle: string
@@ -19,29 +17,21 @@ export interface Service {
 export const ServiceList:Service[] = [
     {
         title: "Busqueda del inmueble mas rentable",
-        description: "Buscamos superar las expectativas de nuestros clientes al ofrecerles una experiencia inigualable en la búsqueda de propiedades. Nuestro objetivo es ayudarles a tomar decisiones informadas y acertadas, maximizando su rentabilidad y brindándoles tranquilidad en cada inversión",
-        icon:  <TimeIcon/>,
         image: busquedaImg,
         subtitle: "Busqueda"
       },
       {
         title: "Negociacion al mejor precio ",
-        description: "Mi enfoque es claro: tu satisfacción y seguridad son mi máxima prioridad. Trabajo arduamente para que encuentres la propiedad que se adapte a tus sueños y metas de inversión.",
-        icon:  <TimeIcon/>,
         image: negociacionImg,
         subtitle: "Ahorro"
       },
       {
         title: "Reforma del inmueble",
-        description: "Buscamos superar las expectativas de nuestros clientes al ofrecerles una experiencia inigualable en la búsqueda de propiedades. Nuestro objetivo es ayudarles a tomar decisiones informadas y acertadas, maximizando su rentabilidad y brindándoles tranquilidad en cada inversión",
-        icon:  <TimeIcon/>,
         image: reformaImg,
         subtitle: "Reforma"
       },
       {
         title: "Gestion del alquiler e inquilino",
-        description: "Buscamos superar las expectativas de nuestros clientes al ofrecerles una experiencia inigualable en la búsqueda de propiedades. Nuestro objetivo es ayudarles a tomar decisiones informadas y acertadas, maximizando su rentabilidad y brindándoles tranquilidad en cada inversión",
-        icon:  <TimeIcon/>,
         image: gestionImg,
         subtitle: "Gestion"
       },

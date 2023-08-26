@@ -28,7 +28,7 @@ import { useRouter } from 'next/router'
     },
   }
   
-export default function BlogSection() {
+export default function BlogSection({data}:any) {
 
   const router = useRouter()
 
@@ -48,7 +48,6 @@ export default function BlogSection() {
         return (
           <motion.div
             onClick={() => router.push("/blog")}
-            variants={serviceVariant}                
             className=" px-5 py-2 group cursor-pointer relative w-full text-white flex flex-col justify-end h-36 md:h-96 overflow-hidden rounded-3xl"
             onHoverStart={()=> setIsHover(true)}
             onHoverEnd={()=> setIsHover(false)}
@@ -77,7 +76,7 @@ export default function BlogSection() {
   return (
     <>
       <TitleSection 
-        content='Lo que debes saber para concretar tu proyecto de inversión en bienes raíces en España o Italia con éxito.  ' 
+        content={data.title}
         subtitle='' 
         alignment='center'
       />
@@ -88,8 +87,8 @@ export default function BlogSection() {
         viewport={{ once: true }}
         className='mt-14 grid grid-cols-1 md:grid-cols-4 gap-5 md:gap-3 md:px-10'
       >
-        {BlogList.slice(0,4).map(blog => (
-          <Blog key={blog.title} {...blog} />
+        {data.blogs.slice(0,4).map((blog:any, index:number) => (
+          <Blog key={blog.title} index={index} {...blog} image={BlogList[index].image} />
         ))}
       </motion.div>
     </>

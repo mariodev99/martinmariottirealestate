@@ -35,7 +35,7 @@ export default function BlogPage() {
             Lo que debes saber para concretar tu proyecto de inversión en bienes raíces en España o Italia con éxito.
           </h1> */}
           {BlogList.map((item, index) => (
-            <div key={item.title} className='grid grid-cols1 md:grid-cols-2 py-10 gap-12'>
+            <div key={item.title} className='px-5 grid grid-cols1 md:grid-cols-2 py-10 gap-12'>
               <div className={`flex flex-col justify-center ${index % 2 == 0 ? "order-0" : "order-0 md:order-1"}`}>
                 <h2 className='text-2xl mb-6'>{item.title}</h2>
                 <p className='text-lg'>{item.description}</p>
