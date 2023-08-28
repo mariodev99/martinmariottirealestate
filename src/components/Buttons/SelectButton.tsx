@@ -27,6 +27,13 @@ export const SelectButton = () => {
     setIsOpen(!isOpen)
   }
 
+  function handleItemClick(code:string) {
+    setLangActive(code)
+    handleOpenLangList()
+  }
+
+
+
   return (
 
 
@@ -54,9 +61,9 @@ export const SelectButton = () => {
             transition={{ duration: 0.5, ease: [0.04, 0.62, 0.23, 0.98] }}
           >
               <ul className='mt-1 overflow-hidden cursor-pointer text-black bg-white w-full text-center font-medium rounded-2xl flex flex-col gap-1'>
-                <li className='hover:bg-greenprimary hover:text-black w-full px-4 py-2' onClick={() => setLangActive("en")}>Ingles</li>
-                <li className='hover:bg-greenprimary hover:text-black w-full px-4 py-2' onClick={() => setLangActive("es")}>Español</li>
-                <li className='hover:bg-greenprimary hover:text-black w-full px-4 py-2' onClick={() => setLangActive("it")}>Italiano</li>
+                <li className='hover:bg-greenprimary hover:text-black w-full px-4 py-2' onClick={() => handleItemClick("en")}>Ingles</li>
+                <li className='hover:bg-greenprimary hover:text-black w-full px-4 py-2' onClick={() => handleItemClick("es")}>Español</li>
+                <li className='hover:bg-greenprimary hover:text-black w-full px-4 py-2' onClick={() => handleItemClick("it")}>Italiano</li>
               </ul>
           </motion.div>
         )}
