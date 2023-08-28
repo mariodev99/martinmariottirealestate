@@ -92,6 +92,5 @@ export default function BlogSection({data}:any) {
         ))}
       </motion.div>
     </>
-
   )
 }

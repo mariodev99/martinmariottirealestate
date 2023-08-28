@@ -176,17 +176,17 @@ export const Nav = ({dataLang}:any) => {
               initial={{opacity: 0}} 
               animate={{opacity: 1}}
               exit={{opacity: 0}} 
-              className='flex flex-col gap-10'
+              className='flex flex-col gap-5'
             >
               <motion.h2 
-                className='text-center text-white mt-10'
+                className='text-center text-white '
               >
                 Mi asesoría, tu rentabilidad. Invierte con confianza hoy mismo.
               </motion.h2>
 
               <SelectButton />          
 
-              <p className='mt-20 text-sm text-secondary text-center text-regular'>Martin Mariotti, Real Estate Agent</p>
+              <p className=' text-sm text-secondary text-center text-regular'>Martin Mariotti, Real Estate Agent</p>
             </motion.div>
 
           </motion.aside>
