@@ -176,7 +176,7 @@ export const Nav = ({dataLang}:any) => {
               initial={{opacity: 0}} 
               animate={{opacity: 1}}
               exit={{opacity: 0}} 
-              className='flex flex-col gap-5'
+              className='flex flex-col gap-10'
             >
               <SelectButton />          
               <p className=' text-xs text-secondary text-center text-regular'>Martin Mariotti, Real Estate Agent</p>
