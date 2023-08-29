@@ -123,10 +123,10 @@
         "email": "martinmariotti.realestate@gmail.com"
     },
     "nav": {
-        "home_nav": "Inicio",
-        "services_nav": "Servicios",
-        "about_nav": "Sobre mí",
+        "home_nav": "Inizio",
+        "services_nav": "Servizi",
+        "about_nav": "Su di me",
         "blog_nav": "Blog",
-        "contact_nav": "Contacto"
+        "contact_nav": "Contatto"
     }
 }

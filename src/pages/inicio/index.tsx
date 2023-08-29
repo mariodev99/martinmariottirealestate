@@ -45,8 +45,9 @@ export default function HomePage(props:any) {
       <SectionWraper>
         <ContactSection data={props.contactData}/>
       </SectionWraper>
-      {/* <CredentialsSection/> */}
+      {/* TODO: TRADUCIR FOOTER */}
       <Footer data={props.footerData}/>
+      {/*  */}
     </motion.div>
   )
 }

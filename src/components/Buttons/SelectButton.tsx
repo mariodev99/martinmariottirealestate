@@ -43,7 +43,10 @@ export const SelectButton = () => {
         className='cursor-pointer border-2 border-white py-2 px-5 text-white rounded-full text-lg font-medium'
         whileHover={{backgroundColor: "#fff", color: "#000"}}
       >
-        Idioma
+        {router.locale === "es" && "Idioma"}
+        {router.locale === "en" && "Language"}
+        {router.locale === "it" && "Lingua"}
+
       </motion.div>
       <div className='w-full flex justify-center'>
 

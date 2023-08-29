@@ -7,14 +7,52 @@ import { useRouter } from 'next/router';
 import { Link as ScrollLink } from "react-scroll"
 import SelectButton from '../Buttons/SelectButton';
 
-
 const links = [
-  { name: "Inicio", to: "/inicio", id: 1 },
-  // { name: "Oportunidades", to: "/inicio", id: 2 },
-  { name: "Sobre mi", to: "/inicio", id: 3 },
-  { name: "Servicios", to: "/servicios", id: 4 },
-  { name: "Blog", to: "/blog", id: 5},
-  { name: "Contacto", to: "/contacto", id: 6},
+  { 
+    name: {
+      es: "Inicio",
+      en: "Home",
+      it: "Inizio"
+    }, 
+    to: "/inicio",
+    id: 1
+  },
+  { 
+    name: {
+      es: "Servicios",
+      en: "Services",
+      it: "Servizi"
+    }, 
+    to: "/inicio#section_services",
+    id: 2 
+  },
+  { 
+    name: {
+      es: "Sobre mí",
+      en: "About me",
+      it: "Su di me"
+    }, 
+    to: "/inicio#section_about_me",
+    id: 3 
+  },
+  { 
+    name: {
+      es: "Blog",
+      en: "Blog",
+      it: "Blog"
+    }, 
+    to: "/blog",
+    id: 4 
+  },
+  { 
+    name: {
+      es: "Contacto",
+      en: "Contact",
+      it: "Contatto"
+    }, 
+    to: "/contacto",
+    id: 5
+  },
 ];
 
 const itemVariants = {
@@ -40,13 +78,12 @@ const sideVariants = {
 };
 
 // FIX
-export const Nav = ({dataLang}:any) => {
+export const Nav = () => {
 
   const router = useRouter()
   const [open, cycleOpen] = useCycle(false, true);
   const { scrollY } = useScroll()
 
-  // console.log(router.pathname, "Base path")
   const [backgroundNavColor, setBackgroundNavColor] = useState("transparent")
 
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -63,7 +100,17 @@ export const Nav = ({dataLang}:any) => {
     cycleOpen()
   }
 
-  // console.log(router.pathname, "Base path")
+const MobileNavLink = ({name, to}: {name:string, to: string}) => (
+    <motion.div
+      whileHover={{ color: "#c0ff3f"}}
+      variants={itemVariants}
+      className='text-center text-white font-medium text-3xl py-2'
+      onClick={() => handleRedirect(to)}
+  >
+    {name}
+  </motion.div>
+)
+
 
   const LogoWithAnimation = () => (
     <motion.div
@@ -98,27 +145,52 @@ export const Nav = ({dataLang}:any) => {
           <LogoWithAnimation/>
         </div>
         <div className={`items-center justify-center flex-1 gap-8 hidden md:flex text-base font-medium uppercase ${backgroundNavColor === "white" ? "text-dark" : "text-white"}`}>
-          <Link href={"/inicio"} className='nav-link'>Inicio</Link>
+          <Link href={"/inicio"} className='nav-link'>
+            {router.locale === "es" && "Inicio"}
+            {router.locale === "en" && "Home"}
+            {router.locale === "it" && "Inizio"}
+          </Link>
 
           {router.pathname === "/inicio" ? 
           <div className='cursor-pointer nav-link'>
-            <ScrollLink to="section_services" smooth={true} duration={500}>Servicios</ScrollLink>
+            <ScrollLink to="section_services" smooth={true} duration={500}>
+              {router.locale === "es" && "Servicios"}
+              {router.locale === "en" && "Services"}
+              {router.locale === "it" && "Servizi"}
+            </ScrollLink>
           </div>
           :
-          <Link href={"/inicio#section_services"} className='nav-link'>Servicios</Link>
+          <Link href={"/inicio#section_services"} className='nav-link'>
+            {router.locale === "es" && "Servicios"}
+            {router.locale === "en" && "Services"}
+            {router.locale === "it" && "Servizi"}
+          </Link>
           }
 
           {router.pathname === "/inicio" ? 
           <div className='cursor-pointer nav-link'>
-            <ScrollLink to="section_about_me" smooth={true} duration={500}>Sobre mi</ScrollLink>
+            <ScrollLink to="section_about_me" smooth={true} duration={500}>
+              {router.locale === "es" && "Sobre mí"}
+              {router.locale === "en" && "About me"}
+              {router.locale === "it" && "Su di me"}              
+            </ScrollLink>
           </div>
           :
-          <Link href={"/inicio#section_about_me"} className='nav-link'>Sobre mi</Link>
+          <Link href={"/inicio#section_about_me"} className='nav-link'>              
+            {router.locale === "es" && "Sobre mí"}
+            {router.locale === "en" && "About me"}
+            {router.locale === "it" && "Su di me"} 
+           </Link>
           }
 
           <Link href={"/blog"} className='nav-link'>Blog</Link>
 
-          <Link href={"/contacto"} className='nav-link'>Contacto</Link>
+          <Link href={"/contacto"} className='nav-link'>
+
+            {router.locale === "es" && "Contacto"}
+            {router.locale === "en" && "Contact"}
+            {router.locale === "it" && "Contatto"}  
+          </Link>
 
         </div>
         <div className='hidden md:flex'>
@@ -153,22 +225,20 @@ export const Nav = ({dataLang}:any) => {
               <motion.button exit={{opacity: 0}} className='' onClick={() => cycleOpen()}> <CloseIcon/></motion.button>
             </div>
             <motion.div
-                className="flex flex-col gap-3 cursor-pointer mt-10"
+                className="flex flex-col gap-5 cursor-pointer mt-10"
                 initial="closed"
                 animate="open"
                 exit="closed"
                 variants={sideVariants}
               >
+
+                {/* <MobileNavLink name={router.locale === "es" ? "Inicio" : router.locale === "en" ? "Home" : "Inizio" } to='/inicio'/>
+                <MobileNavLink name={router.locale === "es" ? "Inicio" : router.locale === "en" ? "Home" : "Inizio" } to='/inicio'/> */}
+                    {/* {router.locale === "es" ? name.es : router.locale === "en" ? name.en : name.it } */}
+
+                
                 {links.map(({ name, to, id }) => (
-                  <motion.div
-                    whileHover={{ color: "#c0ff3f"}}
-                    key={id}
-                    variants={itemVariants}
-                    className='text-center text-white font-medium text-3xl py-2'
-                    onClick={() => handleRedirect(to)}
-                  >
-                    {name}
-                  </motion.div>
+                  <MobileNavLink key={id}  name={router.locale === "es" ? name.es : router.locale === "en" ? name.en : name.it } to={to}/>
                 ))}
             </motion.div>
 
@@ -176,10 +246,10 @@ export const Nav = ({dataLang}:any) => {
               initial={{opacity: 0}} 
               animate={{opacity: 1}}
               exit={{opacity: 0}} 
-              className='flex flex-col gap-10'
+              className='flex flex-col mt-10'
             >
-              <SelectButton />          
-              <p className=' text-xs text-secondary text-center text-regular'>Martin Mariotti, Real Estate Agent</p>
+              <SelectButton />
+              <p className='mt-10 text-xs text-secondary text-center text-regular'>Martin Mariotti, Real Estate Agent</p>
             </motion.div>
 
           </motion.aside>

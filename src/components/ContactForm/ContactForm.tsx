@@ -4,12 +4,14 @@ import { motion } from 'framer-motion';
 
 interface contactData {
   data: {
-    title: string
-    name_label: string
-    email_label: string
-    message_label: string
-    callToAction: string
-    status_ok_message: string
+    contact_form: {
+      title: string
+      name_label: string
+      email_label: string
+      message_label: string
+      callToAction: string
+      status_ok_message: string
+    }
   }
 }
 
@@ -46,9 +48,9 @@ export default function ContactForm({data}:contactData) {
 
   return (
     <form onSubmit={handleSubmit} className='order-1 md:order-2 flex flex-col gap-10 py-10 px-5 rounded-4xl bg-white shadow-lg'>
-    <h2 className='font-medium md:font-semibold text-lg md:text-xl'>{data.title}</h2>
+    <h2 className='font-medium md:font-semibold text-lg md:text-xl'>{data.contact_form.title}</h2>
     <div className='flex flex-col'>
-        <label htmlFor='userName' className='font-semibold'>{data.name_label}</label>
+        <label htmlFor='userName' className='font-semibold'>{data.contact_form.name_label}</label>
         <input onChange={handleChange} name='userName' required id='userName' type='text' className={inputClassname}/>
     </div>
     <div className='flex flex-col'>
@@ -56,7 +58,7 @@ export default function ContactForm({data}:contactData) {
       <input onChange={handleChange} required id='userEmail' name='userEmail' type='email' className={inputClassname}/>
     </div>
     <div className='flex flex-col'>
-      <label htmlFor='message' className='font-semibold'>{data.message_label}</label>
+      <label htmlFor='message' className='font-semibold'>{data.contact_form.message_label}</label>
       <textarea onChange={handleChange} required className={`h-32 ${inputClassname}`} id='message' name='message'></textarea>
     </div>
     <motion.button 
@@ -74,9 +76,9 @@ export default function ContactForm({data}:contactData) {
             <span className="sr-only">Loading...</span>
         </div>
         : sendMessageSuccess ? 
-        `${data.status_ok_message}` 
+        `${data.contact_form.status_ok_message}` 
         : 
-        `${data.callToAction}` 
+        `${data.contact_form.callToAction}` 
       }
     </motion.button>
 </form>

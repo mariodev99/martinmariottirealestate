@@ -24,7 +24,7 @@ export default function ContactPage(props:any) {
           <div className='relative h-64 w-full flex justify-center '>
             <div className='relative z-20 pt-24 w-3/4'>
               <h1 className={` text-xl md:text-3xl font-semibold text-center text-white`}>
-                Contactame y hagamos realidad tu proyecto de inversión inmobiliario
+                {props.contactData.title}
               </h1>
             </div>
             <Image
@@ -68,7 +68,6 @@ export default function ContactPage(props:any) {
             </div>
               {/* Formulario */}
               <ContactForm data={props.contactData}/>
-
           </div>
         </div>
       <Footer/>

@@ -42,8 +42,8 @@ export default function ContactSection({data}:any) {
             alignment='center' 
           />
           <div className=' pb-10 mt-2 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-10'>
-            <div className='order-2 md:order-1 flex flex-col gap-4 bg-black text-white rounded-4xl px-5 py-10'>
-                <div className='mb-3'>
+            <div className='order-2 md:order-1 flex flex-col gap-3 bg-black text-white rounded-4xl px-5 py-14'>
+                <div className=''>
                   <LogoIcon color='#fff'/>
                   <h2 className=' text-2xl font-semibold'>Martin Mariotti, Personal Shopper Inmobiliario</h2>
                 </div>
@@ -71,7 +71,7 @@ export default function ContactSection({data}:any) {
             </div>
 
             {/* Formulario */}
-            <ContactForm data={data.contact_form}/>
+            <ContactForm data={data}/>
           </div>
         </> 
   )
