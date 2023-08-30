@@ -6,6 +6,7 @@ import { Characteristics } from '@/components/Accordion/AccordionCharacteristics
 import { EnfoqueIcon, MisionIcon, ValoresIcon } from '@/components/Icons'
 import { motion } from 'framer-motion'
 import {PrimaryButton} from '@/components/Buttons/PrimaryButton'
+import { useRouter } from 'next/router'
 
 export interface CharacteristicsIconsProps {
   icon: React.ReactNode
@@ -24,6 +25,8 @@ const CaracteristicasIconos:CharacteristicsIconsProps[] = [
   ]
 
 export default function AboutSection({data}:any) {
+  const router = useRouter()
+
   return (
     <div >
 
@@ -77,7 +80,7 @@ export default function AboutSection({data}:any) {
         <Characteristics data={data.characteristics} icons={CaracteristicasIconos} />
       </div>
       
-      <div className='mt-2 flex justify-center'>
+      <div className='mt-2 flex justify-center' onClick={() => router.push("/contacto")}>
         <PrimaryButton mode='dark'>{data.callToAction}</PrimaryButton>
       </div>
     </div>
