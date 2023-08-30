@@ -1,6 +1,5 @@
 import TitleSection from '@/components/Layout/TitleSection'
 import React from 'react'
-import {PrimaryButton} from '@/components/Buttons/PrimaryButton'
 import { ServiceList } from '@/db/Services'
 import { AdvantageList } from '@/db/Advantages'
 import Image from 'next/image'
@@ -8,8 +7,8 @@ import { motion } from 'framer-motion'
 import { Service } from '@/db/Services'
 import { SwiperSlide, Swiper } from "swiper/react";
 import ServiceImage1 from "@/../public/images/servicesImage1.jpg"
-import ServiceImage2 from "@/../public/images/servicesImage2.jpg"
-import ServiceImage3 from "@/../public/images/servicesImage3.jpg"
+import ServiceImage2 from "@/../public/images/servicess2.jpg"
+import ServiceImage3 from "@/../public/images/llavesEnMano.jpg"
 import { CheckIcon } from '@/components/Icons'
 
 const container = {
@@ -143,7 +142,7 @@ const MostrarImagenes = () => (
       <div className='relative rounded-2xl overflow-hidden '>
       <Image 
         src={ServiceImage3} 
-        alt='Imagen de una casa' 
+        alt='Manos de una mujer con llaves de una casa' 
         layout="fill"
         objectFit="cover"
         quality={100}/>
