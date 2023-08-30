@@ -33,12 +33,6 @@ const serviceVariant = {
   },
 }
 
-
-
-
-
-
-
 const MostrarProceso = (data:any) => {
 
   const ServiceBox = ({title, image, subtitle}:Service) => (
