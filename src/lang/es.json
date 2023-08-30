@@ -112,15 +112,25 @@
             "title": "Martin Mariotti, Personal Shopper Inmobiliario",
             "location": "Barcelona, España",
             "email": "martinmariotti.realestate",
-            "italy_number": "España (+34) 624250094",
-            "spain_number": "Italia (+39) 3802056435"
+            "italy": "Italia",
+            "spain": "España"
         }
     },
     "footer": {
-        "title": "Mi asesoría, tu rentabilidad. Invierte con confianza hoy mismo.",
+        "title": {
+            "line1":  "Mi asesoría, tu rentabilidad.",
+            "line2":  "Invierte con confianza hoy mismo."
+        },
         "subtitle": "Martin Mariotti, 2023",
         "acreditations": "Acreditaciones",
-        "email": "martinmariotti.realestate@gmail.com"
+        "email": "martinmariotti.realestate@gmail.com",
+        "nav": {
+            "home_nav": "Inicio",
+            "services_nav": "Servicios",
+            "about_nav": "Sobre mí",
+            "blog_nav": "Blog",
+            "contact_nav": "Contacto"
+        }
     },
     "nav": {
         "home_nav": "Inicio",
