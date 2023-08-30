@@ -17,7 +17,7 @@ export interface Service {
 export const ServiceList:Service[] = [
     {
         title: "Busqueda del inmueble mas rentable",
-        image: busquedaImg,
+        image: gestionImg,
         subtitle: "Busqueda"
       },
       {
@@ -32,7 +32,7 @@ export const ServiceList:Service[] = [
       },
       {
         title: "Gestion del alquiler e inquilino",
-        image: gestionImg,
+        image: busquedaImg,
         subtitle: "Gestion"
       },
 ]
