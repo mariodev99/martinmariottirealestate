@@ -1,10 +1,8 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import headerImage from "../../../public/images/header2.jpg"
+import headerImage from "../../../public/images/header.jpg"
 import Image from 'next/image'
 import Footer from '@/components/Layout/Footer'
-import { EmailIcon, LocationIcon, LogoIcon, PhoneIcon } from '@/components/Icons'
-import contactImage from "../../../public/images/ContactPage.avif"
 import ContactForm from '@/components/ContactForm/ContactForm'
 import ContactData from '@/components/ContactForm/ContactData'
 

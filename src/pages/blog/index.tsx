@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Footer from '@/components/Layout/Footer'
 import Image from 'next/image'
-import headerImage from "../../../public/images/header2.jpg"
+import headerImage from "../../../public/images/header.jpg"
 import SectionWraper from '@/components/Layout/SectionWraper'
 import { BlogList } from '@/db/BlogList'
 
@@ -15,19 +15,19 @@ export default function BlogPage(props:any) {
         exit={{opacity: 0}}
     >
         <div className='w-full '>
-          <div className='relative h-64 w-full flex justify-center '>
-            <div className='relative z-20 pt-24 w-3/4'>
+          <div className='relative h-64  w-full flex justify-center '>
+            <div className=' z-20 pt-24 w-3/4'>
               <h1 className={` text-xl md:text-3xl font-semibold text-center text-white`}>{props.blogData.title}</h1>
             </div>
-            <Image
-              className='brightness-50'
-              src={headerImage}
-              alt='imagen del servicio' 
-              layout="fill"
-              objectFit="cover"
-              quality={100}
-              priority
-            />
+              <Image
+                className='brightness-50 '
+                src={headerImage}
+                alt='imagen del servicio' 
+                layout="fill"
+                objectFit="cover"
+                quality={100}
+                priority
+              />
           </div>
         </div>
         <SectionWraper>
@@ -37,7 +37,7 @@ export default function BlogPage(props:any) {
                 <h2 className='text-2xl mb-6'>{item.title}</h2>
                 <p className='text-lg'>{item.description}</p>
               </div>
-              <div className='relative overflow-hidden rounded-3xl'>
+              <div className='relative overflow-hidden rounded-3xl max-h-[500px]'>
                 <Image src={BlogList[index].image} alt='Imagen de una casa'></Image>
               </div>
             </div>

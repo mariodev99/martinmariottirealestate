@@ -1,10 +1,7 @@
-import { CashIcon, SmileIcon, TimeIcon } from "@/components/Icons"
-import React from "react"
-import busquedaImg from "../../public/images/busqueda_image.jpg"
-import negociacionImg from "../../public/images/negociacion_image.jpg"
-import reformaImg from "../../public/images/reforma_image.jpg"
-import gestionImg from "../../public/images/gestion_image.jpg"
-
+import Service4 from "../../public/images/services/busqueda_image.jpg"
+import Service2 from "../../public/images/services/negociacion_image.jpg"
+import Service3 from "../../public/images/services/reforma_image.jpg"
+import Service1 from "../../public/images/services/gestion_image.jpg"
 import { StaticImageData } from "next/image"
 
 export interface Service {
@@ -17,22 +14,22 @@ export interface Service {
 export const ServiceList:Service[] = [
     {
         title: "Busqueda del inmueble mas rentable",
-        image: gestionImg,
+        image: Service1,
         subtitle: "Busqueda"
       },
       {
         title: "Negociacion al mejor precio ",
-        image: negociacionImg,
+        image: Service2,
         subtitle: "Ahorro"
       },
       {
         title: "Reforma del inmueble",
-        image: reformaImg,
+        image: Service3,
         subtitle: "Reforma"
       },
       {
         title: "Gestion del alquiler e inquilino",
-        image: busquedaImg,
+        image: Service4,
         subtitle: "Gestion"
       },
 ]

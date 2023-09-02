@@ -16,17 +16,17 @@ import { useRouter } from 'next/router'
     }
   }
   
-  const serviceVariant = {
-    hidden: { opacity: 0, y: 50 },
-    show: { 
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.7,
-        type: "spring"
-      }
-    },
-  }
+  // const serviceVariant = {
+  //   hidden: { opacity: 0, y: 50 },
+  //   show: { 
+  //     opacity: 1,
+  //     y: 0,
+  //     transition: {
+  //       duration: 0.7,
+  //       type: "spring"
+  //     }
+  //   },
+  // }
   
 export default function BlogSection({data}:any) {
 

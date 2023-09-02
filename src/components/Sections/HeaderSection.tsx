@@ -2,7 +2,7 @@ import {PrimaryButton} from '@/components/Buttons/PrimaryButton'
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import SectionWraper from '@/components/Layout/SectionWraper'
-import headerImage from "../../../public/images/header2.jpg"
+import headerImage from "../../../public/images/header.jpg"
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
