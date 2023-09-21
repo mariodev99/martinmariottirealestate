@@ -15,7 +15,7 @@ export default function ContactData(props:any) {
       </div>
       <div className='flex gap-3'>
         <EmailIcon color='#fff'/>
-        <a href='mailto:martinmariotti.realestate@gmail.com'>martinmariotti.realestate</a>
+        <a className='truncate' href='mailto:martinmariotti.realestate@gmail.com'>martinmariotti.realestate@gmail.com</a>
       </div>
       <div className='flex gap-3'>
         <PhoneIcon color='white'/>
