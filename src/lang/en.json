@@ -10,15 +10,15 @@
         ]
     },
     "services" : {
-        "title": "I help you finalize your real estate investment project, providing comprehensive support and personalized services",
-        "subtitle": "Simplify your investment in real estate by delegating the entire process:",
+        "title": "Real Estate Investment Support",
+        "subtitle": "Simplify your real estate investment process by entrusting us with comprehensive support and personalized services, allowing you to focus on other priorities while we handle every aspect of your project.",
         "services": [
             "Search for the most profitable property",
             "Negotiation at the best price",
             "Reform of the property",
             "Property manager"
         ],
-        "subtitle2": "Maximize the effectiveness of your investment by delegating the entire process:",
+        "subtitle2": "Maximize the effectiveness of your investment",
         "proccess": [
             {
                 "title": "Search for the most profitable property",
@@ -74,32 +74,37 @@
         "callToAction": "Contact me"
     },
     "blog": {
-        "title": "What you need to know to complete your real estate investment project in Spain or Italy successfully",
+        "title": "Success essentials for your project",
         "blogs": [
             {
-                "title": "Property Management: Rental Management",
-                "description": "As a Property Manager I offer a range of personalized services for owners and renters who need professional help with managing their property or who need a concierge to manage their rentals. 100% personalized services available online throughout Spain and Italy, and in person in Barcelona"
+                "title": "Property Management",
+                "description": "As a Property Manager I offer a range of personalized services for owners and renters who need professional help with managing their property or who need a concierge to manage their rentals. 100% personalized services available online throughout Spain and Italy, and in person in Barcelona",
+                "color": "#0D0D0D"
             },
             {
                 "title": "Plan the investment from the beginning",
-                "description": "It is important not to forget that, prior to buying a property, analyzing the real estate market in the area or city where you want to invest will play an essential role. You must know not only supply and demand, prices, trends, but also focus on the factors that influence property values, opportunities and risks"
+                "description": "It is important not to forget that, prior to buying a property, analyzing the real estate market in the area or city where you want to invest will play an essential role. You must know not only supply and demand, prices, trends, but also focus on the factors that influence property values, opportunities and risks",
+                "color": "#A5F83B"
             },
             {
                 "title": "Traditional form of financing",
-                "description": "If you do not have enough money to buy a property in cash, you can resort to mortgage financing. To do this, you must compare the different options offered by financial institutions and choose the one that best suits you according to the interest rate, term or commissions. You should also take into account your ability to pay and your level of indebtedness, to avoid future problems."
+                "description": "If you do not have enough money to buy a property in cash, you can resort to mortgage financing. To do this, you must compare the different options offered by financial institutions and choose the one that best suits you according to the interest rate, term or commissions. You should also take into account your ability to pay and your level of indebtedness, to avoid future problems.",
+                "color": "#0D0D0D"
             },
             {
                 "title": "Location and diversification",
-                "description": "We always recommend choosing an area that has good communication, services and quality of life. For example, if you want to invest in housing for students or young professionals, you can opt for areas or workplaces. If you prefer to invest in a family home, you may prefer residential or quiet areas. Also, if the intention is to reduce risk and increase the chances of success when investing in real estate, you can diversify your investment in different types of properties or locations. So you can take advantage of the opportunities offered by each market and better adapt to changes in the sector."
+                "description": "We always recommend choosing an area that has good communication, services and quality of life. For example, if you want to invest in housing for students or young professionals, you can opt for areas or workplaces. If you prefer to invest in a family home, you may prefer residential or quiet areas. Also, if the intention is to reduce risk and increase the chances of success when investing in real estate, you can diversify your investment in different types of properties or locations. So you can take advantage of the opportunities offered by each market and better adapt to changes in the sector.",
+                "color": "#FBFBFB"
             },
             {
                 "title": "Investing gives us the possibility of making our money profitable",
-                "description": "To be certain that the return on investment in a property is optimal, it is necessary to make certain calculations and closely follow indicators that show the true numbers of the processes. Among them, profitability is a key reference to have the detail of the investments. If you are thinking of starting an investment in real estate this year, you should already know that the real estate market is one of the most profitable and safe in the long term, but also one of the most changing. For this reason, before starting to buy a property, I remind you that it is important to follow some tips that will help you make the best decision and maximize the return on your investment."
+                "description": "To be certain that the return on investment in a property is optimal, it is necessary to make certain calculations and closely follow indicators that show the true numbers of the processes. Among them, profitability is a key reference to have the detail of the investments. If you are thinking of starting an investment in real estate this year, you should already know that the real estate market is one of the most profitable and safe in the long term, but also one of the most changing. For this reason, before starting to buy a property, I remind you that it is important to follow some tips that will help you make the best decision and maximize the return on your investment.",
+                "color": "#A5F83B"
             }
         ]
     },
     "contact": {
-        "title": "Contact me and let's make your real estate investment project a reality",
+        "title": "Contact me and let's make your project a reality",
         "contact_form": {
             "title": "Send me a message and tell me about your project",
             "name_label": "Name and surname",

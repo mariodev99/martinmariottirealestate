@@ -16,10 +16,12 @@ module.exports = {
       },
       colors: {
         // ddf247 otro verde clarito
-        greenprimary: "#c0ff3f",
+        greenprimary: "#A5F83B",
         greensecondary: "#BFDE00",
         orangeprimary: "#FF7A00",
         secondary: "#757575",
+        blacksecondary: "#151515",
+        grayprimary: "#A4A4A4",
       },
       borderRadius: {
         "4xl": "35px",

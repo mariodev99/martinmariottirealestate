@@ -74,27 +74,37 @@
         "callToAction": "Contattami"
     },
     "blog": {
-        "title": "Quello che devi sapere per completare con successo il tuo progetto di investimento immobiliare in Spagna o in Italia",
+        "title": "Quello che devi sapere per completare con successo il tuo progetto di investimento immobiliare",
         "blogs": [
             {
-                "title": "Gestione della proprietà: gestione degli affitti",
-                "description": "In qualità di Property Manager offro una gamma di servizi personalizzati per proprietari e affittuari che necessitano di un aiuto professionale nella gestione della loro proprietà o che necessitano di un concierge per gestire i loro affitti. Servizi personalizzati al 100% disponibili online in tutta Spagna e Italia e di persona a Barcellona"
+                "title": "Gestione della proprietà",
+                "description": "In qualità di Property Manager offro una gamma di servizi personalizzati per proprietari e affittuari che necessitano di un aiuto professionale nella gestione della loro proprietà o che necessitano di un concierge per gestire i loro affitti. Servizi personalizzati al 100% disponibili online in tutta Spagna e Italia e di persona a Barcellona",
+                "color": "#0D0D0D"
+
             },
             {
                 "title": "Pianificare l'investimento fin dall'inizio",
-                "description": "È importante non dimenticare che, prima di acquistare un immobile, l’analisi del mercato immobiliare della zona o della città in cui si vuole investire ricoprirà un ruolo essenziale. È necessario conoscere non solo domanda e offerta, prezzi, tendenze, ma anche concentrarsi sui fattori che influenzano i valori, le opportunità e i rischi degli immobili"
+                "description": "È importante non dimenticare che, prima di acquistare un immobile, l’analisi del mercato immobiliare della zona o della città in cui si vuole investire ricoprirà un ruolo essenziale. È necessario conoscere non solo domanda e offerta, prezzi, tendenze, ma anche concentrarsi sui fattori che influenzano i valori, le opportunità e i rischi degli immobili",
+                "color": "#A5F83B"
+
             },
             {
                 "title": "Forma di finanziamento tradizionale",
-                "description": "Se non hai abbastanza soldi per acquistare un immobile in contanti, puoi ricorrere al finanziamento ipotecario. Per fare ciò, devi confrontare le diverse opzioni offerte dagli istituti finanziari e scegliere quella più adatta a te in base al tasso di interesse, alla durata o alle commissioni. Dovresti anche tenere in considerazione la tua capacità di pagare e il tuo livello di indebitamento, per evitare problemi futuri."
+                "description": "Se non hai abbastanza soldi per acquistare un immobile in contanti, puoi ricorrere al finanziamento ipotecario. Per fare ciò, devi confrontare le diverse opzioni offerte dagli istituti finanziari e scegliere quella più adatta a te in base al tasso di interesse, alla durata o alle commissioni. Dovresti anche tenere in considerazione la tua capacità di pagare e il tuo livello di indebitamento, per evitare problemi futuri.",
+                "color": "#0D0D0D"
+
             },
             {
                 "title": "Localizzazione e diversificazione",
-                "description": "Consigliamo sempre di scegliere una zona che abbia una buona comunicazione, servizi e qualità della vita. Se ad esempio si vuole investire in alloggi per studenti o giovani professionisti si può optare per aree o luoghi di lavoro. Se preferisci investire in una casa unifamiliare, potresti preferire zone residenziali o tranquille. Inoltre, se l’intenzione è ridurre il rischio e aumentare le possibilità di successo quando si investe nel settore immobiliare, è possibile diversificare il proprio investimento in diversi tipi di proprietà o luoghi. Potrai così sfruttare le opportunità offerte da ciascun mercato e adattarti meglio ai cambiamenti del settore."
+                "description": "Consigliamo sempre di scegliere una zona che abbia una buona comunicazione, servizi e qualità della vita. Se ad esempio si vuole investire in alloggi per studenti o giovani professionisti si può optare per aree o luoghi di lavoro. Se preferisci investire in una casa unifamiliare, potresti preferire zone residenziali o tranquille. Inoltre, se l’intenzione è ridurre il rischio e aumentare le possibilità di successo quando si investe nel settore immobiliare, è possibile diversificare il proprio investimento in diversi tipi di proprietà o luoghi. Potrai così sfruttare le opportunità offerte da ciascun mercato e adattarti meglio ai cambiamenti del settore.",
+                "color": "#FBFBFB"
+
             },
             {
                 "title": "Investire ci dà la possibilità di rendere redditizi i nostri soldi",
-                "description": "Per essere certi che il ritorno sull'investimento in un immobile sia ottimale, è necessario fare alcuni calcoli e seguire attentamente gli indicatori che mostrano i numeri reali dei processi. Tra questi, la redditività è un riferimento fondamentale per avere il dettaglio degli investimenti. Se stai pensando di iniziare quest’anno un investimento immobiliare, dovresti già sapere che il mercato immobiliare è uno dei più redditizi e sicuri a lungo termine, ma anche uno dei più mutevoli. Pertanto, prima di iniziare ad acquistare un immobile, ti ricordo che è importante seguire alcuni consigli che ti aiuteranno a prendere la decisione migliore e a massimizzare il ritorno del tuo investimento."
+                "description": "Per essere certi che il ritorno sull'investimento in un immobile sia ottimale, è necessario fare alcuni calcoli e seguire attentamente gli indicatori che mostrano i numeri reali dei processi. Tra questi, la redditività è un riferimento fondamentale per avere il dettaglio degli investimenti. Se stai pensando di iniziare quest’anno un investimento immobiliare, dovresti già sapere che il mercato immobiliare è uno dei più redditizi e sicuri a lungo termine, ma anche uno dei più mutevoli. Pertanto, prima di iniziare ad acquistare un immobile, ti ricordo che è importante seguire alcuni consigli che ti aiuteranno a prendere la decisione migliore e a massimizzare il ritorno del tuo investimento.",
+                "color": "#A5F83B"
+
             }
         ]
     },
