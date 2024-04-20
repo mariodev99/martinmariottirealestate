@@ -130,10 +130,10 @@ export const Nav = () => {
         className="fixed w-full flex top-0 h-16 items-center z-40"
       >
         <div className="pt-10 container flex mx-auto w-full justify-between px-10 items-center ">
-          <div className="">
+          <div className="w-1/4">
             <LogoWithAnimation />
           </div>
-          <div className="text-white items-center justify-center flex-1 gap-8 hidden md:flex font-medium text-base ">
+          <div className="text-white items-center justify-center flex-1 gap-8 hidden md:flex font-medium text-base w-1/2">
             <div className="flex gap-5 bg-blacksecondary rounded-full px-6 py-2.5">
               <Link href={"/inicio"} className="nav-link">
                 {router.locale === "es" && "Inicio"}
@@ -186,7 +186,7 @@ export const Nav = () => {
               </Link>
             </div>
           </div>
-          <div className="hidden md:flex gap-4 ">
+          <div className="hidden md:flex gap-4 w-1/4">
             <SelectButton />
             <Link
               href={"/contacto"}

@@ -6,7 +6,7 @@ export default function ContactData(props: any) {
     <div className="order-2 md:order-1 flex flex-col gap-4  text-white ">
       <div className="mb-3 flex items-center gap-5">
         <LogoIcon color="#A5F83B" width="50" height="50" />
-        <h2 className="text-xl font-medium">
+        <h2 className="text-md md:text-xl font-medium">
           Martin Mariotti <br /> Personal Shopper Inmobiliario
         </h2>
       </div>

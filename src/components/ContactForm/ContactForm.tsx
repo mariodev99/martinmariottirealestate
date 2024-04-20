@@ -57,7 +57,7 @@ export default function ContactForm({ data }: contactData) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="order-1 md:order-2 flex flex-col gap-10 text-white "
+      className="order-1 md:order-2 flex flex-col gap-5 md:gap-10 text-white "
     >
       <h2 className="font-medium md:font-regular text-lg md:text-3xl">
         {data.contact_form.title}

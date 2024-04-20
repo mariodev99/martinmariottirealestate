@@ -52,7 +52,7 @@ export default function HeaderSection({ data }: any) {
       <SectionWraper>
         <main className="relative text-white w-full md:w-2/3">
           <div className="flex flex-col gap-10">
-            <div className="text-2xl md:text-5xl ">
+            <div className="text-2xl md:text-5xl lg:6xl ">
               <h1
                 className={`text-center md:text-start font-semibold tracking-wide`}
               >

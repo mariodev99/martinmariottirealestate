@@ -56,7 +56,7 @@ export default function BlogSection({ data }: any) {
     return (
       <>
         {/* Mobile Blog */}
-        <div className="block md:hidden">
+        <div className="block md:hidden" onClick={() => router.push("/blog")}>
           <div className="flex  w-full text-white cursor-pointer">
             <div className="relative overflow-hidden w-20 h-20 rounded-s">
               <Image
@@ -82,7 +82,7 @@ export default function BlogSection({ data }: any) {
           className="hidden md:flex flex-col gap-3 cursor-pointer"
         >
           <div
-            className={`rounded-sm overflow-hidden brightness-75 relative w-full h-64  ${
+            className={`rounded-sm overflow-hidden brightness-75 relative w-full h-64 lg:h-72   ${
               order != 0 && "order-3 "
             } `}
           >
@@ -96,7 +96,7 @@ export default function BlogSection({ data }: any) {
             />
           </div>
           <div
-            className={`rounded-sm w-full h-64 py-6 px-8 font-medium flex flex-col justify-between ${
+            className={`rounded-sm w-full h-64 lg:h-72 py-6 px-8 font-medium flex flex-col justify-between ${
               order == 0 && "text-white "
             }`}
             style={{ backgroundColor: color }}

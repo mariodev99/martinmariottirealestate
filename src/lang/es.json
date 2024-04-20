@@ -74,7 +74,7 @@
         "callToAction": "Contactame"
     },
     "blog": {
-        "title": "Lo que debes saber para concretar tu proyecto de inversión en bienes raíces con éxito",
+        "title": "Lo que debes saber para concretar tu proyecto con éxito",
         "blogs": [
             {
                 "title": "Administración de Propiedades",
@@ -104,7 +104,7 @@
         ]
     },
     "contact": {
-        "title": "Contactame y hagamos realidad tu proyecto de inversión inmobiliario",
+        "title": "Contactame y hagamos realidad tu proyecto",
         "contact_form": {
             "title": "Enviame un mensaje y cuentame sobre tu proyecto",
             "name_label": "Nombre y apellido",
