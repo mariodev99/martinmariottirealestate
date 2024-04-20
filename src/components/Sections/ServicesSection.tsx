@@ -44,7 +44,7 @@ const MostrarProceso = (data: any) => {
         </div>
       </div>
       {/* Image */}
-      <motion.div className="relative w-full h-72 overflow-hidden">
+      <motion.div className="relative w-full h-72 overflow-hidden rounded">
         <Image
           src={image}
           alt="imagen del servicio"
@@ -53,15 +53,15 @@ const MostrarProceso = (data: any) => {
           quality={100}
         />
       </motion.div>
-      <div className="py-3 px-3">
-        <p className="mt-0 text-md font-regular ">{title}</p>
+      <div className="py-3 ">
+        <p className="mt-0 text-lg ">{title}</p>
       </div>
     </motion.div>
   );
 
   return (
     <>
-      <h2 className="font-regular text-lg md:text-xl">{data.subtitle2}</h2>
+      <h2 className="font-regular text-lg md:text-2xl">{data.subtitle2}</h2>
 
       <div>
         <Swiper
@@ -116,10 +116,10 @@ const MostrarVentajas = (data: any) => (
         {data.advantages.map((item: any, index: number) => (
           <div
             key={item.title}
-            className=" py-7 px-5 border border-[#181818] flex flex-col gap-3 "
+            className=" py-7 px-5 border border-[#181818] flex flex-col gap-3 rounded"
           >
             <div>{AdvantageList[index].icon}</div>
-            <h3 className="font-medium text-lg mt-4">{item.title}</h3>
+            <h3 className=" text-lg mt-4">{item.title}</h3>
             <p className="text-[#AEAEAE] text-sm">{item.description}</p>
           </div>
         ))}
@@ -170,7 +170,7 @@ export default function ServicesSection({ data }: any) {
           <div>
             <TitleSection content={data.title} alignment={"start"} />
             <div className="mt-6">
-              <h2 className="font-regular md:text-xl text-grayprimary">
+              <h2 className="font-regular md:text-lg text-grayprimary">
                 {data.subtitle}
               </h2>
             </div>
@@ -188,7 +188,7 @@ export default function ServicesSection({ data }: any) {
             <circle cx="17" cy="17" r="9.0625" stroke="#A5F83B" />
             <circle cx="17" cy="17" r="16.5" stroke="#A5F83B" />
             <circle cx="17" cy="17" r="7.4375" fill="#A5F83B" />
-            <path d="M17 47V102H57" stroke="white" stroke-width="2" />
+            <path d="M17 47V102H57" stroke="white" strokeWidth="2" />
             <path
               d="M82.7071 102.707C83.0976 102.317 83.0976 101.683 82.7071 101.293L76.3431 94.9289C75.9526 94.5384 75.3195 94.5384 74.9289 94.9289C74.5384 95.3195 74.5384 95.9526 74.9289 96.3431L80.5858 102L74.9289 107.657C74.5384 108.047 74.5384 108.681 74.9289 109.071C75.3195 109.462 75.9526 109.462 76.3431 109.071L82.7071 102.707ZM71 103H82V101H71V103Z"
               fill="#A5F83B"

@@ -41,7 +41,7 @@ const Slider = () => {
             className="flex-shrink-0"
             style={{ width: `${100 / slides.length}%` }}
           >
-            <div className="flex flex-col items-center justify-center h-full text-lg md:text-5xl">
+            <div className="flex flex-col items-center justify-center h-full text-md md:text-5xl">
               {slide.text}
             </div>
           </div>

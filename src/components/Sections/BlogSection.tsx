@@ -58,7 +58,7 @@ export default function BlogSection({ data }: any) {
         {/* Mobile Blog */}
         <div className="block md:hidden">
           <div className="flex  w-full text-white cursor-pointer">
-            <div className="relative overflow-hidden w-20 h-20  ">
+            <div className="relative overflow-hidden w-20 h-20 rounded-s">
               <Image
                 src={image}
                 alt="imagen del servicio"
@@ -66,10 +66,12 @@ export default function BlogSection({ data }: any) {
                 objectFit="cover"
               />
             </div>
-            <div className="flex flex-col  flex-1 bg-gradient-to-r from-[#0D0D0D] to-black pl-3 py-1 ">
-              <h4 className="text-sm line-clamp-1 font-medium">{title}</h4>
-              <p className="line-clamp-2 text-xs ">{description}</p>
-              <p className="line-clamp-2 text-xs text-secondary">More</p>
+            <div className="flex flex-col justify-between flex-1 bg-gradient-to-r from-[#0D0D0D] to-[#070707] pl-3 py-1 rounded-e">
+              <h4 className=" line-clamp-2 font-medium mt-1">{title}</h4>
+              {/* <p className="line-clamp-2 text-xs ">{description}</p> */}
+              <p className="line-clamp-2 text-xs text-secondary">
+                More information
+              </p>
             </div>
           </div>
         </div>
