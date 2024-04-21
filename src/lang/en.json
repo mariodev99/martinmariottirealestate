@@ -10,7 +10,7 @@
         ]
     },
     "services" : {
-        "title": "Real Estate Investment Support",
+        "title": "Comprehensive support and tailored services",
         "subtitle": "Simplify your real estate investment process by entrusting us with comprehensive support and personalized services, allowing you to focus on other priorities while we handle every aspect of your project.",
         "services": [
             "Search for the most profitable property",
@@ -74,7 +74,7 @@
         "callToAction": "Contact me"
     },
     "blog": {
-        "title": "Success essentials for your project",
+        "title": "Essential Tips for project success",
         "blogs": [
             {
                 "title": "Property Management",
@@ -106,7 +106,7 @@
 
     },
     "contact": {
-        "title": "Contact me and let's make your project a reality",
+        "title": "Contact me to bring your project to life",
         "contact_form": {
             "title": "Send me a message and tell me about your project",
             "name_label": "Name and surname",

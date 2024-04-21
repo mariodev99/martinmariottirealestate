@@ -10,7 +10,7 @@
         ]
     },
     "services" : {
-        "title": "Ti aiuto a finalizzare il tuo progetto di investimento immobiliare, fornendo supporto completo e servizi personalizzati",
+        "title": "Supporto completo e servizi personalizzati",
         "subtitle": "Semplifica il tuo investimento immobiliare delegando l'intero processo:",
         "services": [
             "Cerca l'immobile più redditizio",
@@ -74,7 +74,7 @@
         "callToAction": "Contattami"
     },
     "blog": {
-        "title": "Quello che devi sapere per completare con successo il tuo progetto di investimento immobiliare",
+        "title": "Consigli essenziali per il successo del progetto",
         "blogs": [
             {
                 "title": "Gestione della proprietà",
@@ -113,7 +113,7 @@
     "contact": {
         "title": "Contattami e trasformeremo in realtà il tuo progetto di investimento immobiliare",
         "contact_form": {
-            "title": "Mandami un messaggio e parlami del tuo progetto",
+            "title": "Prendi contatto e realizziamo il tuo progetto",
             "name_label": "Nome e cognome",
             "email_label": "E-mail",
             "message_label": "Messaggio",
