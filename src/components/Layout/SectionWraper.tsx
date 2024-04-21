@@ -6,7 +6,7 @@ interface Props {
 
 export default function SectionWraper({ children }: Props) {
   return (
-    <section className="py-5 md:py-10 px-10 container mx-auto">
+    <section className="py-5 md:py-10 px-5 md:px-10 container mx-auto">
       {children}
     </section>
   );
