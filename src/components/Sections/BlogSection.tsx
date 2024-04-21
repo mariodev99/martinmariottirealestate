@@ -104,7 +104,7 @@ export default function BlogSection({ data }: any) {
             <h3 className={`relative z-20  text-base md:text-lg `}>{title}</h3>
             <div className=" text-sm ">
               <p className="line-clamp-3  mb-3">{description}</p>
-              <Link href={"/blog"}>Mas informacion</Link>
+              <Link href={"/blog"}>{data.more_button}</Link>
             </div>
           </div>
         </div>
