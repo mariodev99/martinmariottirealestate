@@ -5,7 +5,7 @@
 ::-webkit-scrollbar {display: none;}
 
 body {
-	background: linear-gradient(309deg, rgba(0,0,0,1) 0%, rgba(12,12,12,1) 100%);
+	background: white;
 	color: "#fff";
 	overflow-x: hidden;
 }

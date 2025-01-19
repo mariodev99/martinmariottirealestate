@@ -34,17 +34,20 @@ export default function HomePage(props: any) {
           <ServicesSection data={props.servicesData} />
         </SectionWraper>
       </div>
-      <div id="section_about_me">
+      <div id="section_about_me" className="bg-black rounded-t-4xl">
         <SectionWraper>
           <AboutSection data={props.aboutData} />
         </SectionWraper>
       </div>
-      <SectionWraper>
-        <BlogSection data={props.blogData} />
-      </SectionWraper>
-      <SectionWraper>
-        <ContactSection data={props.contactData} />
-      </SectionWraper>
+      <div className="bg-black ">
+        <SectionWraper>
+          <BlogSection data={props.blogData} />
+        </SectionWraper>
+
+        <SectionWraper>
+          <ContactSection data={props.contactData} />
+        </SectionWraper>
+      </div>
       <Footer data={props.footerData} />
       {/*  */}
     </motion.div>

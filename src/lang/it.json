@@ -19,22 +19,22 @@
             "Gestione affitti e inquilini"
         ],
         "subtitle2": "Massimizza l’efficacia del tuo investimento delegando l’intero processo:",
-        "proccess": [
+        "process": [
             {
-                "title": "Cerca l'immobile più redditizio",
-                "subtitle": "Ricerca"
+                "title": "Search for the most profitable property",
+                "description": "Search"
             },
             {
-                "title": "Trattativa al miglior prezzo",
-                "subtitle": "Salvataggio"
+                "title": "Negotiation at the best price",
+                "description": "Saving"
             },
             {
-                "title": "Riforma della proprietà",
-                "subtitle": "Riforma"
+                "title": "Reform of the property",
+                "description": "Reform"
             },
             {
-                "title": "Gestione affitti e inquilini",
-                "subtitle": "Gestione"
+                "title": "Rent and tenant management",
+                "description": "Management"
             }
         ],
         "subtitle3": "In qualità di Agente Acquirente mi dedico esclusivamente alla ricerca di immobili espressamente commissionati dai miei clienti acquirenti, siano essi in Spagna o in Italia al momento dell'acquisto.",

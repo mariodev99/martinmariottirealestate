@@ -1,16 +1,16 @@
 {
     "home" : {
-        "title": "Invest in real estate in Spain or Italy, so",
-        "subtitle": "Create your real estate assets by investing in the most profitable properties with complete security and peace of mind",
+        "title": "Make Smart Investments:",
+        "subtitle": "Build your real estate portfolio by investing in the most profitable properties, with total security and peace of mind.",
         "callToAction": "Concrete your project",
         "words": [
-            "intelligent",
-            "scalable",
-            "profitable"
+            "Inteligently",
+            "Scalably",
+            "Profitably"
         ]
     },
     "services" : {
-        "title": "Comprehensive support and tailored services",
+        "title": "Simplify your real estate investment process by entrusting us with comprehensive support and personalized services, allowing you to focus on other priorities while we handle every aspect of your project.",
         "subtitle": "Simplify your real estate investment process by entrusting us with comprehensive support and personalized services, allowing you to focus on other priorities while we handle every aspect of your project.",
         "services": [
             "Search for the most profitable property",
@@ -19,22 +19,29 @@
             "Property manager"
         ],
         "subtitle2": "Maximize the effectiveness of your investment",
-        "proccess": [
+        "process": [
             {
                 "title": "Search for the most profitable property",
-                "subtitle": "Search"
+                "description": "I specialize in finding the most profitable real estate opportunities for you. By analyzing market trends, property values, and rental potential, I ensure you make smart investments that maximize your returns. From identifying the best locations to closing the deal, I handle everything so you can focus on your goals.",
+                "image": ""
             },
             {
                 "title": "Negotiation at the best price",
-                "subtitle": "Saving"
+                "description": "I take pride in negotiating the best possible deals on your behalf. Whether you're buying or selling, I use strategic planning and deep market knowledge to secure the most favorable price. Your interests are my priority, and I make sure you get the best value every time.",
+                "image": ""
+
             },
             {
                 "title": "Reform of the property",
-                "subtitle": "Reform"
+                "description": "Let me transform your property into its best version. From planning and design to overseeing renovations, I manage every detail to deliver high-quality results. Whether it’s a small update or a full-scale makeover, I’m here to turn your vision into reality and boost the value of your property.",
+                "image": ""
+
             },
             {
                 "title": "Rent and tenant management",
-                "subtitle": "Management"
+                "description": "I make renting out your property effortless. From finding reliable tenants to handling contracts and maintenance, I take care of every detail. You can enjoy a steady income without the hassle, knowing your property is in good hands. Your peace of mind is my priority.",
+                "image": ""
+
             }
         ],
         "subtitle3": "As Buyer's Agent, I am exclusively dedicated to the search for properties expressly commissioned by my buyer clients, whether they are in Spain or Italy at the time of purchase.",

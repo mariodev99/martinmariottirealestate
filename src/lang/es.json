@@ -19,22 +19,22 @@
             "Gestion del alquiler e inquilino"
         ],
         "subtitle2": "Maximiza la eficacia de tu inversión delegando todo el proceso:",
-        "proccess": [
+        "process": [
             {
-                "title": "Busqueda del inmueble mas rentable",
-                "subtitle": "Busqueda"
+                "title": "Search for the most profitable property",
+                "description": "Search"
             },
             {
-                "title": "Negociacion al mejor precio",
-                "subtitle": "Ahorro"
+                "title": "Negotiation at the best price",
+                "description": "Saving"
             },
             {
-                "title": "Reforma del inmueble",
-                "subtitle": "Reforma"
+                "title": "Reform of the property",
+                "description": "Reform"
             },
             {
-                "title": "Gestion del alquiler e inquilino",
-                "subtitle": "Gestion"
+                "title": "Rent and tenant management",
+                "description": "Management"
             }
         ],
         "subtitle3": "Como Agente del Comprador, me dedico exclusivamente a la búsqueda de propiedades por encargo expreso de mis clientes compradores, ya sea que se encuentren en España o Italia al momento de la compra.",
