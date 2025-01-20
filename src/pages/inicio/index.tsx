@@ -34,8 +34,27 @@ export default function HomePage(props: any) {
           <ServicesSection data={props.servicesData} />
         </SectionWraper>
       </div>
+      <div className="px-5 md:px-10 container mx-auto pt-20">
+        <h2 className="text-[15vw] md:text-[10vw] leading-9 md:leading-[100px] text-center font-bold">
+          WHY ME?
+        </h2>
+      </div>
+
       <div id="section_about_me" className="bg-black rounded-t-4xl">
         <SectionWraper>
+          <div className="flex flex-col gap-3 mb-16">
+            {props.servicesData.advantages.map((item: any, index: number) => (
+              <div className="rounded-3xl bg-[#161616] py-6 px-4">
+                <div className="flex justify-between items-center text-lg md:text-2xl font-medium text-white p-4">
+                  <h3 className="">{item.title}</h3>
+                  <div className="text-greenprimary"> 0{index + 1}</div>
+                </div>
+                <div className="px-4 text-sm md:text-lg text-[#cbcbcb]">
+                  {item.description}
+                </div>
+              </div>
+            ))}
+          </div>
           <AboutSection data={props.aboutData} />
         </SectionWraper>
       </div>

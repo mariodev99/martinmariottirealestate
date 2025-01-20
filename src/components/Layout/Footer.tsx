@@ -29,7 +29,7 @@ export default function Footer({ data }: any) {
               {data.title.line1} <br /> {data.title.line2}
             </h2>
             <h3 className="font-normal text-base hidden md:block">
-              Martin Mariotti, 2023
+              Martin Mariotti, 2025
             </h3>
           </div>
           {/* Acreditaciones */}

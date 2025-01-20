@@ -9,7 +9,7 @@ import { BlogList } from "@/db/BlogList";
 export default function BlogPage(props: any) {
   return (
     <motion.main
-      className={` min-h-screen overflow-y-hidden text-white`}
+      className={` min-h-screen overflow-y-hidden text-white bg-black`}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -49,7 +49,7 @@ export default function BlogPage(props: any) {
                 <h2 className="text-2xl mb-6">{item.title}</h2>
                 <p className="text-lg">{item.description}</p>
               </div>
-              <div className="relative overflow-hidden rounded max-h-[500px]">
+              <div className="relative overflow-hidden max-h-[500px]">
                 <Image
                   src={BlogList[index].image}
                   alt="Imagen de una casa"

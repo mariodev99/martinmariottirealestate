@@ -21,32 +21,6 @@ const wordVariants = {
 };
 
 export default function HeaderSection({ data }: any) {
-  const [currentWordIndex, setCurrentWordIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentWordIndex((prevIndex) =>
-        prevIndex === data.words.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 2000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const Background = () => (
-    <div className="absolute w-full h-full brightness-[0.5] ">
-      <Image
-        className="bg-top"
-        src={headerImage}
-        alt="edificios"
-        layout="fill"
-        objectFit="cover"
-        quality={100}
-        priority
-      />
-    </div>
-  );
-
   return (
     <div className="relative flex items-center pt-0 h-screen w-full">
       {/* bg-[url('/images/header2.jpg')] bg-right bg-cover  */}

@@ -29,6 +29,8 @@ export default function AboutSection({ data }: any) {
 
   return (
     <div>
+      {/* WHY ME */}
+
       {/* Sobre mi */}
       <TitleSection content={data.title} alignment="start" />
       <div className="grid grid-cols-1 md:grid-cols-2 text-white mt-5">

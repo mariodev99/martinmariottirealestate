@@ -13,7 +13,8 @@ export default function ContactData(props: any) {
       <div className="text-md md:text-lg font-regular md:font-medium flex flex-col gap-4 mt-5 ">
         <div className="flex gap-3">
           <LocationIcon color="#fff" />
-          <p>{props.contactData.contact_data.location}</p>
+          {/* <p>{props.contactData.contact_data.location}</p> */}
+          <p>Miami, Florida</p>
         </div>
         {/* <div className="flex gap-3">
           <EmailIcon color="#fff" />
@@ -24,6 +25,10 @@ export default function ContactData(props: any) {
             martinmariotti.realestate@gmail.com
           </a>
         </div> */}
+        <div className="flex gap-3">
+          <PhoneIcon color="white" />
+          <p>Miami +1 (786) 516-9097</p>
+        </div>
         <div className="flex gap-3">
           <PhoneIcon color="white" />
           <p>{props.contactData.contact_data.spain} (+34) 624250094</p>
