@@ -1,12 +1,12 @@
 {
     "home" : {
-        "title": "Investi in immobili in Spagna o in Italia, quindi",
-        "subtitle": "Crea il tuo patrimonio immobiliare invirtiendo negli immobili di mayor rentabilidad con totale sicurezza e tranquillità",
-        "callToAction": "Concretizza il tuo progetto",
+        "title": "Fai investimenti strategici:",
+        "subtitle": "Costruisci il tuo portafoglio immobiliare investendo nelle proprietà più redditizie, con totale sicurezza e tranquillità.",
+        "callToAction": "Realizza il tuo progetto",
         "words": [
-            "intelligente",
-            "scalabile",
-            "redditizio"
+            "Intelligente",
+            "Scalabili",
+            "Redditizi"
         ]
     },
     "services" : {
@@ -21,21 +21,26 @@
         "subtitle2": "Massimizza l’efficacia del tuo investimento delegando l’intero processo:",
         "process": [
             {
-                "title": "Search for the most profitable property",
-                "description": "Search"
+                "title": "Ricerca della proprietà più redditizia",
+                "description": "Sono specializzato nel trovare le opportunità immobiliari più redditizie per te. Analizzando le tendenze del mercato, i valori delle proprietà e il potenziale di affitto, ti aiuto a fare investimenti intelligenti che massimizzano i tuoi rendimenti. Dall'identificazione delle migliori location alla chiusura dell'affare, mi occupo di tutto affinché tu possa concentrarti sui tuoi obiettivi.",
+                "image": ""
             },
             {
-                "title": "Negotiation at the best price",
-                "description": "Saving"
+                "title": "Negoziazione al miglior prezzo",
+                "description": "Sono orgoglioso di negoziare le migliori condizioni possibili per te. Che tu stia comprando o vendendo, utilizzo una pianificazione strategica e una profonda conoscenza del mercato per ottenere il prezzo più favorevole. I tuoi interessi sono la mia priorità, e mi assicuro che tu ottenga sempre il massimo valore.",
+                "image": ""
             },
             {
-                "title": "Reform of the property",
-                "description": "Reform"
+                "title": "Ristrutturazione della proprietà",
+                "description": "Lasciami trasformare la tua proprietà nella sua versione migliore. Dalla pianificazione e progettazione alla supervisione dei lavori di ristrutturazione, gestisco ogni dettaglio per offrire risultati di alta qualità. Che si tratti di un piccolo aggiornamento o di una ristrutturazione completa, sono qui per realizzare la tua visione e aumentare il valore della tua proprietà.",
+                "image": ""
             },
             {
-                "title": "Rent and tenant management",
-                "description": "Management"
+                "title": "Gestione dell'affitto e degli inquilini",
+                "description": "Rendo l'affitto della tua proprietà semplice e senza sforzo. Dalla ricerca di inquilini affidabili alla gestione dei contratti e della manutenzione, mi occupo di ogni dettaglio. Puoi godere di un reddito stabile senza preoccupazioni, sapendo che la tua proprietà è in buone mani. La tua tranquillità è la mia priorità.",
+                "image": ""
             }
+            
         ],
         "subtitle3": "In qualità di Agente Acquirente mi dedico esclusivamente alla ricerca di immobili espressamente commissionati dai miei clienti acquirenti, siano essi in Spagna o in Italia al momento dell'acquisto.",
         "advantage_title": "Perché assumere i miei servizi?",
