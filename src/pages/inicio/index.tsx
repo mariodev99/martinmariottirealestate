@@ -44,7 +44,10 @@ export default function HomePage(props: any) {
         <SectionWraper>
           <div className="flex flex-col gap-3 mb-16">
             {props.servicesData.advantages.map((item: any, index: number) => (
-              <div className="rounded-3xl bg-[#161616] py-6 px-4">
+              <div
+                className="rounded-3xl bg-[#161616] py-6 px-4"
+                key={item.title}
+              >
                 <div className="flex justify-between items-center text-lg md:text-2xl font-medium text-white p-4">
                   <h3 className="">{item.title}</h3>
                   <div className="text-greenprimary"> 0{index + 1}</div>
