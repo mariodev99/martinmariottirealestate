@@ -1,12 +1,12 @@
 {
     "home" : {
-        "title": "Invierte en inmuebles en España o Italia, de forma",
-        "subtitle": "Crea tu patrimonio inmobiliario inviertiendo en los inmuebles de mayor rentabilidad con total seguridad y tranquilidad",
+        "title": "Haz inversiones estratégicas:",
+        "subtitle": "Construye tu portafolio inmobiliario invirtiendo en las propiedades más rentables, con total seguridad y tranquilidad.",
         "callToAction": "Concreta tu proyecto",
         "words": [
-            "inteligente",
-            "escalable",
-            "rentable"
+            "Con estrategia",
+            "Escalable",
+            "Rentable"
         ]
     },
     "services" : {
@@ -21,21 +21,20 @@
         "subtitle2": "Maximiza la eficacia de tu inversión delegando todo el proceso:",
         "process": [
             {
-                "title": "Search for the most profitable property",
-                "description": "Search"
+                "title": "Búsqueda de la propiedad más rentable",
+                "description": "Me especializo en encontrar las oportunidades inmobiliarias más rentables para ti. Analizando las tendencias del mercado, los valores de las propiedades y el potencial de alquiler, me aseguro de que realices inversiones inteligentes que maximicen tus beneficios. Desde identificar las mejores ubicaciones hasta cerrar el trato, me encargo de todo para que puedas enfocarte en tus objetivos.",
+                "image": ""
             },
             {
-                "title": "Negotiation at the best price",
-                "description": "Saving"
+                "title": "Negociación al mejor precio",
+                "description": "Me enorgullezco de negociar los mejores acuerdos posibles en tu nombre. Ya sea que estés comprando o vendiendo, utilizo una planificación estratégica y un profundo conocimiento del mercado para asegurar el precio más favorable. Tus intereses son mi prioridad, y me aseguro de que obtengas el mejor valor en cada ocasión.",
+                "image": ""
             },
             {
-                "title": "Reform of the property",
-                "description": "Reform"
-            },
-            {
-                "title": "Rent and tenant management",
-                "description": "Management"
-            }
+                "title": "Reforma de la propiedad",
+                "description": "Permíteme transformar tu propiedad en su mejor versión. Desde la planificación y el diseño hasta la supervisión de las renovaciones, gestiono cada detalle para ofrecer resultados de alta calidad. Ya sea una pequeña actualización o una remodelación completa, estoy aquí para convertir tu visión en realidad y aumentar el valor de tu propiedad.",
+                "image": ""
+            }            
         ],
         "subtitle3": "Como Agente del Comprador, me dedico exclusivamente a la búsqueda de propiedades por encargo expreso de mis clientes compradores, ya sea que se encuentren en España o Italia al momento de la compra.",
         "advantage_title": "¿Por que contratar mis servicios?",
