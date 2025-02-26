@@ -44,10 +44,10 @@ export default function HomePage(props: any) {
 
       <div id="section_about_me" className="bg-black rounded-t-4xl">
         <SectionWraper>
-          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-16">
             {props.servicesData.advantages.map((item: any, index: number) => (
               <div key={index} className="rounded-3xl bg-[#161616] py-6 px-4">
-                <div className="pl-3">{advantagesIcons[index]}</div>
+                {/* <div className="pl-3">{advantagesIcons[index]}</div> */}
                 <div className="flex justify-between items-center text-lg md:text-2xl font-medium text-white p-4">
                   <h3 className="">{item.title}</h3>
                 </div>
@@ -56,7 +56,7 @@ export default function HomePage(props: any) {
                 </div>
               </div>
             ))}
-          </div> */}
+          </div>
           <AboutSection data={props.aboutData} />
         </SectionWraper>
       </div>
