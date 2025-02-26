@@ -67,7 +67,6 @@ export default function HomePage(props: any) {
         <SectionWraper>
           <BlogSection data={props.blogData} />
         </SectionWraper>
-
         <SectionWraper>
           <ContactSection data={props.contactData} />
         </SectionWraper>
