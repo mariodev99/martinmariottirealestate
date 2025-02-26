@@ -7,15 +7,10 @@ const bebas = Bebas_Neue({
   subsets: ["latin"],
 });
 
-// Define the array of slides with numbers
-const slides = [
-  { text: "Invest in real state" },
-  { text: "Invest in real state" },
-  { text: "Invest in real state" },
-];
-
-const Slider = () => {
-  // Duplicate the slides array to ensure seamless looping
+const Slider = ({ text }: { text: string }) => {
+  // duplicate the slides array to ensure seamless looping
+  //refactor
+  const slides = [text, text, text, text];
   const duplicatedSlides = [...slides, ...slides];
 
   return (
@@ -41,8 +36,8 @@ const Slider = () => {
             className="flex-shrink-0"
             style={{ width: `${100 / slides.length}%` }}
           >
-            <div className="flex flex-col items-center justify-center h-full text-md md:text-5xl">
-              {slide.text}
+            <div className="flex flex-col items-center justify-center h-full text-md md:text-6xl">
+              {slide}
             </div>
           </div>
         ))}

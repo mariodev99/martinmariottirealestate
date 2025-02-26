@@ -35,8 +35,8 @@ export default function HeaderSection({ data }: any) {
           priority
         />
       </div>
-      <div className="h-20 w-full absolute bottom-0 rotate-1 pt-14">
-        <Slider />
+      <div className="h-20 w-full absolute bottom-0 rotate-1 pt-12">
+        <Slider text="Invest in real estate" />
       </div>
       <SectionWraper>
         <div className="relative flex items-center pt-0 h-screen w-full">

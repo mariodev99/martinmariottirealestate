@@ -8,6 +8,10 @@ import AboutSection from "@/components/Sections/About";
 import ServicesSection from "@/components/Sections/ServicesSection";
 import ContactSection from "@/components/Sections/ContactSection";
 import { useRouter } from "next/router";
+import Slider from "@/components/Common/Slider";
+import { CashIcon, TimeIcon, SmileIcon } from "@/components/Icons";
+
+const advantagesIcons = [<CashIcon />, <SmileIcon />, <TimeIcon />];
 
 export default function HomePage(props: any) {
   const router = useRouter();
@@ -34,23 +38,21 @@ export default function HomePage(props: any) {
           <ServicesSection data={props.servicesData} />
         </SectionWraper>
       </div>
-      <div className="px-5 md:px-10 container mx-auto pt-20">
-        <h2 className="text-[15vw] md:text-[10vw] leading-9 md:leading-[100px] text-center font-bold">
-          WHY ME?
-        </h2>
+      <div className="py-10 mt-20 rotate-3">
+        <Slider text="¿WHY ME?" />
       </div>
 
       <div id="section_about_me" className="bg-black rounded-t-4xl">
         <SectionWraper>
-          <div className="flex flex-col gap-3 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-16">
             {props.servicesData.advantages.map((item: any, index: number) => (
               <div
                 className="rounded-3xl bg-[#161616] py-6 px-4"
                 key={item.title}
               >
+                <div className="pl-3">{advantagesIcons[index]}</div>
                 <div className="flex justify-between items-center text-lg md:text-2xl font-medium text-white p-4">
                   <h3 className="">{item.title}</h3>
-                  <div className="text-greenprimary"> 0{index + 1}</div>
                 </div>
                 <div className="px-4 text-sm md:text-lg text-[#cbcbcb]">
                   {item.description}
