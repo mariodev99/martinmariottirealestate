@@ -11,7 +11,7 @@ import { useRouter } from "next/router";
 import Slider from "@/components/Common/Slider";
 import { CashIcon, TimeIcon, SmileIcon } from "@/components/Icons";
 
-const advantagesIcons = [<CashIcon />, <SmileIcon />, <TimeIcon />];
+// const advantagesIcons = [<CashIcon />, <SmileIcon />, <TimeIcon />];
 
 export default function HomePage(props: any) {
   const router = useRouter();
@@ -69,7 +69,6 @@ export default function HomePage(props: any) {
         </SectionWraper>
       </div>
       <Footer data={props.footerData} />
-      {/*  */}
     </motion.div>
   );
 }
