@@ -46,10 +46,7 @@ export default function HomePage(props: any) {
         <SectionWraper>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-16">
             {props.servicesData.advantages.map((item: any, index: number) => (
-              <div
-                key={item.title}
-                className="rounded-3xl bg-[#161616] py-6 px-4"
-              >
+              <div key={index} className="rounded-3xl bg-[#161616] py-6 px-4">
                 {/* <div className="pl-3">{advantagesIcons[index]}</div> */}
                 <div className="flex justify-between items-center text-lg md:text-2xl font-medium text-white p-4">
                   <h3 className="">{item.title}</h3>
