@@ -65,9 +65,9 @@ export default function Home() {
               </motion.div>
               <motion.div
                 variants={item}
-                className="uppercase text-secondary text-sm "
+                className="uppercase text-secondary text-sm font-medium "
               >
-                Personal shopper inmobiliario
+                Real Estate Personal Shopper
               </motion.div>
             </motion.div>
           </div>
