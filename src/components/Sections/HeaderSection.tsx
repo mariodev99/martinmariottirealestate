@@ -35,7 +35,7 @@ export default function HeaderSection({ data }: any) {
           priority
         />
       </div>
-      <div className="h-20 w-full absolute bottom-8 rotate-1 pt-12">
+      <div className="h-20 w-full absolute bottom-0 rotate-1 pt-12">
         <Slider text="Invest in real estate" />
       </div>
       <SectionWraper>
