@@ -22,7 +22,7 @@ const wordVariants = {
 
 export default function HeaderSection({ data }: any) {
   return (
-    <div className="relative flex  w-full">
+    <div className="relative flex  w-full mb-10">
       {/* bg-[url('/images/header2.jpg')] bg-right bg-cover  */}
       <div className="absolute w-full h-full brightness-[0.5] ">
         <Image
