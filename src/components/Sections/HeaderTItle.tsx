@@ -50,7 +50,7 @@ export default function HeaderTitle({ data }: { data: any }) {
         </h2>
         <div className="flex justify-center">
           <Link href={"/contacto"} className="w-full md:max-w-lg ">
-            <div className=" flex justify-between items-center p-1  bg-greenprimary text-black rounded-full text-lg  ">
+            <div className=" flex justify-between items-center p-1  bg-greenprimary text-black rounded-full text-base  ">
               <div className=" font-semibold w-full md:w-auto pl-4">
                 {data.callToAction}
               </div>
