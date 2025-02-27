@@ -10,6 +10,7 @@ import ContactSection from "@/components/Sections/ContactSection";
 import { useRouter } from "next/router";
 import Slider from "@/components/Common/Slider";
 import { CashIcon, TimeIcon, SmileIcon } from "@/components/Icons";
+import SliderBig from "@/components/Common/SliderBig";
 
 // const advantagesIcons = [<CashIcon />, <SmileIcon />, <TimeIcon />];
 
@@ -39,7 +40,7 @@ export default function HomePage(props: any) {
         </SectionWraper>
       </div>
       <div className="py-10 mt-20 rotate-3">
-        <Slider text="¿WHY ME?" />
+        <SliderBig text="¿WHY ME?" />
       </div>
 
       <div id="section_about_me" className="bg-black rounded-t-4xl">
