@@ -44,7 +44,7 @@ export default function HeaderTitle({ data }: { data: any }) {
           </h1>
         </div>
         <h2
-          className={`text-lg md:text-xl text-center  font-regular mt-5 md:mt-20`}
+          className={`text-base md:text-xl text-center font-medium mt-5 md:mt-20`}
         >
           {data.subtitle}
         </h2>
