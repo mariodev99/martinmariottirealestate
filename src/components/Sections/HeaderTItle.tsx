@@ -26,7 +26,7 @@ export default function HeaderTitle({ data }: { data: any }) {
   return (
     <main className="relative text-white w-full overflow-x-hidden px-5">
       <div className="flex flex-col gap-10">
-        <div className="text-5xl md:text-8xl font-bold">
+        <div className="text-4xl md:text-8xl font-bold">
           <h1 className={`text-center  tracking-wide`}>
             {data.title}
             <br></br>

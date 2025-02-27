@@ -10,7 +10,7 @@ const bebas = Bebas_Neue({
 const Slider = ({ text }: { text: string }) => {
   // duplicate the slides array to ensure seamless looping
   //refactor
-  const slides = [text, text, text, text];
+  const slides = [text, text, text];
   const duplicatedSlides = [...slides, ...slides];
 
   return (

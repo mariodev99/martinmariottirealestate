@@ -237,7 +237,7 @@ export const Nav = () => {
               </motion.button>
             </div>
             <motion.div
-              className="flex flex-col gap-5 cursor-pointer mt-10"
+              className="flex flex-col gap-3 cursor-pointer mt-10"
               initial="closed"
               animate="open"
               exit="closed"
