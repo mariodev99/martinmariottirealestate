@@ -89,13 +89,13 @@ export const Nav = () => {
   const [open, cycleOpen] = useCycle(false, true);
   const { scrollY } = useScroll();
 
-  const [backgroundNavColor, setBackgroundNavColor] = useState("transparent");
+  const [navAnimation, setNavAnimation] = useState(false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (latest > 50) {
-      setBackgroundNavColor("black");
+      setNavAnimation(true);
     } else {
-      setBackgroundNavColor("transparent");
+      setNavAnimation(false);
     }
   });
 
@@ -116,8 +116,12 @@ export const Nav = () => {
   );
 
   const LogoWithAnimation = () => (
-    <motion.div>
-      <LogoIcon color={backgroundNavColor === "black" ? "#c0ff3f" : "white"} />
+    <motion.div
+      initial={{ scale: 0.9 }}
+      animate={{ scale: navAnimation ? 1 : 0.9 }}
+      transition={{ ease: "easeInOut", duration: 0.5 }}
+    >
+      <LogoIcon color={navAnimation ? "#c0ff3f" : "white"} />
     </motion.div>
   );
 
@@ -198,9 +202,7 @@ export const Nav = () => {
             </Link>
           </div>
           <button className="flex md:hidden" onClick={() => cycleOpen()}>
-            <MenuIcon
-              color={backgroundNavColor === "white" ? "#000" : "#fff"}
-            />
+            <MenuIcon color={"#fff"} />
           </button>
         </div>
       </motion.div>
