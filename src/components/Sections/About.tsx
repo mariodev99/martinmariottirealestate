@@ -5,8 +5,8 @@ import Martin from "../../../public/images/martinabout.png";
 import { Characteristics } from "@/components/Accordion/AccordionCharacteristics";
 import { EnfoqueIcon, MisionIcon, ValoresIcon } from "@/components/Icons";
 import { motion } from "framer-motion";
-import { PrimaryButton } from "@/components/Buttons/PrimaryButton";
 import { useRouter } from "next/router";
+import PrimaryButton from "../Buttons/PrimaryButton";
 
 export interface CharacteristicsIconsProps {
   icon: React.ReactNode;
@@ -92,7 +92,7 @@ export default function AboutSection({ data }: any) {
         className="mt-2 flex justify-center"
         onClick={() => router.push("/contacto")}
       >
-        <PrimaryButton>{data.callToAction}</PrimaryButton>
+        <PrimaryButton text={data.callToAction}></PrimaryButton>
       </div>
     </div>
   );

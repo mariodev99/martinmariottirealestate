@@ -8,7 +8,6 @@ import {
   useMotionValueEvent,
   useScroll,
 } from "framer-motion";
-import { PrimaryButton } from "../Buttons/PrimaryButton";
 import { useRouter } from "next/router";
 import { Link as ScrollLink } from "react-scroll";
 import SelectButton from "../Buttons/SelectButton";

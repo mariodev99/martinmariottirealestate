@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import PrimaryButton from "../Buttons/PrimaryButton";
 
 const wordVariants = {
   hidden: { opacity: 0, y: -20 },
@@ -49,16 +50,7 @@ export default function HeaderTitle({ data }: { data: any }) {
           {data.subtitle}
         </h2>
         <div className="flex justify-center">
-          <Link href={"/contacto"} className="w-full md:max-w-lg ">
-            <div className=" flex justify-between items-center p-1  bg-greenprimary text-black rounded-full text-base  ">
-              <div className=" font-semibold w-full md:w-auto pl-4">
-                {data.callToAction}
-              </div>
-              <div className="bg-black h-12 w-12 rounded-full flex justify-center items-center">
-                <ArrowRight color="white" />
-              </div>
-            </div>
-          </Link>
+          <PrimaryButton text={data.callToAction} />
         </div>
       </div>
     </main>
