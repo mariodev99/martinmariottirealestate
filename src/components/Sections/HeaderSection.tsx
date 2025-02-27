@@ -39,7 +39,7 @@ export default function HeaderSection({ data }: any) {
         <Slider text="Invest in real estate" />
       </div>
       <SectionWraper>
-        <div className="relative flex  pt-40 h-screen w-full">
+        <div className="relative flex  pt-40 lg:pt-52 h-screen w-full">
           <HeaderTitle data={data} />
         </div>
       </SectionWraper>

@@ -24,15 +24,15 @@ export default function HeaderTitle({ data }: { data: any }) {
   }, []);
 
   return (
-    <main className="relative text-white w-full overflow-x-hidden px-5">
+    <main className="relative text-white w-full overflow-x-hidden ">
       <div className="flex flex-col gap-10">
-        <div className="text-4xl md:text-8xl font-bold">
+        <div className="text-4xl md:text-6xl lg:text-8xl font-bold">
           <h1 className={`text-center  tracking-wide`}>
             {data.title}
             <br></br>
             {data.words.map((word: string, index: number) => (
               <motion.span
-                className="text-center flex justify-center w-full absolute text-greenprimary pr-8"
+                className="text-center flex justify-center w-full absolute text-greenprimary "
                 key={index}
                 variants={wordVariants}
                 initial="hidden"
